@@ -14,7 +14,9 @@ class CreateTypeFraisTable extends Migration
     public function up()
     {
         Schema::create('type_frais', function (Blueprint $table) {
-            $table->id();
+            $table->id('idTypeFrais');
+            $table->String('typeFraisDesc');
+            $table->char('activeTypeFrais', 1);
             $table->timestamps();
         });
     }
