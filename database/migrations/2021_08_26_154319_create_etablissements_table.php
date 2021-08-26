@@ -14,7 +14,12 @@ class CreateEtablissementsTable extends Migration
     public function up()
     {
         Schema::create('etablissements', function (Blueprint $table) {
-            $table->id();
+            $table->id('id Etablissement');
+            $table->string('nomEtablissement');
+            $table->string('codeEtablissement');
+            $table->string('adresseEtablissement');
+            $table->string('telephoneEtablissement');
+            $table->char('activeEtablissement', 1);
             $table->timestamps();
         });
     }
