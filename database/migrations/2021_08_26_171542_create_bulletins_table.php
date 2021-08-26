@@ -14,7 +14,10 @@ class CreateBulletinsTable extends Migration
     public function up()
     {
         Schema::create('bulletins', function (Blueprint $table) {
-            $table->id();
+            $table->id('idBulletin');
+            $table->date('dateBulletin');
+            $table->String('AuthentifieBulletin');
+            $table->char('activeBulltin');
             $table->timestamps();
         });
     }
