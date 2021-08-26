@@ -14,7 +14,11 @@ class CreateAnneeScolairesTable extends Migration
     public function up()
     {
         Schema::create('annee_scolaires', function (Blueprint $table) {
-            $table->id();
+            $table->id('idAnneeScolaire');
+            $table->year('AnneeScolaireInf');
+            $table->year('AnneeScolaireSup');
+            $table->String('idAnneeScolaireDesc');
+            $table->char('activeAnneeScolaire');
             $table->timestamps();
         });
     }
