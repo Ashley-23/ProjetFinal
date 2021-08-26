@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-// use App\Models\Admin;
+use App\Models\Admin;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -10,9 +10,9 @@ class Profil extends Model
 {
     use HasFactory;
     // Un profil appartient à un admin 
-    // public function Profil()
-    // {
-    //     return $this->belongsTo(Admin::class);
+    public function Admin()
+    {
+        return $this->belongsTo(Admin::class);
     }
     // // Un profil appartient à un superadmin 
     // public function SuperAdmin()
