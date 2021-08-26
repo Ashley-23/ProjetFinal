@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Eleve;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -14,8 +15,16 @@ class CreateRelationElevesTable extends Migration
     public function up()
     {
         Schema::create('relation_eleves', function (Blueprint $table) {
-            $table->id();
+            $table->id('idRelationEleve');
+            $table->String('descRelationEleve');
+            $table->char('activeRelationEleve');
             $table->timestamps();
+
+
+
+
+            $table->foreignId('idParent')->constrained();
+            $table->foreignId('idEleve')->constrained();
         });
     }
 
