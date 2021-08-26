@@ -14,7 +14,11 @@ class CreateFraisScolairesTable extends Migration
     public function up()
     {
         Schema::create('frais_scolaires', function (Blueprint $table) {
-            $table->id();
+            $table->id('idFraisScolaire');
+            $table->date('dateFraisScolaire');
+            $table->unsignedDouble('montantFraiscolaire', 12, 2);
+            $table->unsignedDouble('soldeFraisScolaire', 12, 2);
+            $table->char('activeFraisScolaire', 1);
             $table->timestamps();
         });
     }
