@@ -18,7 +18,7 @@ class CreateMatiereMoyenesTable extends Migration
         Schema::create('matiere_moyenes', function (Blueprint $table) {
             $table->id('idMatiereMoyenne');
             $table->String('descriptionMatiereMoyenne');
-            $table->char('activeMatiereMoyenne');
+            $table->char('activeMatiereMoyenne', 1);
             $table->timestamps();
 
 
