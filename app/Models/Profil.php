@@ -6,6 +6,7 @@ use App\Models\Admin;
 use App\Models\Parent;
 use App\Models\Professeur;
 use App\Models\SuperAdmin;
+use App\Models\Eleve;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -33,8 +34,13 @@ class Profil extends Model
         return $this->belongsTo(Professeur::class);
     }
     // // Un profil appartient à un etablissement 
-    // public function Etablissement()
-    // {
-    //     return $this->belongsTo(Etablissement::class);
-    // }
+    public function Etablissement()
+    {
+        return $this->belongsTo(Etablissement::class);
+    }
+    // // Un profil appartient à un eleve
+    public function Eleve()
+    {
+        return $this->belongsTo(Eleve::class);
+    }
 }
