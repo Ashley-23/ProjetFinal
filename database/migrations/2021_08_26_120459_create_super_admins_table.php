@@ -22,7 +22,7 @@ class CreateSuperAdminsTable extends Migration
             $table->string('emailSuperAdmin')->unique();
             $table->string('passwordSuperAdmin');
             $table->string('telephoneSuperAdmin');
-            $table->string('PhotoSuperAdmin')->default('photoAdmin.jpg');
+            $table->string('PhotoSuperAdmin')->default('photoSuperAdmin.jpg');
             $table->String('adresseSuperAdmin');
             $table->char('activeSuperAdmin', 1);
             $table->timestamps();

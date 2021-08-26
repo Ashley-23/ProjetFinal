@@ -22,7 +22,7 @@ class CreateParentsTable extends Migration
             $table->string('emailParent')->unique();
             $table->string('passwordParent');
             $table->string('telephoneParent');
-            $table->string('PhotoParent')->default('photoAdmin.jpg');
+            $table->string('PhotoParent')->default('photoParent.jpg');
             $table->String('adresseParent');
             $table->char('activeParent', 1);
             $table->timestamps();
