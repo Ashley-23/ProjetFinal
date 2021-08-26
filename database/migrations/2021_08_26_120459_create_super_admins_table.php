@@ -26,6 +26,9 @@ class CreateSuperAdminsTable extends Migration
             $table->String('adresseSuperAdmin');
             $table->char('activeSuperAdmin', 1);
             $table->timestamps();
+
+
+            $table->foreignId('idProfil')->constrained();
         });
     }
 

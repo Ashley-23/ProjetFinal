@@ -26,6 +26,9 @@ class CreateAdminsTable extends Migration
             $table->String('adresseAdmin');
             $table->char('activeAdmin', 1);
             $table->timestamps();
+
+
+            $table->foreignId('idProfil')->constrained();
         });
     }
 

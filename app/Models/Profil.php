@@ -21,10 +21,10 @@ class Profil extends Model
         return $this->belongsTo(SuperAdmin::class);
     }
     // // Un profil appartient à un parent 
-    // public function Parent()
-    // {
-    //     return $this->belongsTo(Parent::class);
-    // }
+    public function Parent()
+    {
+        return $this->belongsTo(Parent::class);
+    }
     // // Un profil appartient à un professeur 
     // public function Professeur()
     // {

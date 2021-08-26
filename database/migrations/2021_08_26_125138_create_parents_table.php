@@ -14,8 +14,22 @@ class CreateParentsTable extends Migration
     public function up()
     {
         Schema::create('parents', function (Blueprint $table) {
-            $table->id();
+            $table->id('idParent');
+            $table->string('nomParent');
+            $table->string('prenomParent');
+            $table->date('dateNaissParent');
+            $table->char('sexeParent', 1);
+            $table->string('emailParent')->unique();
+            $table->string('passwordParent');
+            $table->string('telephoneParent');
+            $table->string('PhotoParent')->default('photoAdmin.jpg');
+            $table->String('adresseParent');
+            $table->char('activeParent', 1);
             $table->timestamps();
+
+
+
+            $table->foreignId('idProfil')->constrained();
         });
     }
 
