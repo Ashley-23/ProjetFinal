@@ -14,8 +14,22 @@ class CreateElevesTable extends Migration
     public function up()
     {
         Schema::create('eleves', function (Blueprint $table) {
-            $table->id();
+            $table->id('idEleve');
+            $table->string('nomEleve');
+            $table->string('prenomEleve');
+            $table->date('dateNaissEleve');
+            $table->char('sexeEleve', 1);
+            $table->string('emailEleve')->unique();
+            $table->string('passwordEleve');
+            $table->string('telephoneEleve');
+            $table->string('PhotoEleve')->default('photoEleve.jpg');
+            $table->String('adresseEleve');
+            $table->char('activeEleve', 1);
             $table->timestamps();
+
+
+
+            $table->foreignId('idProfil')->constrained();
         });
     }
 
