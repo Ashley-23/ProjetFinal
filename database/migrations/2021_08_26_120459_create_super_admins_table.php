@@ -14,7 +14,17 @@ class CreateSuperAdminsTable extends Migration
     public function up()
     {
         Schema::create('super_admins', function (Blueprint $table) {
-            $table->id();
+            $table->id('idSuperAdmin');
+            $table->string('nomSuperAdmin');
+            $table->string('prenomSuperAdmin');
+            $table->date('dateNaissSuperAdmin');
+            $table->char('sexeSuperAdmin', 1);
+            $table->string('emailSuperAdmin')->unique();
+            $table->string('passwordSuperAdmin');
+            $table->string('telephoneSuperAdmin');
+            $table->string('PhotoSuperAdmin')->default('photoAdmin.jpg');
+            $table->String('adresseSuperAdmin');
+            $table->char('activeSuperAdmin', 1);
             $table->timestamps();
         });
     }
