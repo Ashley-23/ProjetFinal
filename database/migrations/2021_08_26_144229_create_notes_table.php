@@ -19,7 +19,7 @@ class CreateNotesTable extends Migration
             $table->unsignedDouble('valeurNote', 4, 2);
             $table->integer('coefNote');
             $table->integer('rangNote');
-            $table->char('activeNote');
+            $table->char('activeNote', 1);
             $table->timestamps();
         });
     }
