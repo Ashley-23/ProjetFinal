@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Models\Admin;
 use App\Models\Parent;
+use App\Models\Professeur;
 use App\Models\SuperAdmin;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -27,10 +28,10 @@ class Profil extends Model
         return $this->belongsTo(Parent::class);
     }
     // // Un profil appartient à un professeur 
-    // public function Professeur()
-    // {
-    //     return $this->belongsTo(Professeur::class);
-    // }
+    public function Professeur()
+    {
+        return $this->belongsTo(Professeur::class);
+    }
     // // Un profil appartient à un etablissement 
     // public function Etablissement()
     // {
