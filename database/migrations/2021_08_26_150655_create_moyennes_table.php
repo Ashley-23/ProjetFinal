@@ -14,7 +14,10 @@ class CreateMoyennesTable extends Migration
     public function up()
     {
         Schema::create('moyennes', function (Blueprint $table) {
-            $table->id();
+            $table->id('idMoyenne');
+            $table->unsignedDouble('ValeurMoyenne', 4, 2);
+            $table->integer('rangMoyenne');
+            $table->char('activeMoyenne');
             $table->timestamps();
         });
     }
