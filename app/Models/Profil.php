@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\Admin;
+use App\Models\SuperAdmin;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -15,10 +16,10 @@ class Profil extends Model
         return $this->belongsTo(Admin::class);
     }
     // // Un profil appartient à un superadmin 
-    // public function SuperAdmin()
-    // {
-    //     return $this->belongsTo(SuperAdmin::class);
-    // }
+    public function SuperAdmin()
+    {
+        return $this->belongsTo(SuperAdmin::class);
+    }
     // // Un profil appartient à un parent 
     // public function Parent()
     // {
