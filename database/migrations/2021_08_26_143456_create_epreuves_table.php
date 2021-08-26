@@ -14,7 +14,10 @@ class CreateEpreuvesTable extends Migration
     public function up()
     {
         Schema::create('epreuves', function (Blueprint $table) {
-            $table->id();
+            $table->id('idEpreuve');
+            $table->String('nomEpreuve');
+            $table->date('dateEpreuve');
+            $table->char('activeEpreuve', 1);
             $table->timestamps();
         });
     }
