@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Profil;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -26,6 +27,7 @@ class CreateAdminsTable extends Migration
             $table->String('adresseAdmin');
             $table->char('activeAdmin', 1);
             $table->timestamps();
+
 
 
             $table->foreignId('idProfil')->constrained();
