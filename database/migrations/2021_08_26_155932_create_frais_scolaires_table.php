@@ -20,6 +20,9 @@ class CreateFraisScolairesTable extends Migration
             $table->unsignedDouble('soldeFraisScolaire', 12, 2);
             $table->char('activeFraisScolaire', 1);
             $table->timestamps();
+
+
+            $table->foreignId('idTypeFrais')->constrained();
         });
     }
 
