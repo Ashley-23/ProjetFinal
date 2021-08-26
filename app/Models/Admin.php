@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Admin extends Model
 {
     use HasFactory;
+    // Un admin a un profil 
+    public function Profil()
+    {
+        return $this->hasOne(Profil::class);
+    }
 }
