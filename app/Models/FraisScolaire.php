@@ -12,7 +12,6 @@ class FraisScolaire extends Model
 {
     use HasFactory;
 
-
     // // Un frais scolaire appartient à un type frais
     public function TypeFrais()
     {
