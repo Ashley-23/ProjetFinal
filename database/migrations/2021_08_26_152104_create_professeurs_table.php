@@ -18,6 +18,7 @@ class CreateProfesseursTable extends Migration
             $table->id('idProfesseur');
             $table->string('nomProfesseur');
             $table->string('prenomProfesseur');
+            $table->string('userName')->unique();
             $table->date('dateNaissProfesseur');
             $table->char('sexeProfesseur', 1);
             $table->string('emailProfesseur')->unique();

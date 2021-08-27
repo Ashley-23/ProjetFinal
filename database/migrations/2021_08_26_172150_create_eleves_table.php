@@ -19,6 +19,7 @@ class CreateElevesTable extends Migration
             $table->id('idEleve');
             $table->string('nomEleve');
             $table->string('prenomEleve');
+            $table->string('userName')->unique();
             $table->date('dateNaissEleve');
             $table->char('sexeEleve', 1);
             $table->string('emailEleve')->unique();
