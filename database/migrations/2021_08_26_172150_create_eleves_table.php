@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Bulletin;
 use App\Models\Profil;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -29,8 +30,8 @@ class CreateElevesTable extends Migration
             $table->timestamps();
 
 
-
             $table->foreignId('idProfil')->constrained();
+            $table->foreignId('idBulletin')->constrained();
         });
     }
 
