@@ -1,6 +1,5 @@
 <?php
 
-use App\Models\Classe;
 use App\Models\EpreuveMatiereNote;
 use App\Models\Professeur;
 use Illuminate\Database\Migrations\Migration;
@@ -23,7 +22,6 @@ class CreateEnseignementsTable extends Migration
             $table->timestamps();
 
 
-            $table->foreignId('idClasse')->constrained();
             $table->foreignId('idEpreuveMatiereNote')->constrained();
             $table->foreignId('idProfesseur')->constrained();
         });
