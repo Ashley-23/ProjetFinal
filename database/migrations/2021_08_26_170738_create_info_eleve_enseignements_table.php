@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Eleve;
 use App\Models\Enseignement;
 use App\Models\EpreuveMatiereNote;
 use Illuminate\Database\Migrations\Migration;
@@ -21,9 +22,9 @@ class CreateInfoEleveEnseignementsTable extends Migration
             $table->char('activeInfoEleveEnseignement');
             $table->timestamps();
 
-
             $table->foreignId('idEpreuveMatiereNote')->constrained();
             $table->foreignId('idEnseignement')->constrained();
+            $table->foreignId('idEleve')->constrained();
         });
     }
 
