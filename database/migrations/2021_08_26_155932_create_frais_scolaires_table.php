@@ -1,7 +1,7 @@
 <?php
 
 use App\Models\Inscription;
-use App\Models\Parent;
+use App\Models\Relative;
 use App\Models\TypeFrais;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -29,7 +29,7 @@ class CreateFraisScolairesTable extends Migration
 
             $table->foreignId('idTypeFrais')->constrained();
             $table->foreignId('idInscription')->constrained();
-            $table->foreignId('idParent')->constrained();
+            $table->foreignId('idRelative')->constrained();
         });
     }
 

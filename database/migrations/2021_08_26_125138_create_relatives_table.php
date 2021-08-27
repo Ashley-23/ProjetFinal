@@ -15,17 +15,17 @@ class CreateRelativesTable extends Migration
     public function up()
     {
         Schema::create('relatives', function (Blueprint $table) {
-            $table->id('idParent');
-            $table->string('nomParent');
-            $table->string('prenomParent');
-            $table->date('dateNaissParent');
-            $table->char('sexeParent', 1);
-            $table->string('emailParent')->unique();
-            $table->string('passwordParent');
+            $table->id('idRelative');
+            $table->string('nomRelative');
+            $table->string('prenomRelative');
+            $table->date('dateNaissRelative');
+            $table->char('sexeRelative', 1);
+            $table->string('emailRelative')->unique();
+            $table->string('passwordRelative');
             $table->string('telephoneParent');
-            $table->string('PhotoParent')->default('photoParent.jpg');
-            $table->String('adresseParent');
-            $table->char('activeParent', 1);
+            $table->string('PhotoRelative')->default('photoRelative.jpg');
+            $table->String('adresseRelative');
+            $table->char('activeRelative', 1);
             $table->timestamps();
 
 

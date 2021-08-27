@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Eleve;
+use App\Models\Relative;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -23,7 +24,7 @@ class CreateRelationElevesTable extends Migration
 
 
 
-            $table->foreignId('idParent')->constrained();
+            $table->foreignId('idRelative')->constrained();
             $table->foreignId('idEleve')->constrained();
         });
     }

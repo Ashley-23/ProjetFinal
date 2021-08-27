@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Models\Parent;
+use App\Models\Relative;
 use App\Models\TypeFrais;
 use App\Models\Inscription;
 use Illuminate\Database\Eloquent\Model;
@@ -24,9 +24,9 @@ class FraisScolaire extends Model
     {
         return $this->belongsTo(Inscription::class);
     }
-    // // Un frais scolaire appartient à un Parent
-    public function Parent()
+    // // Un frais scolaire appartient à un ou relative
+    public function Relative()
     {
-        return $this->belongsTo(Parent::class);
+        return $this->belongsTo(Relative::class);
     }
 }

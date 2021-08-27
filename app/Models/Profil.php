@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use App\Models\Admin;
-use App\Models\Parent;
+use App\Models\Relative;
 use App\Models\Professeur;
 use App\Models\SuperAdmin;
 use App\Models\Eleve;
@@ -23,10 +23,10 @@ class Profil extends Model
     {
         return $this->belongsTo(SuperAdmin::class);
     }
-    // // Un profil appartient à un parent 
-    public function Parent()
+    // // Un profil appartient à un relative 
+    public function Relative()
     {
-        return $this->belongsTo(Parent::class);
+        return $this->belongsTo(Relative::class);
     }
     // // Un profil appartient à un professeur 
     public function Professeur()
