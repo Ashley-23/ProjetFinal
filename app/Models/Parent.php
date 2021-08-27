@@ -3,6 +3,8 @@
 namespace App\Models;
 
 use App\Models\Profil;
+use App\Models\FraisScolaire;
+use App\Models\RelationEleve;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -13,5 +15,15 @@ class Parent extends Model
     public function Profil()
     {
         return $this->hasOne(Profil::class);
+    }
+    // Un parent a un plusieurs RelationEleve 
+    public function RelationEleve()
+    {
+        return $this->hasMany(RelationEleves::class);
+    }
+    // Un parent a un plusieurs FraisScolaire 
+    public function FraisScolaire()
+    {
+        return $this->hasMany(FraisScolaires::class);
     }
 }
