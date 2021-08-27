@@ -18,6 +18,8 @@ class CreateRelativesTable extends Migration
             $table->id('idRelative');
             $table->string('nomRelative');
             $table->string('prenomRelative');
+            //  POUR SAVOIR SI C'EST LE PERE LA MERE OU UN TUTEUR 
+            $table->string('typeRelative');
             $table->date('dateNaissRelative');
             $table->char('sexeRelative', 1);
             $table->string('emailRelative')->unique();
