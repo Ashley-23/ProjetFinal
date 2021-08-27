@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Profil;
+use App\Models\SuperAdmin;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -21,6 +23,11 @@ class CreateEtablissementsTable extends Migration
             $table->string('telephoneEtablissement');
             $table->char('activeEtablissement', 1);
             $table->timestamps();
+
+
+
+            $table->foreignId('idProfil')->constrained();
+            $table->foreignId('idSuperAdmin')->constrained();
         });
     }
 
