@@ -8,7 +8,7 @@ use App\Models\RelationEleve;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Parent extends Model
+class Relative extends Model
 {
     use HasFactory;
     // Un parent a un profil 
