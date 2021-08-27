@@ -14,4 +14,9 @@ class SuperAdmin extends Model
     {
         return $this->hasOne(Profil::class);
     }
+    // // Un profil appartient à un etablissement
+    public function Etablissement()
+    {
+        return $this->belongsTo(Etablissement::class);
+    }
 }
