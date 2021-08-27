@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Etablissement;
 use App\Models\Profil;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -31,6 +32,7 @@ class CreateAdminsTable extends Migration
 
 
             $table->foreignId('idProfil')->constrained();
+            $table->foreignId('idEtablissement')->constrained();
         });
     }
 
