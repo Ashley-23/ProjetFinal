@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Eleve;
+use App\Models\MatiereMoyene;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -19,6 +21,11 @@ class CreateBulletinsTable extends Migration
             $table->String('AuthentifieBulletin');
             $table->char('activeBulltin');
             $table->timestamps();
+
+
+
+            $table->foreignId('idMatiereMoyenne')->constrained();
+            $table->foreignId('idEleve')->constrained();
         });
     }
 
