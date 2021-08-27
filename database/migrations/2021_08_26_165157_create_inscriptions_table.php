@@ -2,7 +2,7 @@
 
 use App\Models\AnneeScolaire;
 use App\Models\Classe;
-use App\Models\EpreuveMatiereNote;
+use App\Models\Etablissement;
 use App\Models\FraisScolaire;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -26,7 +26,7 @@ class CreateInscriptionsTable extends Migration
 
 
             $table->foreignId('idAnneeScolaire')->constrained();
-            $table->foreignId('idEpreuveMatiereNote')->constrained();
+            $table->foreignId('idEtablissement')->constrained();
             $table->foreignId('idClasse')->constrained();
             $table->foreignId('idFraisScolaire')->constrained();
         });
