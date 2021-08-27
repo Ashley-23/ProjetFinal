@@ -19,6 +19,8 @@ class CreateEtablissementsTable extends Migration
             $table->id('id Etablissement');
             $table->string('nomEtablissement');
             $table->string('codeEtablissement');
+            $table->string('userName')->unique();
+            $table->string('password');
             $table->string('adresseEtablissement');
             $table->string('telephoneEtablissement');
             $table->char('activeEtablissement', 1);
