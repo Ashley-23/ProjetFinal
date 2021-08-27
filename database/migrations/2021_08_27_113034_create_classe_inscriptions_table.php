@@ -1,12 +1,12 @@
 <?php
 
-use App\Models\Etablissement;
-use App\Models\Relative;
+use App\Models\Classe;
+use App\Models\Inscription;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateEtablissementRelativesTable extends Migration
+class CreateClasseInscriptionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,10 +15,10 @@ class CreateEtablissementRelativesTable extends Migration
      */
     public function up()
     {
-        Schema::create('etablissement_relative', function (Blueprint $table) {
+        Schema::create('classe_inscription', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('idEtablisssement')->constrained()->onDelete('cascade');
-            $table->foreignId('idRelative')->constrained()->onDelete('cascade');
+            $table->foreignId('idClasse')->constrained()->onDelete('cascade');
+            $table->foreignId('idInscription')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class CreateEtablissementRelativesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('etablissement_relatives');
+        Schema::dropIfExists('classe_inscriptions');
     }
 }
