@@ -1,10 +1,12 @@
 <?php
 
+use App\Models\Etablissement;
+use App\Models\Parent;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateEtablissementParentsTable extends Migration
+class EtablissementParents extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +15,10 @@ class CreateEtablissementParentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('etablissement_parents', function (Blueprint $table) {
+        Schema::create('etablissement_parent', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('idEtablisssement')->constrained()->onDelete('cascade');
+            $table->foreignId('idParent')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }
