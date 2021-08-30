@@ -66,7 +66,7 @@
 
 
                             
-						<!-- Footer -->
+						{{-- <!-- Footer -->
 							<footer>
 								<div class="pagination">
 									<!--<a href="#" class="previous">Prev</a>-->
@@ -79,7 +79,7 @@
 									<a href="#" class="page">10</a>
 									<a href="#" class="next">Next</a>
 								</div>
-							</footer>
+							</footer> --}}
 
 					</div>
 

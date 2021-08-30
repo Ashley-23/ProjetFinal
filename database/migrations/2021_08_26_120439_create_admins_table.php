@@ -19,7 +19,7 @@ class CreateAdminsTable extends Migration
             $table->id('idAdmin');
             $table->string('nomAdmin');
             $table->string('prenomAdmin');
-            $table->string('userName')->unique();
+            $table->string('username')->unique();
             $table->date('dateNaissAdmin');
             $table->char('sexeAdmin', 1);
             $table->string('emailAdmin')->unique();

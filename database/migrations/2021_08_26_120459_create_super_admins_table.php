@@ -18,7 +18,7 @@ class CreateSuperAdminsTable extends Migration
             $table->id('idSuperAdmin');
             $table->string('nomSuperAdmin');
             $table->string('prenomSuperAdmin');
-            $table->string('userName')->unique();
+            $table->string('username')->unique();
             $table->date('dateNaissSuperAdmin');
             $table->char('sexeSuperAdmin', 1);
             $table->string('emailSuperAdmin')->unique();

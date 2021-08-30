@@ -18,6 +18,7 @@ class CreateEtablissementsTable extends Migration
         Schema::create('etablissements', function (Blueprint $table) {
             $table->id('id Etablissement');
             $table->string('nomEtablissement');
+            $table->string('username')->unique();
             $table->string('codeEtablissement');
             $table->string('userName')->unique();
             $table->string('password');

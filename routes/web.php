@@ -44,3 +44,7 @@ Route::get(
         return view('siteinscription');
     }
 )->name('vue_inscription');
+
+route::get('/index', function () {
+    return view('index');
+})->name('vue_index');

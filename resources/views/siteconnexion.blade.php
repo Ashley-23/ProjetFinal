@@ -8,34 +8,58 @@
 
 
 
-<!-- Nav -->
-<nav id="nav">
-    <ul class="links">
-        <li ><a href="{{route('vue_accueil')}}">Gestion|Ecole</a></li>
-        <li class="active"  ><a href="{{route('vue_connexion')}}">Connexion</a></li>
-        <li><a href="{{route('vue_inscription')}}">Inscription</a></li>
-    </ul>
+            <!-- Nav -->
+            <nav id="nav">
+                <ul class="links">
+                    <li ><a href="{{route('vue_accueil')}}">Gestion|Ecole</a></li>
+                    <li  class="active"  ><a href="{{route('vue_connexion')}}">Connexion</a></li>
+                    <li><a href="{{route('vue_inscription')}}">Inscription</a></li>
+                </ul>
 
-</nav>
-<!-- Main -->
-<div id="main">
-
-    <!-- Post -->
-        <section class="post">
-            <header class="major">
-                <span class="date">April 25, 2017</span>
-                <h1>This is a<br />
-                Generic Page</h1>
-                <p>Aenean ornare velit lacus varius enim ullamcorper proin aliquam<br />
-                facilisis ante sed etiam magna interdum congue. Lorem ipsum dolor<br />
-                amet nullam sed etiam veroeros.</p>
-            </header>
-            <div class="image main"><img src="images/pic01.jpg" alt="" /></div>
-            <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur sapien risus, commodo eget turpis at, elementum convallis enim turpis, lorem ipsum dolor sit amet nullam.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus. Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum.</p>
-        </section>
-
-
+            </nav>
+            <!-- Main -->
+            <div id="main">
+                <form action="" method="post">
+                    <table>
+                        <tr>
+                            <td>
+                                Nom : 
+                            </td>
+                            <td>
+                                <input type="text" name="login" id="" placeholder="login" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Mot de passe :
+                            </td>
+                            <td>
+                                <input type="password" name="" id="" required>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                   S'authentifier en tant que :
+                                    
+                            </td>
+                            <td>
+                                <select name="mdp" id="mdp"  class="form-control"  >
+                                    <option value="Eleve">Eleve</option>
+                                    <option value="Parent">Parent</option>
+                                    <option value="Professeur">Professeur</option>
+                                    <option value="Administrateur">Administrateur</option>
+                                    <option value="SuperAdministrateur">SuperAdministrateur</option>
+                                  </select>
+                            </td>
+                        </tr>
+                    </table>
+                <div class="form-group">
+                    <div>  <button type="submit" class="login-btn">  <a href="{{route('vue_index')}}"> Se connecter </a> </button> <br></div>
+                   
+                    <div class="sign-up">Vous n'avez pas de compte ? <a href="{{route('vue_inscription')}}">Inscrivez-vous</a></div>
+                </div>
+                </form>
 
 
 
