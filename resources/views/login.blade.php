@@ -42,14 +42,26 @@
                 </div>
                 <form action="http://www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/index.html" class="login-form">
                     <div class="form-group">
-                        <label>Username</label>
+                        <label>Nom d'utilisateur</label>
                         <input type="text" placeholder="Enter usrename" class="form-control">
                         <i class="far fa-envelope"></i>
                     </div>
                     <div class="form-group">
-                        <label>Password</label>
-                        <input type="text" placeholder="Enter password" class="form-control">
+                        <label>Mot de passe </label>
+                        <input type="password" placeholder="Enter password" class="form-control">
                         <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="form-group">
+                            <label>S'authentifier en tant que </label>
+                            <select name="mdp" id="mdp"  class="form-control"  >
+                            <option value="Eleve">Eleve</option>
+                            <option value="Parent">Parent</option>
+                            <option value="Professeur">Professeur</option>
+                            <option value="Administrateur">Administrateur</option>
+                            <option value="SuperAdministrateur">SuperAdministrateur</option>
+                          </select>
+                        
+                        
                     </div>
                     <div class="form-group d-flex align-items-center justify-content-between">
                         <div class="form-check">
@@ -62,7 +74,7 @@
                         <button type="submit" class="login-btn">Login</button>
                     </div>
                 </form>
-                <div class="login-social">
+                {{-- <div class="login-social">
                     <p>or sign in with</p>
                     <ul>
                         <li><a href="#" class="bg-fb"><i class="fab fa-facebook-f"></i></a></li>
@@ -70,7 +82,7 @@
                         <li><a href="#" class="bg-gplus"><i class="fab fa-google-plus-g"></i></a></li>
                         <li><a href="#" class="bg-git"><i class="fab fa-github"></i></a></li>
                     </ul>
-                </div>
+                </div> --}}
             </div>
             <div class="sign-up">Don't have an account ? <a href="#">Signup now!</a></div>
         </div>

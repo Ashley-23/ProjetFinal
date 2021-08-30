@@ -14,5 +14,33 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('login');
+    return view('siteconnexion');
 });
+//route vers l'accueil du site
+Route::get(
+    '/accueil',
+    function () {
+        return view('siteaccueil');
+    }
+)->name('vue_accueil');
+// //route vers le default du site
+// Route::get(
+//     '/Sitedefault',
+//     function () {
+//         return view('sitedefault');
+//     }
+// )->name('vue_site_default');
+//route vers la connexion
+Route::get(
+    '/connexion',
+    function () {
+        return view('siteconnexion');
+    }
+)->name('vue_connexion');
+//route vers l'inscription
+Route::get(
+    '/inscription',
+    function () {
+        return view('siteinscription');
+    }
+)->name('vue_inscription');
