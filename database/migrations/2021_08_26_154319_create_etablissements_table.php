@@ -20,7 +20,7 @@ class CreateEtablissementsTable extends Migration
             $table->string('nomEtablissement');
             $table->string('username')->unique();
             $table->string('codeEtablissement');
-            $table->string('userName')->unique();
+            $table->string('login')->unique();
             $table->string('password');
             $table->string('adresseEtablissement');
             $table->string('telephoneEtablissement');
