@@ -341,6 +341,6 @@ Route::get('/All_Students', 'AdminAffController@index')->name('all_student');
 //     }
 // )->name('vue_inscription');
 
-// route::get('/index', function () {
-//     return view('index');
-// })->name('vue_index');
+route::get('/index', function () {
+    return view('index');
+})->name('vue_index');
