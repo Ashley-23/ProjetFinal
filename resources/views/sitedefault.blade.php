@@ -33,7 +33,7 @@
 				<!-- Header -->
 					<header id="header">
                         <p>
-                            <a href="{{route('vue_siteaccueil')}}" class="logo">Se connecter</a>
+                            <a href="{{route('vue_Siteconnexion')}}" class="logo">Se connecter</a>
                             <a href="{{route('vue_siteinscription')}}" class="logo">S'inscrire</a>
                         </p>
 						
