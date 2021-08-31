@@ -262,7 +262,7 @@
                 <div class="sidebar-menu-content">
                     <ul class="nav nav-sidebar-menu sidebar-toggle-view">
                         <li class="nav-item">
-                            <a href="#" class="nav-link"><i class="flaticon-dashboard"></i><span>Dashboard</span></a>
+                            <a href="{{route('vue_admin_accueil')}}" class="nav-link"><i class="flaticon-dashboard"></i><span>Dashboard</span></a>
                             {{-- <ul class="nav sub-group-menu">
                                 <li class="nav-item">
                                     <a href="index-2.html" class="nav-link"><i class="fas fa-angle-right"></i>Admins</a>
@@ -284,15 +284,15 @@
                             <a href="#" class="nav-link"><i class="flaticon-classmates"></i><span>Eleve</span></a>
                             <ul class="nav sub-group-menu">
                                 <li class="nav-item">
-                                    <a href="all-student.html" class="nav-link"><i class="fas fa-angle-right"></i>Tous les élèves </a>
+                                    <a href="{{route('vue_admin_allstudent')}}" class="nav-link"><i class="fas fa-angle-right"></i>Tous les élèves </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="student-details.html" class="nav-link"><i
+                                    <a href="{{route('vue_admin_detailstudent')}}" class="nav-link"><i
                                             class="fas fa-angle-right"></i>Details sur les élèves </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="admit-form.html" class="nav-link"><i
-                                            class="fas fa-angle-right"></i>Formulaire</a>
+                                    <a href="{{route('vue_admin_addstudent')}}" class="nav-link"><i
+                                            class="fas fa-angle-right"></i>Ajouter Eleve</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="student-promotion.html" class="nav-link"><i
@@ -305,14 +305,14 @@
                                     class="flaticon-multiple-users-silhouette"></i><span>Professeurs</span></a>
                             <ul class="nav sub-group-menu">
                                 <li class="nav-item">
-                                    <a href="all-teacher.html" class="nav-link"><i class="fas fa-angle-right"></i>Tous les professeurs</a>
+                                    <a href="{{route('vue_admin_allteacher')}}" class="nav-link"><i class="fas fa-angle-right"></i>Tous les professeurs</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="teacher-details.html" class="nav-link"><i
+                                    <a href="{{route('vue_admin_detailteacher')}}" class="nav-link"><i
                                             class="fas fa-angle-right"></i>Details sur les professeurs</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="add-teacher.html" class="nav-link"><i class="fas fa-angle-right"></i>Ajputer un 
+                                    <a href="{{route('vue_admin_addteacher')}}" class="nav-link"><i class="fas fa-angle-right"></i>Ajouter un 
                                         professeur</a>
                                 </li>
                             </ul>
@@ -321,20 +321,20 @@
                             <a href="#" class="nav-link"><i class="flaticon-couple"></i><span>Parents</span></a>
                             <ul class="nav sub-group-menu">
                                 <li class="nav-item">
-                                    <a href="all-parents.html" class="nav-link"><i class="fas fa-angle-right"></i>Tous les 
+                                    <a href="{{route('vue_admin_allparent')}}" class="nav-link"><i class="fas fa-angle-right"></i>Tous les 
                                         Parents</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="parents-details.html" class="nav-link"><i
+                                    <a href="{{route('vue_admin_detailparent')}}" class="nav-link"><i
                                             class="fas fa-angle-right"></i>Details sur les parents</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="add-parents.html" class="nav-link"><i class="fas fa-angle-right"></i>Ajouter un 
+                                    <a href="{{route('vue_admin_addparent')}}" class="nav-link"><i class="fas fa-angle-right"></i>Ajouter un 
                                         Parent</a>
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item sidebar-nav-item">
+                        {{-- <li class="nav-item sidebar-nav-item">
                             <a href="#" class="nav-link"><i class="flaticon-books"></i><span>Library</span></a>
                             <ul class="nav sub-group-menu">
                                 <li class="nav-item">
@@ -346,20 +346,20 @@
                                         Book</a>
                                 </li>
                             </ul>
-                        </li>
+                        </li> --}}
                         <li class="nav-item sidebar-nav-item">
                             <a href="#" class="nav-link"><i class="flaticon-technological"></i><span>Comptes</span></a>
                             <ul class="nav sub-group-menu">
                                 <li class="nav-item">
-                                    <a href="all-fees.html" class="nav-link"><i class="fas fa-angle-right"></i>Frais 
+                                    <a href="{{route('vue_admin_fraisscolaire')}}" class="nav-link"><i class="fas fa-angle-right"></i>Frais 
                                         Scolaire</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="all-expense.html" class="nav-link"><i
+                                    <a href="{{route('vue_admin_depense')}}" class="nav-link"><i
                                             class="fas fa-angle-right"></i>Dépenses</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="add-expense.html" class="nav-link"><i class="fas fa-angle-right"></i>Ajouter
+                                    <a href="{{route('vue_admin_addfrais')}}" class="nav-link"><i class="fas fa-angle-right"></i>Ajouter
                                         frais</a>
                                 </li>
                             </ul>
@@ -369,56 +369,56 @@
                                     class="flaticon-maths-class-materials-cross-of-a-pencil-and-a-ruler"></i><span>Classes</span></a>
                             <ul class="nav sub-group-menu">
                                 <li class="nav-item">
-                                    <a href="all-class.html" class="nav-link"><i class="fas fa-angle-right"></i>Toutes les
+                                    <a href="{{route('vue_admin_allclass')}}" class="nav-link"><i class="fas fa-angle-right"></i>Toutes les
                                         classes</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="add-class.html" class="nav-link"><i class="fas fa-angle-right"></i>Ajouter une nouvelle 
+                                    <a href="{{route('vue_admin_addclass')}}" class="nav-link"><i class="fas fa-angle-right"></i>Ajouter une nouvelle 
                                         classe</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="all-subject.html" class="nav-link"><i
+                            <a href="{{route('vue_admin_subject')}}" class="nav-link"><i
                                     class="flaticon-open-book"></i><span>Matières</span></a>
                         </li>
                         <li class="nav-item">
-                            <a href="class-routine.html" class="nav-link"><i class="flaticon-calendar"></i><span>Class
+                            <a href="{{route('vue_admin_classroutine')}}" class="nav-link"><i class="flaticon-calendar"></i><span>Class
                                     Routine</span></a>
                         </li>
                         <li class="nav-item">
-                            <a href="student-attendence.html" class="nav-link"><i
+                            <a href="{{route('vue_admin_presence')}}" class="nav-link"><i
                                     class="flaticon-checklist"></i><span>Présences</span></a>
                         </li>
                         <li class="nav-item sidebar-nav-item">
                             <a href="#" class="nav-link"><i class="flaticon-shopping-list"></i><span>Examens</span></a>
                             <ul class="nav sub-group-menu">
                                 <li class="nav-item">
-                                    <a href="exam-schedule.html" class="nav-link"><i class="fas fa-angle-right"></i>Exam
-                                        Schedule</a>
+                                    <a href="{{route('vue_admin_horaire')}}" class="nav-link"><i class="fas fa-angle-right"></i>Exam
+                                        Horaire</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="exam-grade.html" class="nav-link"><i class="fas fa-angle-right"></i>Exam
-                                        Grades</a>
+                                    <a href="{{route('vue_admin_mark')}}" class="nav-link"><i class="fas fa-angle-right"></i>Exam
+                                        Notes</a>
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a href="transport.html" class="nav-link"><i
                                     class="flaticon-bus-side-view"></i><span>Transport</span></a>
-                        </li>
-                        <li class="nav-item">
+                        </li> --}}
+                        {{-- <li class="nav-item">
                             <a href="hostel.html" class="nav-link"><i class="flaticon-bed"></i><span>Hostel</span></a>
+                        </li> --}}
+                        <li class="nav-item">
+                            <a href="{{route('vue_admin_notice')}}" class="nav-link"><i
+                                    class="flaticon-script"></i><span>Notification</span></a>
                         </li>
                         <li class="nav-item">
-                            <a href="notice-board.html" class="nav-link"><i
-                                    class="flaticon-script"></i><span>Notice</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="messaging.html" class="nav-link"><i
+                            <a href="{{route('vue_admin_message')}}" class="nav-link"><i
                                     class="flaticon-chat"></i><span>Messages</span></a>
                         </li>
-                        <li class="nav-item sidebar-nav-item">
+                        {{-- <li class="nav-item sidebar-nav-item">
                             <a href="#" class="nav-link"><i class="flaticon-menu-1"></i><span>UI Elements</span></a>
                             <ul class="nav sub-group-menu">
                                 <li class="nav-item">
@@ -444,14 +444,14 @@
                                             class="fas fa-angle-right"></i>Widget</a>
                                 </li>
                             </ul>
-                        </li>
-                        <li class="nav-item">
+                        </li> --}}
+                        {{-- <li class="nav-item">
                             <a href="map.html" class="nav-link"><i
                                     class="flaticon-planet-earth"></i><span>Map</span></a>
-                        </li>
+                        </li> --}}
                         <li class="nav-item">
-                            <a href="account-settings.html" class="nav-link"><i
-                                    class="flaticon-settings"></i><span>Account</span></a>
+                            <a href="{{route('vue_admin_account')}}" class="nav-link"><i
+                                    class="flaticon-settings"></i><span>Compte</span></a>
                         </li>
                     </ul>
                 </div>
