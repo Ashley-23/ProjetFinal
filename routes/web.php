@@ -70,9 +70,11 @@ Route::get('/deconnexion', 'DeconnexionControler@deconnexion')->name('vue_deconn
 
 // Pour afficher tous les utilisateurs 
 
-Route::get('/admin_accueil', 'AdminAffController@allstudents')->name('admin_accueil');
-
-Route::get('/All_Students', 'AdminAffController@index')->name('all_student');
+Route::get('/admin_accueil', 'AdminAffController@accueil')->name('admin_accueil');
+//  Tous les eleves
+Route::get('/All_Students', 'AdminAffController@allstudent')->name('all_student');
+//Detail sur les eleves 
+// Route::get('/admin',)
 
 
 

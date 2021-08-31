@@ -6,6 +6,24 @@ use Illuminate\Http\Request;
 
 class AdminAffController extends Controller
 {
+
+
+
+
+    public function accueil()
+    {
+        // 
+        return view('admin.accueil');
+    }
+
+
+    // Pour afficher la page de la liste de tous les élèves 
+    public function allstudents()
+    {
+        // 
+        return view('admin.Students.allstudent')
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -15,11 +33,6 @@ class AdminAffController extends Controller
     {
         //
         return view('Admin/Students/allstudent');
-    }
-    // Pour afficher la page de la liste de tous les élèves 
-    public function allstudents()
-    {
-        return view('admin.accueil');
     }
 
     /**
