@@ -34,7 +34,7 @@
                                 Mot de passe :
                             </td>
                             <td>
-                                <input type="password" name="" id="" required>
+                                <input type="password" name="" id="" placeholder="Mot de passe" required>
                             </td>
                         </tr>
                         

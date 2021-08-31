@@ -11,6 +11,6 @@ class DeconnexionControler extends Controller
     public function Deconnexion()
     {
         auth()->logout();
-        return Redirect('/connexion');
+        return view('admin/lock-screen');
     }
 }

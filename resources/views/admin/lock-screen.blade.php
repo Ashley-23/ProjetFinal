@@ -32,10 +32,10 @@
                   <input type="password" class="form-control text-center" id="examplePassword1" placeholder="Password">
                 </div>
                 <div class="mt-5">
-                  <a class="btn btn-block btn-success btn-lg font-weight-medium" href=" ">Ouvrir</a>
+                  <a class="btn btn-block btn-success btn-lg font-weight-medium" href="">Ouvrir</a>
                 </div>
                 <div class="mt-3 text-center">
-                  <a href="/deconnexion" class="auth-link text-white">se connecter à l’aide d’un autre compte</a>
+                  <a href="{{route('vue_connexion')}}" class="auth-link text-white">se connecter à l’aide d’un autre compte</a>
                 </div>
               </form>
             </div>

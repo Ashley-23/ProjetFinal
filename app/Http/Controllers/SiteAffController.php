@@ -4,8 +4,35 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class AdminAffController extends Controller
+class SiteAffController extends Controller
 {
+
+    // Pour afficher la page d'accueil du site
+
+    public function accueil()
+    {
+        return view('siteaccueil');
+    }
+
+    // Pour afficher la page de connexion du site
+
+    public function connexion()
+    {
+        return view('siteconnexion');
+    }
+
+    // Pour afficher la page d'inscription du site 
+
+    public function inscription()
+    {
+        return view('siteinscription');
+    }
+
+
+
+
+
+
     /**
      * Display a listing of the resource.
      *
@@ -14,12 +41,6 @@ class AdminAffController extends Controller
     public function index()
     {
         //
-        return view('Admin/Students/allstudent');
-    }
-    // Pour afficher la page de la liste de tous les élèves 
-    public function allstudents()
-    {
-        return view('admin.accueil');
     }
 
     /**

@@ -2,8 +2,9 @@
 
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AdminAffController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\SiteAffController;
+use App\Http\Controllers\AdminAffController;
 use App\Http\Controllers\DeconnexionControler;
 
 
@@ -23,13 +24,293 @@ use App\Http\Controllers\DeconnexionControler;
 //     return view('admin/students/allstudent');
 // });
 
-Route::get('/', 'AdminAffController@index')->name('all_student');
 
-// Route::get('/', 'AdminController@index')->name('all_student');
-// Route::resource('adminAff', AdminController::class);
+//                                                   Routes pour afficher le site vitrine
+
+
+//          Accueil
+
+Route::get('/', 'SiteAffController@accueil')->name('vue_siteaccueil');
+
+//          Connexion
+
+Route::get('/connexion', 'SiteAffController@connexion')->name('vue_Siteconnexion');
+
+//          Inscription
+
+Route::get('/inscription', 'SiteAffController@inscription')->name('vue_siteinscription');
+
+
+
+
 
 // pour la déconnexion
 Route::get('/deconnexion', 'DeconnexionControler@deconnexion')->name('vue_deconnexion');
+
+
+
+
+
+
+//                                                                  Routes pour les superadministrateurs
+
+
+
+
+
+
+
+
+
+
+//                                                                  Routes pour les administrateurs
+
+// Pour afficher la page d'acccueil 
+
+
+// Pour afficher tous les utilisateurs 
+
+Route::get('/admin_accueil', 'AdminAffController@allstudents')->name('admin_accueil');
+
+Route::get('/All_Students', 'AdminAffController@index')->name('all_student');
+
+
+
+//                                                                  Routes pour les professeurs
+
+
+
+
+
+
+//                                                                  Routes pour les eleves
+
+
+
+
+
+
+
+//                                                                  Routes pour les parents
+
+
+
+
+
+
+
+//                                                                  Routes pour l'etablissement
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //route vers l'accueil du site
 Route::get(

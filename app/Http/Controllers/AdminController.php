@@ -15,7 +15,6 @@ class AdminController extends Controller
     public function index()
     {
         //
-        return view('Admin/Students/allstudent');
     }
 
     /**
