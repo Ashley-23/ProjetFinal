@@ -36,6 +36,13 @@
                                         <input type="text" name="prenom" id="" required placeholder="prenoms">
                                     </td>
                                 </tr>
+                                 {{-- pour la saisie du login --}}
+                                 <tr>
+                                    <td> Login :</td>
+                                    <td> 
+                                        <input type="text" name="login" id="" required placeholder="Login">
+                                    </td>
+                                </tr>
                         
                                  {{-- pour la saisie de la date de naissance --}}
                                  <tr>

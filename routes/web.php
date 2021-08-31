@@ -1,6 +1,12 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminAffController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\DeconnexionControler;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,9 +19,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('siteconnexion');
-});
+// Route::get('/', function () {
+//     return view('admin/students/allstudent');
+// });
+
+Route::get('/', 'AdminAffController@index')->name('all_student');
+
+// Route::get('/', 'AdminController@index')->name('all_student');
+// Route::resource('adminAff', AdminController::class);
+
+// pour la déconnexion
+Route::get('/deconnexion', 'DeconnexionControler@deconnexion')->name('vue_deconnexion');
+
 //route vers l'accueil du site
 Route::get(
     '/accueil',
