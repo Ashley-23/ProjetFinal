@@ -14,9 +14,9 @@
 				<!-- Nav -->
                 <nav id="nav">
                     <ul class="links">
-                        <li class="active"><a href="{{route('vue_accueil')}}">Gestion|Ecole</a></li>
-                        <li><a href="{{route('vue_connexion')}}">Connexion</a></li>
-                        <li><a href="{{route('vue_inscription')}}">Inscription</a></li>
+                        <li class="active"><a href="{{route('vue_siteaccueil')}}">Gestion|Ecole</a></li>
+                        <li><a href="{{route('vue_Siteconnexion')}}">Connexion</a></li>
+                        <li><a href="{{route('vue_siteinscription')}}">Inscription</a></li>
                     </ul>
                 
                 </nav>

@@ -16,7 +16,7 @@
                 <h3>Admin Dashboard</h3>
                 <ul>
                     <li>
-                        <a href="{{route('vue_accueil')}}">Voir site</a>
+                        <a href="{{route('vue_siteaccueil')}}">Voir site</a>
                     </li>
                     <li>Admin</li>
                 </ul>

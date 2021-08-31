@@ -312,35 +312,35 @@ Route::get('/All_Students', 'AdminAffController@index')->name('all_student');
 
 
 
-//route vers l'accueil du site
-Route::get(
-    '/accueil',
-    function () {
-        return view('siteaccueil');
-    }
-)->name('vue_accueil');
-// //route vers le default du site
+// //route vers l'accueil du site
 // Route::get(
-//     '/Sitedefault',
+//     '/accueil',
 //     function () {
-//         return view('sitedefault');
+//         return view('siteaccueil');
 //     }
-// )->name('vue_site_default');
-//route vers la connexion
-Route::get(
-    '/connexion',
-    function () {
-        return view('siteconnexion');
-    }
-)->name('vue_connexion');
-//route vers l'inscription
-Route::get(
-    '/inscription',
-    function () {
-        return view('siteinscription');
-    }
-)->name('vue_inscription');
+// )->name('vue_accueil');
+// // //route vers le default du site
+// // Route::get(
+// //     '/Sitedefault',
+// //     function () {
+// //         return view('sitedefault');
+// //     }
+// // )->name('vue_site_default');
+// //route vers la connexion
+// Route::get(
+//     '/connexion',
+//     function () {
+//         return view('siteconnexion');
+//     }
+// )->name('vue_connexion');
+// //route vers l'inscription
+// Route::get(
+//     '/inscription',
+//     function () {
+//         return view('siteinscription');
+//     }
+// )->name('vue_inscription');
 
-route::get('/index', function () {
-    return view('index');
-})->name('vue_index');
+// route::get('/index', function () {
+//     return view('index');
+// })->name('vue_index');

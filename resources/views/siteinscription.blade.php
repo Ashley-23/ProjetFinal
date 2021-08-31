@@ -10,9 +10,9 @@
 				<!-- Nav -->
                 <nav id="nav">
                     <ul class="links">
-                        <li ><a href="{{route('vue_accueil')}}">Gestion|Ecole</a></li>
-                        <li><a href="{{route('vue_connexion')}}">Connexion</a></li>
-                        <li class="active" ><a href="{{route('vue_inscription')}}">Inscription</a></li>
+                        <li ><a href="{{route('vue_siteaccueil')}}">Gestion|Ecole</a></li>
+                        <li><a href="{{route('vue_Siteconnexion')}}">Connexion</a></li>
+                        <li class="active" ><a href="{{route('vue_siteinscription')}}">Inscription</a></li>
                     </ul>
                 
                 </nav>
@@ -143,7 +143,7 @@
                             <div class="form-group">
                                 <div>  <button type="submit" class="login-btn">  <a href="{{route('vue_index')}}"> S'inscrire </a> </button> </div>
                                
-                                <div class="sign-up">Vous avez déjà un compte ? <a href="{{route('vue_connexion')}}">Connectez-vous</a> </div>
+                                <div class="sign-up">Vous avez déjà un compte ? <a href="{{route('vue_Siteconnexion')}}">Connectez-vous</a> </div>
                             </div>
 
 

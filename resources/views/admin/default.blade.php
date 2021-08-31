@@ -40,7 +40,7 @@
         <div class="navbar navbar-expand-md header-menu-one bg-light">
             <div class="nav-bar-header-one">
                 <div class="header-logo">
-                    <a href="{{route('vue_accueil')}}">
+                    <a href="{{route('vue_siteaccueil')}}">
                       <h2>   Gestion|Ecole </h2> 
                         {{-- <img src="img/logo.png" alt="logo"> --}}
                     </a>
