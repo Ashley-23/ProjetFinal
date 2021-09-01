@@ -30,7 +30,7 @@ use App\Http\Controllers\DeconnexionControler;
 
 //          Accueil
 Route::get('/', function () {
-    return view('admin.default');
+    return view('superadministrateur/default');
 });
 
 Route::get('/siteaccueil', 'SiteAffController@accueil')->name('vue_siteaccueil');
@@ -74,8 +74,6 @@ Route::get('/deconnexion', 'DeconnexionControler@deconnexion')->name('vue_deconn
 // Pour afficher tous les utilisateurs 
 
 Route::get('/adminaccueil', 'AdminAffController@accueil')->name('vue_admin_accueil');
-
-
 
 
 

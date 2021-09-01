@@ -49,6 +49,7 @@
                                     <option value="Parent">Parent</option>
                                     <option value="Professeur">Professeur</option>
                                     <option value="Administrateur">Administrateur</option>
+                                    <option value="Etablissement">Etablissement</option>
                                     <option value="SuperAdministrateur">SuperAdministrateur</option>
                                   </select>
                             </td>
