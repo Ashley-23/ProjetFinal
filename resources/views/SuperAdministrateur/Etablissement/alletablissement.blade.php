@@ -189,7 +189,7 @@
                                     <li><a href="#"><i class="flaticon-list"></i>Task</a></li>
                                     <li><a href="#"><i class="flaticon-chat-comment-oval-speech-bubble-with-text-lines"></i>Message</a></li>
                                     <li><a href="#"><i class="flaticon-gear-loading"></i>Account Settings</a></li>
-                                    <li><a href="login.html"><i class="flaticon-turn-off"></i>Log Out</a></li>
+                                    <li><a href="{{route('vue_superadmin_lockscreen')}}"><i class="flaticon-turn-off"></i>Log Out</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -211,21 +211,21 @@
                 <div class="sidebar-menu-content">
                     <ul class="nav nav-sidebar-menu sidebar-toggle-view">
                         <li class="nav-item ">
-                            <a href="#" class="nav-link  menu-active"><i class="flaticon-dashboard"></i><span>Dashboard</span></a>
+                            <a href="{{route('vue_superadmin_accueil')}}" class="nav-link  menu-active"><i class="flaticon-dashboard"></i><span>Dashboard</span></a>
                         </li>
                         <li class="nav-item sidebar-nav-item">
                             <a href="#" class="nav-link"><i class="flaticon-classmates"></i><span>Etablissements</span></a>
-                            <ul class="nav sub-group-menu">
+                            <ul class="nav sub-group-menu sub-group-active">
                                 <li class="nav-item">
-                                    <a href="all-student.html" class="nav-link"><i class="fas fa-angle-right"></i>Tous les 
+                                    <a href="{{route('vue_superadmin_alletablissement')}}" class="nav-link menu-active"><i class="fas fa-angle-right"></i>Tous les 
                                         etablissements</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="student-details.html" class="nav-link"><i
+                                    <a href="{{route('vue_superadmin_detailetablissement')}}" class="nav-link"><i
                                             class="fas fa-angle-right"></i>Details etablissement</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="admit-form.html" class="nav-link"><i
+                                    <a href="{{route('vue_superadmin_addetablissement')}}" class="nav-link"><i
                                             class="fas fa-angle-right"></i>Ajouter etablissement</a>
                                 </li>
                             </ul>
@@ -235,26 +235,26 @@
                                     class="flaticon-multiple-users-silhouette"></i><span>Administrateurs</span></a>
                             <ul class="nav sub-group-menu">
                                 <li class="nav-item">
-                                    <a href="all-teacher.html" class="nav-link"><i class="fas fa-angle-right"></i>Tous les 
+                                    <a href="{{route('vue_superadmin_alladmin')}}" class="nav-link"><i class="fas fa-angle-right"></i>Tous les 
                                         administrateurs</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="teacher-details.html" class="nav-link"><i
+                                    <a href="{{route('vue_superadmin_detailadmin')}}" class="nav-link"><i
                                             class="fas fa-angle-right"></i>Details administrateurs</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="add-teacher.html" class="nav-link"><i class="fas fa-angle-right"></i>Ajouter
+                                    <a href="{{route('vue_superadmin_addadmin')}}" class="nav-link"><i class="fas fa-angle-right"></i>Ajouter
                                         Administrateur</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="messaging.html" class="nav-link"><i
+                            <a href="{{route('vue_superadmin_message')}}" class="nav-link"><i
                                     class="flaticon-chat"></i><span>Message</span></a>
                         </li>
                         
                         <li class="nav-item">
-                            <a href="account-settings.html" class="nav-link"><i
+                            <a href="{{route('vue_superadmin_notice')}}" class="nav-link"><i
                                     class="flaticon-settings"></i><span>Notification</span></a>
                         </li>
                     </ul>
