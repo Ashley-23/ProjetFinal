@@ -12,8 +12,9 @@
         <div class="navbar navbar-expand-md header-menu-one bg-light">
             <div class="nav-bar-header-one">
                 <div class="header-logo">
-                    <a href="index-2.html">
-                        <img src="img/logo.png" alt="logo">
+                    <a href="http://127.0.0.1:8000/siteaccueil">
+                      <h2>   Gestion|Ecole </h2> 
+                        
                     </a>
                 </div>
                  <div class="toggle-button sidebar-toggle">
