@@ -31,7 +31,7 @@ use App\Http\Controllers\SuperAdminAffController;
 
 //          Accueil
 Route::get('/', function () {
-    return view('superadministrateur/default');
+    return view('superadministrateur/accueil');
 });
 
 Route::get('/siteaccueil', 'SiteAffController@accueil')->name('vue_siteaccueil');
