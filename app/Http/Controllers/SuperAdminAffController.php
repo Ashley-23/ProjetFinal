@@ -48,7 +48,7 @@ class SuperAdminAffController extends Controller
         return view('SuperAdministrateur.Admin.alladmin');
     }
     // Pour voir les détails sur un administrateur 
-    public function detailadministrateur()
+    public function detailadmin()
     {
         // 
         return view('SuperAdministrateur.Admin.detailadmin');

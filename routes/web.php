@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\SiteAffController;
 use App\Http\Controllers\AdminAffController;
 use App\Http\Controllers\DeconnexionControler;
+use App\Http\Controllers\SuperAdminAffController;
 
 
 
@@ -58,9 +59,28 @@ Route::get('/deconnexion', 'DeconnexionControler@deconnexion')->name('vue_deconn
 //                                                                  Routes pour les superadministrateurs
 
 
-// Pour afficher 
-
-
+// Pour afficher la page d'accueil 
+Route::get('/superadmin_accueil', 'SuperAdminAffController@accueil')->name('vue_superadmin_accueil');
+// Pour afficher le lock-screen 
+Route::get('/superadmin_lock-screen', 'SuperAdminAffController@lockscreen')->name('vue_superadmin_lockscreen');
+//                                ETABLISSEMENTS
+// Pour afficher tous les etablissements 
+Route::get('/superadmin_alletablissement', 'SuperAdminAffController@alletablissement')->name('vue_superadmin_alletablissement');
+// Pour avoir des détails sur les etablissements 
+Route::get('/superadmin_detailetablissement', 'SuperAdminAffController@detailetablissement')->name('vue_superadmin_detailetablissement');
+// Pour ajouter un etablissement
+Route::get('/superadmin_addetablissement', 'SuperAdminAffController@addetablissement')->name('vue_superadmin_addetablissement');
+//                               ADMINISTRATEURS
+// Pour afficher tous les administrateurs 
+Route::get('/superadmin_alladmin', 'SuperAdminAffController@alladmin')->name('vue_superadmin_alladmin');
+// Pour avoir des détails sur les administrateurs 
+Route::get('/superadmin_detailadmin', 'SuperAdminAffController@detailadmin')->name('vue_superadmin_detailadmin');
+// Pour ajouter un administrateur 
+Route::get('/superadmin_addadmin', 'SuperAdminAffController@addadmin')->name('vue_superadmin_addadmin');
+//                               NOTIFICATIONS
+Route::get('/superadmin_notice', 'SuperAdminAffController@notice')->name('vue_superadmin_notice');
+//                               MESSAGES
+Route::get('/superadmin_message', 'SuperAdminAffController@message')->name('vue_superadmin_message');
 
 
 
