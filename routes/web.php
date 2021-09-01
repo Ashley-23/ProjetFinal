@@ -58,7 +58,7 @@ Route::get('/deconnexion', 'DeconnexionControler@deconnexion')->name('vue_deconn
 //                                                                  Routes pour les superadministrateurs
 
 
-
+// Pour afficher 
 
 
 
@@ -69,9 +69,6 @@ Route::get('/deconnexion', 'DeconnexionControler@deconnexion')->name('vue_deconn
 //                                                                  Routes pour les administrateurs
 
 // Pour afficher la page d'acccueil 
-
-
-// Pour afficher tous les utilisateurs 
 
 Route::get('/adminaccueil', 'AdminAffController@accueil')->name('vue_admin_accueil');
 

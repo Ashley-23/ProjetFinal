@@ -2,11 +2,22 @@
 
 namespace App\Http\Controllers;
 
+use Facade\FlareClient\View;
 use Illuminate\Http\Request;
 
 class SuperAdminAffController extends Controller
 {
+    //                                          ACCUEIL 
+    public function accueil()
+    {
+        return view('SuperAdministrateur.accueil');
+    }
 
+    //                                          LOCK-SCREEN
+    public function lockscreen()
+    {
+        return view('SuperAdministrateur.lock-screen');
+    }
 
 
     //                                          ETABLISSEMENT
