@@ -58,6 +58,7 @@ use App\Http\Controllers\SuperAdminAffController;
 //     return view('superadministrateur/accueil');
 // });
 
+
 Route::get('/siteaccueil', 'SiteAffController@accueil')->name('vue_siteaccueil');
 
 //          Connexion
@@ -80,7 +81,7 @@ Route::get('/deconnexion', 'DeconnexionControler@deconnexion')->name('vue_deconn
 
 
 
-//                                                                  Routes pour les superadministrateurs
+//                                                                 Routes pour les superadministrateurs
 
 
 // Pour afficher la page d'accueil 
