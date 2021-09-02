@@ -1,6 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+// use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\SiteAffController;
+use App\Http\Controllers\AdminAffController;
+use App\Http\Controllers\DeconnexionControler;
+use App\Http\Controllers\SuperAdminAffController;
+use App\Http\Controllers\connexionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,12 +32,7 @@ require __DIR__ . '/auth.php';
 
 
 
-// use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AdminController;
-use App\Http\Controllers\SiteAffController;
-use App\Http\Controllers\AdminAffController;
-use App\Http\Controllers\DeconnexionControler;
-use App\Http\Controllers\SuperAdminAffController;
+
 
 
 
@@ -83,6 +85,7 @@ Route::get('/deconnexion', 'DeconnexionControler@deconnexion')->name('vue_deconn
 
 //                                                                 Routes pour les superadministrateurs
 
+Route::get('/ash', 'connexionController@accueiladmin')->middleware(['auth']);
 
 // Pour afficher la page d'accueil 
 Route::get('/superadmin_accueil', 'SuperAdminAffController@accueil')->name('vue_superadmin_accueil');

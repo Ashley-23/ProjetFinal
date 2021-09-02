@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ConnexionController extends Controller
+class connexionController extends Controller
 {
+
     // Permet de vérifier si l'utilisateur est connecté avant de le diriger vers les routes en dessous 
     public function __construct()
     {
@@ -49,10 +50,6 @@ class ConnexionController extends Controller
         // 
         return view('SuperAdministrateur.accueil');
     }
-
-
-
-
 
 
 
