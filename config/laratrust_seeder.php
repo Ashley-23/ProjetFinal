@@ -12,21 +12,31 @@ return [
     'truncate_tables' => true,
 
     'roles_structure' => [
-        'superadministrator' => [
+        'superadmin' => [
             'users' => 'c,r,u,d',
             'payments' => 'c,r,u,d',
             'profile' => 'r,u'
         ],
-        'administrator' => [
+        'admin' => [
             'users' => 'c,r,u,d',
             'profile' => 'r,u'
         ],
-        'user' => [
+        'eleve' => [
             'profile' => 'r,u',
         ],
-        'role_name' => [
-            'module_1_name' => 'c,r,u,d',
-        ]
+        'relative' => [
+            'profile' => 'r,u',
+        ],
+        'professeur' => [
+            'profile' => 'r,u',
+        ],
+        'etablissement' => [
+            'profile' => 'r,u',
+        ],
+
+        // 'role_name' => [
+        //     'module_1_name' => 'c,r,u,d',
+        // ]
     ],
 
     'permissions_map' => [
