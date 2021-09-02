@@ -12,12 +12,56 @@
         <form method="POST" action="{{ route('register') }}">
             @csrf
 
+
+
             <!-- Name -->
             <div>
+                <x-label for="nom" :value="__('Nom')" />
+
+                <x-input id="nom" class="block mt-1 w-full" type="text" name="nom" :value="old('nom')" required autofocus />
+            </div>
+{{-- prenom --}}
+            <div>
+                <x-label for="prenom" :value="__('Prenom')" />
+
+                <x-input id="prenom" class="block mt-1 w-full" type="text" name="prenom" :value="old('prenom')" required autofocus />
+            </div>
+{{-- login --}}
+            <div>
+                <x-label for="Login" :value="__('Login')" />
+
+                <x-input id="login" class="block mt-1 w-full" type="text" name="login" :value="old('login')" required autofocus />
+            </div>
+{{-- date de naissance  --}}
+
+            <div>
+                <x-label for="dateNaiss" :value="__('Date de naissance')" />
+
+                <x-input id="datenaiss" class="block mt-1 w-full" type="date" name="datenaiss" :value="old('datenaiss')" required autofocus />
+            </div>
+
+{{-- sexe --}}
+
+
+                <div class="mt-4">
+                    <x-label for="sexe" :value="__(' Sexe ')" />
+
+                <select name="sexe" class="block mt-1 w-full border-gray-300
+                focus:border-indigo-300 focus:ring-indigo-200
+                focus:ring-opacity-50 rounded-md shaddow-sm ">
+
+                        <option value="m"> Masculin </option>
+                        <option value="f"> Feminin </option>
+
+                    </select>
+
+                </div>
+
+            {{-- <div>
                 <x-label for="name" :value="__('Nom')" />
 
                 <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
-            </div>
+            </div> --}}
 
             <!-- Email Address -->
             <div class="mt-4">
@@ -25,6 +69,13 @@
 
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
             </div>
+            {{-- adresse --}}
+            <div>
+                <x-label for="adresse" :value="__('Adresse')" />
+
+                <x-input id="adresse" class="block mt-1 w-full" type="text" name="adresse" :value="old('adresse')" required autofocus />
+            </div>
+
 
             <!-- Password -->
             <div class="mt-4">
@@ -58,7 +109,7 @@
                     <option value="etablissement"> Etablissement </option>
                     <option value="Admin"> Administrateur </option>
                     <option value="SuperAdmin"> Super Administrateur </option>
-
+ 
                 </select>
 
             </div>

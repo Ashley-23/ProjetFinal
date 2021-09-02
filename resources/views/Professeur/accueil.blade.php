@@ -203,7 +203,37 @@
                                 <li><a href="#"><i class="flaticon-list"></i>Task</a></li>
                                 <li><a href="#"><i class="flaticon-chat-comment-oval-speech-bubble-with-text-lines"></i>Message</a></li>
                                 <li><a href="#"><i class="flaticon-gear-loading"></i>Account Settings</a></li>
-                                <li><a href="login.html"><i class="flaticon-turn-off"></i>Log Out</a></li>
+                                {{-- <li><a href="login.html"><i class="flaticon-turn-off"></i>Log Out</a></li> --}}
+
+
+                                {{-- <li>
+                                    <x-slot name="content">
+                                    <!-- Authentication -->
+                                    <form method="POST" action="{{ route('logout') }}">
+                                        @csrf
+
+                                        <x-dropdown-link :href="route('logout')"
+                                                onclick="event.preventDefault();
+                                                            this.closest('form').submit();">
+                                            {{ __('Log Out') }}
+                                        </x-dropdown-link>
+                                    </form>
+                                </x-slot>
+                                </li> --}}
+                                <li>
+
+                                    <form method="POST" action="{{ route('logout') }}">
+                                        @csrf
+
+                                        <x-dropdown-link :href="route('logout')"
+                                                onclick="event.preventDefault();
+                                                            this.closest('form').submit();">
+                                            {{ __('Deconnexion') }}
+                                        </x-dropdown-link>
+                                    </form>
+
+                                </li>
+
                             </ul>
                         </div>
                     </div>

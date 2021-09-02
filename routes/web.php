@@ -5,9 +5,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\SiteAffController;
 use App\Http\Controllers\AdminAffController;
+use App\Http\Controllers\connexionController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DeconnexionControler;
 use App\Http\Controllers\SuperAdminAffController;
-use App\Http\Controllers\connexionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +29,8 @@ Route::get('/', function () {
 
 Route::group(['middleware' => ['auth']], function () {
     // 
-    Route::get('/accueil', 'App\Http\Controllers\DashboardController@index')
+
+    Route::get('/dashboard', 'DashboardController@index')
         ->name('dashboard');
 });
 
@@ -94,7 +96,7 @@ Route::get('/deconnexion', 'DeconnexionControler@deconnexion')->name('vue_deconn
 
 //                                                                 Routes pour les superadministrateurs
 
-Route::get('/ash', 'connexionController@accueiladmin')->middleware(['auth']);
+// Route::get('/ash', 'connexionController@accueiladmin')->middleware(['auth']);
 
 // Pour afficher la page d'accueil 
 Route::get('/superadmin_accueil', 'SuperAdminAffController@accueil')->name('vue_superadmin_accueil');
@@ -127,54 +129,54 @@ Route::get('/superadmin_message', 'SuperAdminAffController@message')->name('vue_
 
 // Pour afficher la page d'acccueil 
 
-Route::get('/adminaccueil', 'AdminAffController@accueil')->name('vue_admin_accueil');
+Route::get('/admin_accueil', 'AdminAffController@accueil')->name('vue_admin_accueil');
 
 
 
 //  Tous les eleves
-Route::get('/AllStudent', 'AdminAffController@allstudent')->name('vue_admin_allstudent');
+Route::get('/admin_AllStudent', 'AdminAffController@allstudent')->name('vue_admin_allstudent');
 //Detail sur les eleves 
-Route::get('/detailstudent', 'AdminAffController@detailstudent')->name('vue_admin_detailstudent');
+Route::get('/admin_detailstudent', 'AdminAffController@detailstudent')->name('vue_admin_detailstudent');
 // Ajouter eleve
-Route::get('/AddStudent', 'AdminAffController@addstudent')->name('vue_admin_addstudent');
+Route::get('/admin_AddStudent', 'AdminAffController@addstudent')->name('vue_admin_addstudent');
 // tous les profs
-Route::get('/Allteacher', 'AdminAffController@allteacher')->name('vue_admin_allteacher');
+Route::get('/admin_Allteacher', 'AdminAffController@allteacher')->name('vue_admin_allteacher');
 // details profs
-Route::get('/Detailteacher', 'AdminAffController@detailteacher')->name('vue_admin_detailteacher');
+Route::get('/admin_Detailteacher', 'AdminAffController@detailteacher')->name('vue_admin_detailteacher');
 // ajouter prof 
-Route::get('/Addteacher', 'AdminAffController@addteacher')->name('vue_admin_addteacher');
+Route::get('/admin_Addteacher', 'AdminAffController@addteacher')->name('vue_admin_addteacher');
 // tous les parents
-Route::get('/allparent', 'AdminAffController@allparent')->name('vue_admin_allparent');
+Route::get('/admin_allparent', 'AdminAffController@allparent')->name('vue_admin_allparent');
 // details parents
-Route::get('/detailparent', 'AdminAffController@detailparent')->name('vue_admin_detailparent');
+Route::get('/admin_detailparent', 'AdminAffController@detailparent')->name('vue_admin_detailparent');
 // ajouter parent
-Route::get('/addparent', 'AdminAffController@addparent')->name('vue_admin_addparent');
+Route::get('/admin_addparent', 'AdminAffController@addparent')->name('vue_admin_addparent');
 // frais scolaire
-Route::get('/fraisscolaire', 'AdminAffController@fraisscolaire')->name('vue_admin_fraisscolaire');
+Route::get('/admin_fraisscolaire', 'AdminAffController@fraisscolaire')->name('vue_admin_fraisscolaire');
 // depenses 
-Route::get('/depense', 'AdminAffController@depense')->name('vue_admin_depense');
+Route::get('/admin_depense', 'AdminAffController@depense')->name('vue_admin_depense');
 // ajouter frais 
-Route::get('/addfrais', 'AdminAffController@addfrais')->name('vue_admin_addfrais');
+Route::get('/admin_addfrais', 'AdminAffController@addfrais')->name('vue_admin_addfrais');
 // toutes les classes
-Route::get('/allclass', 'AdminAffController@allclass')->name('vue_admin_allclass');
+Route::get('/admin_allclass', 'AdminAffController@allclass')->name('vue_admin_allclass');
 // ajouter classe 
-Route::get('/addclass', 'AdminAffController@addclass')->name('vue_admin_addclass');
+Route::get('/admin_addclass', 'AdminAffController@addclass')->name('vue_admin_addclass');
 // examen horaire 
-Route::get('/horaire', 'AdminAffController@horaire')->name('vue_admin_horaire');
+Route::get('/admin_horaire', 'AdminAffController@horaire')->name('vue_admin_horaire');
 // examen note 
-Route::get('/mark', 'AdminAffController@mark')->name('vue_admin_mark');
+Route::get('/admin_mark', 'AdminAffController@mark')->name('vue_admin_mark');
 // matieres 
-Route::get('/subject', 'AdminAffController@subject')->name('vue_admin_subject');
+Route::get('/admin_subject', 'AdminAffController@subject')->name('vue_admin_subject');
 // classe routine 
-Route::get('/classroutine', 'AdminAffController@classroutine')->name('vue_admin_classroutine');
+Route::get('/admin_classroutine', 'AdminAffController@classroutine')->name('vue_admin_classroutine');
 // presence 
-Route::get('/presence', 'AdminAffController@presence')->name('vue_admin_presence');
+Route::get('/admin_presence', 'AdminAffController@presence')->name('vue_admin_presence');
 // notification 
-Route::get('/notice', 'AdminAffController@notice')->name('vue_admin_notice');
+Route::get('/admin_notice', 'AdminAffController@notice')->name('vue_admin_notice');
 // messages 
-Route::get('/message', 'AdminAffController@Message')->name('vue_admin_message');
+Route::get('/admin_message', 'AdminAffController@Message')->name('vue_admin_message');
 //  compte 
-Route::get('/account', 'AdminAffController@account')->name('vue_admin_account');
+Route::get('/admin_account', 'AdminAffController@account')->name('vue_admin_account');
 
 
 

@@ -2,7 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Eleve;
+use App\Models\Professeur;
+use App\Models\Admin;
+use App\Models\SuperAdmin;
+use App\Models\Etablissement;
+use App\Models\Relative;
 use Illuminate\Http\Request;
+
+use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
 {
@@ -13,7 +21,33 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        //
+        // on va rediriger les utilisateurs vers ces différentes pages s'ils sont authentifiés 
+        // eleve
+        // relative
+        // professeur 
+        // etablissement 
+        // admin 
+        // superadmin 
+
+        if (Auth::user()->hasRole('eleve')) {
+            // dd('Je suis un eleve');
+            return view('Eleve.accueil');
+        } elseif (Auth::user()->hasRole('relative')) {
+            // dd('Je suis un parent');
+            return view('Relative.accueil');
+        } elseif (Auth::user()->hasRole('professeur')) {
+            // dd('Je suis un professeur');
+            return view('Professeur.accueil');
+        } elseif (Auth::user()->hasRole('etablissement')) {
+            // dd('Je suis un etablissement');
+            return view('Etablissement.accueil');
+        } elseif (Auth::user()->hasRole('admin')) {
+            // dd('Je suis un admin');
+            return view('admin.accueil');
+        } elseif (Auth::user()->hasRole('superadmin')) {
+            // dd('Je suis un superadmin');
+            return view('SuperAdministrateur.accueil');
+        }
     }
 
     /**
