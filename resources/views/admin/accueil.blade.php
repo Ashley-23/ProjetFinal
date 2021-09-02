@@ -190,18 +190,43 @@
                     <li class="navbar-item dropdown header-admin">
                         <a class="navbar-nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
                             aria-expanded="false">
-                            <div class="admin-title">
-                                <h5 class="item-title">Stevne Zone</h5>
-                                <span>Admin</span>
-                            </div>
+                            <div  class="admin-title" >
+                                {{ Auth::user()->nom }}
+                                {{ Auth::user()->prenom }}
+        
+                                    <span>Admin</span>
+                            </div>       
+                            
+        
+
+                            
                             <div class="admin-img">
                                 <img src="img/figure/admin.jpg" alt="Admin">
                             </div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
                             <div class="item-header">
-                                <h6 class="item-title">Steven Zone</h6>
+                                <h6 class="item-title">
+                                    {{ Auth::user()->nom }}
+                                    {{ Auth::user()->prenom }}
+                                </h6>
                             </div>
+                            {{-- Affichage du nom automatique au niveau de Laravel --}}
+
+                                {{-- <x-slot name="trigger">
+                                    <button class="flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+                                        <div>{{ Auth::user()->name }}</div>
+            
+                                        <div class="ml-1">
+                                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                            </svg>
+                                        </div>
+                                    </button>
+                                </x-slot> --}}
+        
+
+                            {{-- Fin Affichage du nom automatique au niveau de Laravel --}}
                             <div class="item-content">
                                 <ul class="settings-list">
                                     <li><a href="#"><i class="flaticon-user"></i>My Profile</a></li>
