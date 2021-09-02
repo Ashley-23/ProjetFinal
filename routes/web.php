@@ -30,8 +30,11 @@ Route::get('/', function () {
 Route::group(['middleware' => ['auth']], function () {
     // 
 
+
     Route::get('/dashboard', 'DashboardController@index')
         ->name('dashboard');
+
+    // dd('je suis là');
 });
 
 

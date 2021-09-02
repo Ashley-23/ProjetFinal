@@ -19,8 +19,15 @@ class DashboardController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        // Quand c'était resté bloqué dans une session, on a fait :
+        // 1: public function index(Request $request) au lie ude public function index()
+        // 2:  $request->session()->flush();
+        // 3: on a re-actualiser la page et badaboum, ça a marché 
+
+
+        // Dieu merci 
         // on va rediriger les utilisateurs vers ces différentes pages s'ils sont authentifiés 
         // eleve
         // relative
@@ -29,6 +36,7 @@ class DashboardController extends Controller
         // admin 
         // superadmin 
 
+        //dd("Peut-être que c'est moi ");
         if (Auth::user()->hasRole('eleve')) {
             // dd('Je suis un eleve');
             return view('Eleve.accueil');
