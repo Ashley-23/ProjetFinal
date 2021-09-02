@@ -24,9 +24,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+// Route d'authentification pour tous(qui amène chacun à sa page d'accueil ) 
+
+Route::group(['middleware' => ['auth']], function () {
+    // 
+    Route::get('/accueil', 'App\Http\Controllers\DashboardController@index')
+        ->name('dashboard');
+});
+
+
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth'])->name('dashboard');
 
 require __DIR__ . '/auth.php';
 
