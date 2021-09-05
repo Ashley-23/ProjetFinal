@@ -10,25 +10,25 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('img/favicon.png')}}">
     <!-- Normalize CSS -->
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="{{asset('css/normalize.css')}}">
     <!-- Main CSS -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="{{asset('css/main.css')}}">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
     <!-- Fontawesome CSS -->
-    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="{{asset('css/all.min.css')}}">
     <!-- Flaticon CSS -->
-    <link rel="stylesheet" href="fonts/flaticon.css">
+    <link rel="stylesheet" href="{{asset('fonts/flaticon.css')}}">
     <!-- Full Calender CSS -->
-    <link rel="stylesheet" href="css/fullcalendar.min.css">
+    <link rel="stylesheet" href="{{asset('css/fullcalendar.min.css')}}">
     <!-- Animate CSS -->
-    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="{{asset('css/animate.min.css')}}">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{asset('style.css')}}">
     <!-- Modernize js -->
-    <script src="js/modernizr-3.6.0.min.js"></script>
+    <script src="{{asset('js/modernizr-3.6.0.min.js')}}"></script>
 </head>
 
 <body>
@@ -84,27 +84,27 @@
         <!-- Page Area End Here -->
     </div>
     <!-- jquery-->
-    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="{{asset('js/jquery-3.3.1.min.js')}}"></script>
     <!-- Plugins js -->
-    <script src="js/plugins.js"></script>
+    <script src="{{asset('js/plugins.js')}}"></script>
     <!-- Popper js -->
-    <script src="js/popper.min.js"></script>
+    <script src="{{asset('js/popper.min.js')}}"></script>
     <!-- Bootstrap js -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="{{asset('js/bootstrap.min.js')}}"></script>
     <!-- Counterup Js -->
-    <script src="js/jquery.counterup.min.js"></script>
+    <script src="{{asset('js/jquery.counterup.min.js')}}"></script>
     <!-- Moment Js -->
-    <script src="js/moment.min.js"></script>
+    <script src="{{asset('js/moment.min.js')}}"></script>
     <!-- Waypoints Js -->
-    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="{{asset('js/jquery.waypoints.min.js')}}"></script>
     <!-- Scroll Up Js -->
-    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="{{asset('js/jquery.scrollUp.min.js')}}"></script>
     <!-- Full Calender Js -->
-    <script src="js/fullcalendar.min.js"></script>
+    <script src="{{asset('js/fullcalendar.min.js')}}"></script>
     <!-- Chart Js -->
-    <script src="js/Chart.min.js"></script>
+    <script src="{{asset('js/Chart.min.js')}}"></script>
     <!-- Custom Js -->
-    <script src="js/main.js"></script>
+    <script src="{{asset('js/main.js')}}"></script>
 
 </body>
 

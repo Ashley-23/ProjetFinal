@@ -184,7 +184,7 @@
 
                             
                             <div class="admin-img">
-                                <img src="img/figure/admin.jpg" alt="Admin">
+                                <img src="{{asset('img/figure/admin.jpg')}}" alt="Admin">
                             </div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
@@ -216,7 +216,7 @@
             <div class="sidebar-main sidebar-menu-one sidebar-expand-md sidebar-color">
                <div class="mobile-sidebar-header d-md-none">
                     <div class="header-logo">
-                        <a href="index-2.html"><img src="img/logo1.png" alt="logo"></a>
+                        <a href="{{asset('index-2.html')}}"><img src="{{asset('img/logo1.png')}}" alt="logo"></a>
                     </div>
                </div>
                 <div class="sidebar-menu-content">
@@ -231,10 +231,10 @@
                                     <a href="{{route('vue_superadmin_alletablissement')}}" class="nav-link"><i class="fas fa-angle-right"></i>Tous les 
                                         etablissements</a>
                                 </li>
-                                <li class="nav-item">
+                                {{-- <li class="nav-item">
                                     <a href="{{route('vue_superadmin_detailetablissement')}}" class="nav-link menu-active"><i
                                             class="fas fa-angle-right"></i>Details etablissement</a>
-                                </li>
+                                </li> --}}
                                 <li class="nav-item">
                                     <a href="{{route('vue_superadmin_addetablissement')}}" class="nav-link"><i
                                             class="fas fa-angle-right"></i>Ajouter etablissement</a>
@@ -303,7 +303,7 @@
         <div class="card-body">
             <div class="heading-layout1">
                 <div class="item-title">
-                    <h3>About Me</h3>
+                    <h3>A Propos de :  {{ $userdetail->nom }} {{ $userdetail->prenom }} </h3>
                 </div>
                <div class="dropdown">
                     <a class="dropdown-toggle" href="#" role="button" 
@@ -317,12 +317,12 @@
                 </div>
             </div>
             <div class="single-info-details">
-                <div class="item-img">
+                {{-- <div class="item-img">
                     <img src="img/figure/student1.jpg" alt="student">
-                </div>
+                </div> --}}
                 <div class="item-content">
                     <div class="header-inline item-header">
-                        <h3 class="text-dark-medium font-medium">Jessia Rose</h3>
+                        <h3 class="text-dark-medium font-medium"> {{ $userdetail->nom }} {{ $userdetail->prenom }} </h3>
                         <div class="header-elements">
                             <ul>
                                 <li><a href="#"><i class="far fa-edit"></i></a></li>
@@ -331,53 +331,56 @@
                             </ul>
                         </div>
                     </div>
-                    <p>Aliquam erat volutpat. Curabiene natis massa sedde lacu stiquen sodale 
+                    {{-- <p>Aliquam erat volutpat. Curabiene natis massa sedde lacu stiquen sodale 
                     word moun taiery.Aliquam erat volutpaturabiene natis massa sedde  sodale 
-                    word moun taiery.</p>
+                    word moun taiery.</p> --}}
                     <div class="info-table table-responsive">
+                        
                         <table class="table text-nowrap">
+                            
                             <tbody>
+                                
                                 <tr>
-                                    <td>Name:</td>
-                                    <td class="font-medium text-dark-medium">Jessia Rose</td>
+                                    <td>Nom:</td>
+                                    <td class="font-medium text-dark-medium"> {{ $userdetail->nom }} </td>
                                 </tr>
                                 <tr>
-                                    <td>Gender:</td>
-                                    <td class="font-medium text-dark-medium">Female</td>
+                                    <td>Prenom :</td>
+                                    <td class="font-medium text-dark-medium"> {{ $userdetail->prenom }} </td>
                                 </tr>
                                 <tr>
-                                    <td>Father Name:</td>
-                                    <td class="font-medium text-dark-medium">Steve Jones</td>
+                                    <td>Login:</td>
+                                    <td class="font-medium text-dark-medium"> {{ $userdetail->login }} </td>
                                 </tr>
                                 <tr>
-                                    <td>Mother Name:</td>
-                                    <td class="font-medium text-dark-medium">Naomi Rose</td>
+                                    <td>Date de naissance:</td>
+                                    <td class="font-medium text-dark-medium"> {{ $userdetail->datenaiss }} </td>
                                 </tr>
                                 <tr>
-                                    <td>Date Of Birth:</td>
-                                    <td class="font-medium text-dark-medium">07.08.2016</td>
-                                </tr>
-                                <tr>
-                                    <td>Religion:</td>
-                                    <td class="font-medium text-dark-medium">Islam</td>
-                                </tr>
-                                <tr>
-                                    <td>Father Occupation:</td>
-                                    <td class="font-medium text-dark-medium">Graphic Designer</td>
+                                    <td>Sexe:</td>
+                                    <td class="font-medium text-dark-medium"> {{ $userdetail->sexe }} </td>
                                 </tr>
                                 <tr>
                                     <td>E-mail:</td>
-                                    <td class="font-medium text-dark-medium">jessiarose@gmail.com</td>
+                                    <td class="font-medium text-dark-medium"> {{ $userdetail->email }} </td>
                                 </tr>
                                 <tr>
-                                    <td>Admission Date:</td>
-                                    <td class="font-medium text-dark-medium">07.08.2019</td>
+                                    <td>Telephone:</td>
+                                    <td class="font-medium text-dark-medium"> {{ $userdetail->telephone }} </td>
                                 </tr>
                                 <tr>
-                                    <td>Class:</td>
-                                    <td class="font-medium text-dark-medium">2</td>
+                                    <td>Photo:</td>
+                                    <td class="font-medium text-dark-medium"> {{ $userdetail->photo }} </td>
                                 </tr>
                                 <tr>
+                                    <td>Adesse:</td>
+                                    <td class="font-medium text-dark-medium"> {{ $userdetail->adresse }} </td>
+                                </tr>
+                                <tr>
+                                    <td>Active:</td>
+                                    <td class="font-medium text-dark-medium"> {{ $userdetail->active }} </td>
+                                </tr>
+                                {{-- <tr>
                                     <td>Section:</td>
                                     <td class="font-medium text-dark-medium">Pink</td>
                                 </tr>
@@ -392,7 +395,7 @@
                                 <tr>
                                     <td>Phone:</td>
                                     <td class="font-medium text-dark-medium">+ 88 98568888418</td>
-                                </tr>
+                                </tr> --}}
                             </tbody>
                         </table>
                     </div>

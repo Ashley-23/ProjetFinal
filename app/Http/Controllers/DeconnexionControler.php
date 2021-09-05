@@ -11,6 +11,6 @@ class DeconnexionControler extends Controller
     public function Deconnexion()
     {
         auth()->logout();
-        return view('admin/lock-screen');
+        return view('welcome');
     }
 }

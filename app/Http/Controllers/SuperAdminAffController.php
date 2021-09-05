@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Etablissement;
+use App\Models\EtablissementParent;
 use Facade\FlareClient\View;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class SuperAdminAffController extends Controller
@@ -25,13 +28,23 @@ class SuperAdminAffController extends Controller
     public function alletablissement()
     {
         // 
-        return view('SuperAdministrateur.Etablissement.alletablissement');
+        $user = user::All();
+        return view('SuperAdministrateur.Etablissement.alletablissement', compact('user'));
     }
     // Pour avoir les détails sur un etablissement 
-    public function detailetablissement()
+    public function detailetablissement($id)
     {
         // 
-        return view('SuperAdministrateur.Etablissement.detailetablissement');
+        // dd('detailetablissement');
+        // $user = user::All();
+        // dd('breeeef');
+        $userdetail = user::findOrFail($id);
+
+        // $userdetail = user::findOrFail($user);
+
+
+
+        return view('SuperAdministrateur.Etablissement.detailetablissement', compact('userdetail'));
     }
     // Pour ajouter un etablissement 
     public function addetablissement()

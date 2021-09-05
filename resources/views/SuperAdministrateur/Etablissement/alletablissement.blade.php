@@ -230,10 +230,10 @@
                                     <a href="{{route('vue_superadmin_alletablissement')}}" class="nav-link menu-active"><i class="fas fa-angle-right"></i>Tous les 
                                         etablissements</a>
                                 </li>
-                                <li class="nav-item">
+                                {{-- <li class="nav-item">
                                     <a href="{{route('vue_superadmin_detailetablissement')}}" class="nav-link"><i
                                             class="fas fa-angle-right"></i>Details etablissement</a>
-                                </li>
+                                </li> --}}
                                 <li class="nav-item">
                                     <a href="{{route('vue_superadmin_addetablissement')}}" class="nav-link"><i
                                             class="fas fa-angle-right"></i>Ajouter etablissement</a>
@@ -284,6 +284,8 @@
             <li>Tous les etablissements</li>
         </ul>
     </div>
+    
+   
     <!-- Breadcubs Area End Here -->
     <!-- Student Table Area Start Here -->
     <div class="card height-auto">
@@ -301,8 +303,8 @@
                                 class="fas fa-times text-orange-red"></i>Close</a>
                         <a class="dropdown-item" href="#"><i
                                 class="fas fa-cogs text-dark-pastel-green"></i>Edit</a>
-                        <a class="dropdown-item" href="#"><i
-                                class="fas fa-redo-alt text-orange-peel" onClick="history.go(0)" ></i>Refresh</a>
+                        <a class="dropdown-item"  onClick="history.go(0)" href="#"><i
+                                class="fas fa-redo-alt text-orange-peel"  ></i>Refresh</a>
                     </div>
                 </div>
             </div>
@@ -329,10 +331,11 @@
                             <th>
                                 <div class="form-check">
                                     <input type="checkbox" class="form-check-input checkAll">
-                                    <label class="form-check-label">Roll</label>
+                                    <label class="form-check-label"> Identifiant </label>
+                                    
                                 </div>
                             </th>
-                            <th>Id</th>
+                            {{-- <th>Id</th> --}}
                             <th>Nom</th>
                             <th>Prenom</th>
                             <th>Login</th>
@@ -347,6 +350,66 @@
                         </tr>
                     </thead>
                     <tbody>
+
+ @forelse ($user as $user)
+
+                         <tr> 
+
+                           
+                                
+                                  <td>
+                                                    <div class="form-check">
+                                                        <input type="checkbox" class="form-check-input">
+                                                        <label class="form-check-label"> 
+                                                            {{-- <a href=" {{ route('vue_superadmin_detailetablissement') }},{{$id }}"> --}}
+                                                                {{ $user->id }}
+                                                            {{-- </a> --}}
+                                                         </label>
+                                                    </div>
+                                                </td>
+                                                {{-- <td class="text-center"><img src="img/figure/student2.png" alt="student"></td> --}}
+                                                {{-- <td>  <a href=""> {{ $user->id }} </a> </td> --}}
+                                                <td>  <a href=" {{ route('vue_superadmin_detailetablissement',$user->id) }} "> {{ $user->nom }} </a> </td>
+                                                <td>  <a href=" {{ route('vue_superadmin_detailetablissement',$user->id) }} "> {{ $user->prenom }} </a> </td>
+                                                <td>  <a href=" {{ route('vue_superadmin_detailetablissement',$user->id) }} "> {{ $user->login }} </a> </td>
+                                                <td>  <a href=" {{ route('vue_superadmin_detailetablissement',$user->id) }} "> {{ $user->datenaiss }} </a> </td>
+                                                <td>  <a href=" {{ route('vue_superadmin_detailetablissement',$user->id) }} "> {{ $user->sexe }} </a>  </td>
+                                                <td>  <a href=" {{ route('vue_superadmin_detailetablissement',$user->id) }} "> {{ $user->email }} </a> </td>
+                                                <td>  <a href=" {{ route('vue_superadmin_detailetablissement',$user->id) }} "> {{ $user->telephone }} </a> </td>
+                                                <td>  <a href=" {{ route('vue_superadmin_detailetablissement',$user->id) }} "> {{ $user->photo }} </a> </td>
+                                                <td>  <a href=" {{ route('vue_superadmin_detailetablissement',$user->id) }} "> {{ $user->adresse }} </a> </td>
+                                                <td>  <a href=" {{ route('vue_superadmin_detailetablissement',$user->id) }} "> {{ $user->active }} </a> </td>
+                                                <td>
+                                                    <div class="dropdown">
+                                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                                                            aria-expanded="false">
+                                                            <span class="flaticon-more-button-of-three-dots"></span>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-right">
+                                                            <a class="dropdown-item" href="#"><i
+                                                                    class="fas fa-times text-orange-red"></i>Close</a>
+                                                            <a class="dropdown-item" href="#"><i
+                                                                    class="fas fa-cogs text-dark-pastel-green"></i>Edit</a>
+                                                            <a class="dropdown-item" onClick="history.go(0)" href="#"><i
+                                                                    class="fas fa-redo-alt text-orange-peel" ></i>Refresh</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+
+                            @empty
+                                <p>Aucun élève dans la base de donnée </p>
+                          
+                        
+                         </tr>
+
+  @endforelse
+
+
+
+
+
+
                         {{-- <tr>
 
                             @forelse ($adminAff as $eleve)

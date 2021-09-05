@@ -232,10 +232,10 @@
                                     <a href="{{route('vue_superadmin_alletablissement')}}" class="nav-link"><i class="fas fa-angle-right"></i>Tous les 
                                         etablissements</a>
                                 </li>
-                                <li class="nav-item">
+                                {{-- <li class="nav-item">
                                     <a href="{{route('vue_superadmin_detailetablissement')}}" class="nav-link"><i
                                             class="fas fa-angle-right"></i>Details etablissement</a>
-                                </li>
+                                </li> --}}
                                 <li class="nav-item">
                                     <a href="{{route('vue_superadmin_addetablissement')}}" class="nav-link"><i
                                             class="fas fa-angle-right"></i>Ajouter etablissement</a>

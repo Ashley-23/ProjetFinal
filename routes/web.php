@@ -100,7 +100,7 @@ Route::get('/deconnexion', 'DeconnexionControler@deconnexion')->name('vue_deconn
 //                                                                 Routes pour les superadministrateurs
 
 // Route::get('/ash', 'connexionController@accueiladmin')->middleware(['auth']);
-
+Route::resource('superadminaff', superAdminAffController::class);
 // Pour afficher la page d'accueil 
 Route::get('/superadmin_accueil', 'SuperAdminAffController@accueil')->name('vue_superadmin_accueil');
 // Pour afficher le lock-screen 
@@ -109,7 +109,7 @@ Route::get('/superadmin_lock-screen', 'SuperAdminAffController@lockscreen')->nam
 // Pour afficher tous les etablissements 
 Route::get('/superadmin_alletablissement', 'SuperAdminAffController@alletablissement')->name('vue_superadmin_alletablissement');
 // Pour avoir des détails sur les etablissements 
-Route::get('/superadmin_detailetablissement', 'SuperAdminAffController@detailetablissement')->name('vue_superadmin_detailetablissement');
+Route::get('/superadmin_detailetablissement/{id}', 'SuperAdminAffController@detailetablissement')->name('vue_superadmin_detailetablissement');
 // Pour ajouter un etablissement
 Route::get('/superadmin_addetablissement', 'SuperAdminAffController@addetablissement')->name('vue_superadmin_addetablissement');
 //                               ADMINISTRATEURS
