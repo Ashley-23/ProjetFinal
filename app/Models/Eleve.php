@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Classe;
 use App\Models\Profil;
 use App\Models\Bulletin;
 use App\Models\RelationEleve;
@@ -32,6 +33,15 @@ class Eleve extends Model
     {
         return $this->hasOne(Bulletin::class);
     }
+
+    // Un eleve a une classe
+
+    public function Classe()
+    {
+        return $this->hasOne(Classe::class);
+    }
+
+
     // Un eleve a plusieurs RelationEleve 
 
     public function RelationEleves()
