@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Classe;
+use App\Models\Eleve;
 use App\Models\Etablissement;
 use App\Models\EtablissementParent;
 use Facade\FlareClient\View;
@@ -161,6 +163,48 @@ class SuperAdminAffController extends Controller
     }
 
 
+    // Pour ajouter un etablissement 
+    public function addinscription(Request $request)
+    {
+        // 
+        $this->validate(
+            // 
+            $request,
+            [
+                // 
+                'nomEleve' => 'required',
+                'prenomEleve' => 'required',
+                'sexeEleve' => 'required',
+                'datenaissEleve' => 'required',
+                'loginEleve' => 'required',
+                // 'password' => $request->password,
+                'passwordEleve' => 'required',
+                'emailEleve' => 'required',
+                'adresseEleve' => 'required',
+                'telephoneEleve' => 'required',
+                'classe' => 'required',
+
+            ]
+        );
+        // dd('store'); 
+        $eleve = Eleve::create([
+            'nom' => $request->nomEleve,
+            'prenom' => $request->prenomEleve,
+            'sexe' => $request->sexeEleve,
+            'datenaiss' => $request->datenaissEleve,
+            'login' => $request->login,
+            // 'password' => $request->password,
+            'password' => Hash::make($request->passwordEleve),
+            'email' => $request->emailEleve,
+            'adresse' => $request->adresseEleve,
+            'telephone' => $request->telephoneEleve,
+
+        ]);
+        $classe = Classe::create;
+
+
+        return view('SuperAdministrateur.inscription', compact('eleve', 'classe'));
+    }
 
 
 

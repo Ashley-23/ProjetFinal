@@ -222,11 +222,11 @@
                 <div class="sidebar-menu-content">
                     <ul class="nav nav-sidebar-menu sidebar-toggle-view">
                         <li class="nav-item ">
-                            <a href="{{route('vue_superadmin_accueil')}}" class="nav-link  menu-active"><i class="flaticon-dashboard"></i><span>Dashboard</span></a>
+                            <a href="{{route('vue_superadmin_accueil')}}" class="nav-link  "><i class="flaticon-dashboard"></i><span>Dashboard</span></a>
                         </li>
                         <li class="nav-item sidebar-nav-item">
                             <a href="#" class="nav-link"><i class="flaticon-classmates"></i><span>Etablissements</span></a>
-                            <ul class="nav sub-group-menu sub-group-active">
+                            <ul class="nav sub-group-menu ">
                                 <li class="nav-item">
                                     <a href="{{route('vue_superadmin_alletablissement')}}" class="nav-link"><i class="fas fa-angle-right"></i>Tous les 
                                         etablissements</a>
@@ -236,7 +236,7 @@
                                             class="fas fa-angle-right"></i>Details etablissement</a>
                                 </li> --}}
                                 <li class="nav-item">
-                                    <a href="{{route('vue_superadmin_addetablissementaff')}}" class="nav-link menu-active"><i
+                                    <a href="{{route('vue_superadmin_addetablissementaff')}}" class="nav-link "><i
                                             class="fas fa-angle-right"></i>Ajouter etablissement</a>
                                 </li>
                             </ul>
@@ -259,8 +259,8 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a href="{{route('vue_superadmin_inscription')}}" class="nav-link"><i
+                        <li class="nav-item ">
+                            <a href="{{route('vue_superadmin_inscription')}}" class="nav-link menu-active"><i
                                 class="flaticon-technological"></i><span>Inscription</span></a>
                         </li>
                         
