@@ -7,6 +7,7 @@ use App\Models\EtablissementParent;
 use Facade\FlareClient\View;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class SuperAdminAffController extends Controller
 {
@@ -41,17 +42,88 @@ class SuperAdminAffController extends Controller
         // $user = user::all();
         $userdetail = user::findOrFail($id);
 
+
         // $userdetail = user::findOrFail($user);
 
 
 
         return view('SuperAdministrateur.Etablissement.detailetablissement', compact('userdetail'));
     }
+
     // Pour ajouter un etablissement 
-    public function addetablissement()
+    public function addetablissementaff()
+    {
+        return view('SuperAdministrateur.Etablissement.addetablissement');
+    }
+
+    // Pour ajouter un etablissement 
+    public function addetablissement(Request $request)
     {
         // 
+        $this->validate(
+            // 
+            $request,
+            [
+                // 
+                'nom' => 'required',
+                'prenom' => 'required',
+                'sexe' => 'required',
+                'datenaiss' => 'required',
+                'login' => 'required',
+                // 'password' => $request->password,
+                'password' => 'required',
+                'email' => 'required',
+                'adresse' => 'required',
+                // 'telephone' => $request->telephone,
+
+            ]
+        );
+        // dd('store'); 
+        $user = User::create([
+            'nom' => $request->nom,
+            'prenom' => $request->prenom,
+            'sexe' => $request->sexe,
+            'datenaiss' => $request->datenaiss,
+            'login' => $request->login,
+            // 'password' => $request->password,
+            'password' => Hash::make($request->password),
+            'email' => $request->email,
+            'adresse' => $request->adresse,
+            // 'telephone' => $request->telephone,
+
+        ]);
+        // role_user::create([
+        //     'role_id' => $request->role_id,
+
+        // ]);
+        $user->attachRole($request->role_id);
+
+
         return view('SuperAdministrateur.Etablissement.addetablissement');
+    }
+    //  Pour afficher la vue de modification des etablissements
+    public function editetablissement($id)
+    {
+        // 
+        // dd('detailetablissement');
+        // $user = user::All();
+        // dd('breeeef');
+        // $user = user::all();
+        $user = user::findOrFail($id);
+
+
+        // $userdetail = user::findOrFail($user);
+
+
+
+        return view('SuperAdministrateur.Etablissement.updateetablissement', compact('user'));
+    }
+
+    // Pour ajouter un etablissement 
+    public function updateetablissement()
+    {
+        dd('update');
+        return view('SuperAdministrateur.Etablissement.updateetablissement');
     }
 
     //                                          ADMINISTRATEUR

@@ -235,7 +235,7 @@
                                             class="fas fa-angle-right"></i>Details etablissement</a>
                                 </li> --}}
                                 <li class="nav-item">
-                                    <a href="{{route('vue_superadmin_addetablissement')}}" class="nav-link"><i
+                                    <a href="{{route('vue_superadmin_addetablissementaff')}}" class="nav-link"><i
                                             class="fas fa-angle-right"></i>Ajouter etablissement</a>
                                 </li>
                             </ul>
@@ -438,9 +438,9 @@
                                                             <span class="flaticon-more-button-of-three-dots"></span>
                                                         </a>
                                                         <div class="dropdown-menu dropdown-menu-right">
-                                                            <a class="dropdown-item" href="#"><i
-                                                                    class="fas fa-times text-orange-red"></i>Close</a>
-                                                            <a class="dropdown-item" href="#"><i
+                                                            {{-- <a class="dropdown-item" href="#"><i
+                                                                    class="fas fa-times text-orange-red"></i>Close</a> --}}
+                                                            <a class="dropdown-item" href="{{route('vue_superadmin_editetablissement',$user->id)}}"><i
                                                                     class="fas fa-cogs text-dark-pastel-green"></i>Edit</a>
                                                             <a class="dropdown-item" onClick="history.go(0)" href="#"><i
                                                                     class="fas fa-redo-alt text-orange-peel" ></i>Refresh</a>

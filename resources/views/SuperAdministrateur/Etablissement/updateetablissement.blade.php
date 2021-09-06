@@ -6,8 +6,6 @@
 
 
 
-
-
     <!-- Preloader Start Here -->
     <div id="preloader"></div>
     <!-- Preloader End Here -->
@@ -186,7 +184,7 @@
 
                             
                             <div class="admin-img">
-                                <img src="img/figure/admin.jpg" alt="Admin">
+                                <img src="{{asset('img/figure/admin.jpg')}}" alt="Admin">
                             </div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
@@ -228,7 +226,7 @@
                         </li>
                         <li class="nav-item sidebar-nav-item">
                             <a href="#" class="nav-link"><i class="flaticon-classmates"></i><span>Etablissements</span></a>
-                            <ul class="nav sub-group-menu">
+                            <ul class="nav sub-group-menu sub-group-active">
                                 <li class="nav-item">
                                     <a href="{{route('vue_superadmin_alletablissement')}}" class="nav-link"><i class="fas fa-angle-right"></i>Tous les 
                                         etablissements</a>
@@ -238,7 +236,7 @@
                                             class="fas fa-angle-right"></i>Details etablissement</a>
                                 </li> --}}
                                 <li class="nav-item">
-                                    <a href="{{route('vue_superadmin_addetablissementaff')}}" class="nav-link"><i
+                                    <a href="{{route('vue_superadmin_addetablissementaff')}}" class="nav-link "><i
                                             class="fas fa-angle-right"></i>Ajouter etablissement</a>
                                 </li>
                             </ul>
@@ -246,9 +244,9 @@
                         <li class="nav-item sidebar-nav-item">
                             <a href="#" class="nav-link"><i
                                     class="flaticon-multiple-users-silhouette"></i><span>Administrateurs</span></a>
-                            <ul class="nav sub-group-menu  sub-group-active">
+                            <ul class="nav sub-group-menu">
                                 <li class="nav-item">
-                                    <a href="{{route('vue_superadmin_alladmin')}}" class="nav-link menu-active"><i class="fas fa-angle-right"></i>Tous les 
+                                    <a href="{{route('vue_superadmin_alladmin')}}" class="nav-link"><i class="fas fa-angle-right"></i>Tous les 
                                         administrateurs</a>
                                 </li>
                                 <li class="nav-item">
@@ -284,137 +282,187 @@
 
 
 
+             <!-- Sidebar Area End Here -->
+             <div class="dashboard-content-one">
 
-            <!-- Sidebar Area End Here -->
- <div class="dashboard-content-one">
-    <!-- Breadcubs Area Start Here -->
-    <div class="breadcrumbs-area">
-        <h3>Administrateurs </h3>
-        <ul>
-            <li>
-                <a href="index-2.html">Home</a>
-            </li>
-            <li>Tous les administrateurs</li>
-        </ul>
-    </div>
-    <!-- Breadcubs Area End Here -->
-    <!-- Student Table Area Start Here -->
-    <div class="card height-auto">
-        <div class="card-body">
-            <div class="heading-layout1">
-                <div class="item-title">
-                    <h3>Tous les administrateurs</h3>
-                </div>
-                <div class="dropdown">
-                    <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-                        aria-expanded="false">...</a>
 
-                    <div class="dropdown-menu dropdown-menu-right">
-                        <a class="dropdown-item" href="#"><i
-                                class="fas fa-times text-orange-red"></i>Close</a>
-                        <a class="dropdown-item" href="#"><i
-                                class="fas fa-cogs text-dark-pastel-green"></i>Edit</a>
-                        <a class="dropdown-item" href="#"><i
-                                class="fas fa-redo-alt text-orange-peel" onClick="history.go(0)" ></i>Refresh</a>
-                    </div>
+
+
+
+
+                <!-- Breadcubs Area Start Here -->
+                <div class="breadcrumbs-area">
+                    <h3>Etablissement</h3>
+                    <ul>
+                        <li>
+                            <a href="index-2.html">Home</a>
+                        </li>
+                        <li>Editer etablissement</li>
+                    </ul>
                 </div>
-            </div>
-            <form class="mg-b-20">
-                <div class="row gutters-8">
-                    <div class="col-3-xxxl col-xl-3 col-lg-3 col-12 form-group">
-                        <input type="text" placeholder="Search by Roll ..." class="form-control">
-                    </div>
-                    <div class="col-4-xxxl col-xl-4 col-lg-3 col-12 form-group">
-                        <input type="text" placeholder="Search by Name ..." class="form-control">
-                    </div>
-                    <div class="col-4-xxxl col-xl-3 col-lg-3 col-12 form-group">
-                        <input type="text" placeholder="Search by Class ..." class="form-control">
-                    </div>
-                    <div class="col-1-xxxl col-xl-2 col-lg-3 col-12 form-group">
-                        <button type="submit" class="fw-btn-fill btn-gradient-yellow">SEARCH</button>
-                    </div>
-                </div>
-            </form>
-            <div class="table-responsive">
-                <table class="table display data-table text-nowrap">
-                    <thead>
-                        <tr>
-                            <th>
-                                <div class="form-check">
-                                    <input type="checkbox" class="form-check-input checkAll">
-                                    <label class="form-check-label">Roll</label>
+                <!-- Breadcubs Area End Here -->
+                <!-- Admit Form Area Start Here -->
+                <div class="card height-auto">
+                    <form action="{{route('vue_superadmin_updateetablissement',$user->id)}}" method="POST">
+                        {{ csrf_field() }}
+                        <input type="hidden" name="method" value="PUT">
+                        <div class="card-body">
+                            <div class="heading-layout1">
+                                <div class="item-title">
+                                    <h3>Editer Etablissement</h3>
                                 </div>
-                            </th>
-                            <th>Id</th>
-                            <th>Nom</th>
-                            <th>Prenom</th>
-                            <th>Login</th>
-                            <th>Date de naissance</th>
-                            <th>Genre</th>
-                            <th>Email</th>
-                            <th>Telephone</th>
-                            <th>Photo</th>
-                            <th>Adresse</th>
-                            <th>Active</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {{-- <tr>
+                                <div class="dropdown">
+                                    <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                                        aria-expanded="false">...</a>
 
-                            @forelse ($adminAff as $eleve)
-                                
-                                  <td>
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input">
-                                                        <label class="form-check-label">#0021</label>
-                                                    </div>
-                                                </td>
-                                                <td class="text-center"><img src="img/figure/student2.png" alt="student"></td>
-                                                <td>  <a href=""> {{eleve->nomEleve}} </a> </td>
-                                                <td>  <a href=""> {{eleve->prenomEleve}} </a> </td>
-                                                <td>  <a href=""> {{eleve->login}} </a> </td>
-                                                <td>  <a href=""> {{eleve->dateNaissEleve}} </a> </td>
-                                                <td>  <a href=""> {{eleve->sexeEleve}} </a>  </td>
-                                                <td>  <a href=""> {{eleve->emailEleve}} </a> </td>
-                                                <td>  <a href=""> {{eleve->telephoneEleve}} </a> </td>
-                                                <td>  <a href=""> {{eleve->photoEleve}} </a> </td>
-                                                <td>  <a href=""> {{eleve->adresseEleve}} </a> </td>
-                                                <td>  <a href=""> {{eleve->activeEleve}} </a> </td>
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"
-                                                            aria-expanded="false">
-                                                            <span class="flaticon-more-button-of-three-dots"></span>
-                                                        </a>
-                                                        <div class="dropdown-menu dropdown-menu-right">
-                                                            <a class="dropdown-item" href="#"><i
-                                                                    class="fas fa-times text-orange-red"></i>Close</a>
-                                                            <a class="dropdown-item" href="#"><i
-                                                                    class="fas fa-cogs text-dark-pastel-green"></i>Edit</a>
-                                                            <a class="dropdown-item" href="#"><i
-                                                                    class="fas fa-redo-alt text-orange-peel"></i>Refresh</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-
-
-                            @empty
-                                <p>Aucun élève dans la base de donnée </p>
-                            @endforelse
-                        
-                            
-                        </tr>       --}}
-
-
-<h2> Affichage</h2>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a class="dropdown-item" href="#"><i
+                                                class="fas fa-times text-orange-red"></i>Close</a>
+                                        <a class="dropdown-item" href="#"><i
+                                                class="fas fa-cogs text-dark-pastel-green"></i>Edit</a>
+                                        <a class="dropdown-item" onClick="history.go(0)" href="#"><i
+                                                class="fas fa-redo-alt text-orange-peel" onClick="history.go(0)"></i>Refresh</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <form class="new-added-form">
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                        <label>Nom </label>
+                                        <input type="text" placeholder="" class="form-control" name="nom">
+                                    </div>
+                                    <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                        <label>Prénom(s)</label>
+                                        <input type="text" placeholder="" class="form-control" name="prenom">
+                                    </div>
+                                    <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                        <label>Genre</label>
+                                        <select class="select2" name="sexe">
+                                            {{-- <option value="">Please Select Gender *</option> --}}
+                                            <option value="m">Masculin</option>
+                                            <option value="f">Feminin</option>
+                                            {{-- <option value="3">Others</option> --}}
+                                        </select>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                        <label>Date de naissance</label>
+                                        <input type="date" placeholder="dd/mm/yyyy" class="form-control air-datepicker " name="datenaiss"
+                                            data-position='bottom right'>
+                                        <i class="far fa-calendar-alt"></i>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                        <label>Login</label>
+                                        <input type="text" placeholder="" class="form-control" name="login">
+                                    </div>
+                                    {{-- <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                        <label>Mot de passe</label>
+                                        <input type="text" placeholder="" class="form-control" name="password">
+                                    </div> --}}
 
 
 
-                    </tbody>
-                </table>
+                                     <!-- Password -->
+            <div class="mt-4">
+                <x-label for="password" :value="__('Mot de passe ')" />
+
+                <x-input id="password" class="block mt-1 w-full"
+                                type="password"
+                                name="password"
+                                required autocomplete="new-password" />
             </div>
-        </div>
+
+            <!-- Confirm Password -->
+            <div class="mt-4">
+                <x-label for="password_confirmation" :value="__('Confirmer le mot de passe ')" />
+
+                <x-input id="password_confirmation" class="block mt-1 w-full"
+                                type="password"
+                                name="password_confirmation" required />
+            </div>
+                                    {{-- <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                        <label>Blood Group *</label>
+                                        <select class="select2">
+                                            <option value="">Please Select Group *</option>
+                                            <option value="1">A+</option>
+                                            <option value="2">A-</option>
+                                            <option value="3">B+</option>
+                                            <option value="3">B-</option>
+                                            <option value="3">O+</option>
+                                            <option value="3">O-</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                        <label>Religion *</label>
+                                        <select class="select2">
+                                            <option value="">Please Select Religion *</option>
+                                            <option value="1">Islam</option>
+                                            <option value="2">Hindu</option>
+                                            <option value="3">Christian</option>
+                                            <option value="3">Buddish</option>
+                                            <option value="3">Others</option>
+                                        </select>
+                                    </div> --}}
+                                    <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                        <label>E-Mail</label>
+                                        <input type="email" placeholder="" class="form-control" name="email">
+                                    </div>
+                                    
+                                    
+                                    <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                        <label>Adresse</label>
+                                        <input type="text" placeholder="" class="form-control" name="adresse">
+                                    </div>
+                                    <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                        <label>Telephone</label>
+                                        <input type="text" placeholder="" class="form-control" name="telephone">
+                                    </div>
+                                    {{-- <div class="col-lg-6 col-12 form-group">
+                                        <label>Short BIO</label>
+                                        <textarea class="textarea form-control" name="message" id="form-message" cols="10"
+                                            rows="9"></textarea>
+                                    </div> --}}
+                                    <div class="col-lg-6 col-12 form-group mg-t-30">
+                                        <label class="text-dark-medium">Upload Student Photo (150px X 150px)</label>
+                                        <input type="file" class="form-control-file" name="photo">
+                                    </div>
+                                        {{-- Ajout de l'option select pour les rôles  --}}
+            <div class="mt-4">
+                <x-label for="role_id" :value="__(' S\'enregistrer en tant que ')" />
+        
+               <select name="role_id" class="block mt-1 w-full border-gray-300
+               focus:border-indigo-300 focus:ring-indigo-200
+               focus:ring-opacity-50 rounded-md shaddow-sm ">
+
+                    <option value="eleve"> Eleve </option>
+                    <option value="Relative"> Parent </option>
+                    <option value="professeur"> Professeur </option>
+                    <option value="etablissement"> Etablissement </option>
+                    <option value="Admin"> Administrateur </option>
+                    <option value="SuperAdmin"> Super Administrateur </option>
+ 
+                </select>
+
+            </div>
+
+                                    <div class="col-12 form-group mg-t-8">
+                                        <input type="submit" class="btn-fill-lg btn-gradient-yellow btn-hover-bluedark" value="Modifier">
+                                        {{-- <button type="submit" class="btn-fill-lg btn-gradient-yellow btn-hover-bluedark">Valider</button> --}}
+                                        <button type="reset" class="btn-fill-lg bg-blue-dark btn-hover-yellow">Annuler</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </form>
+                </div>
+                <!-- Admit Form Area End Here -->
+
+
+
+
+
+
+
+
 
 
 

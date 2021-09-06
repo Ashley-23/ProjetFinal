@@ -236,7 +236,7 @@
                                             class="fas fa-angle-right"></i>Details etablissement</a>
                                 </li> --}}
                                 <li class="nav-item">
-                                    <a href="{{route('vue_superadmin_addetablissement')}}" class="nav-link"><i
+                                    <a href="{{route('vue_superadmin_addetablissementaff')}}" class="nav-link"><i
                                             class="fas fa-angle-right"></i>Ajouter etablissement</a>
                                 </li>
                             </ul>

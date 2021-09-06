@@ -110,8 +110,20 @@ Route::get('/superadmin_lock-screen', 'SuperAdminAffController@lockscreen')->nam
 Route::get('/superadmin_alletablissement', 'SuperAdminAffController@alletablissement')->name('vue_superadmin_alletablissement');
 // Pour avoir des détails sur les etablissements 
 Route::get('/superadmin_detailetablissement/{id}', 'SuperAdminAffController@detailetablissement')->name('vue_superadmin_detailetablissement');
-// Pour ajouter un etablissement
-Route::get('/superadmin_addetablissement', 'SuperAdminAffController@addetablissement')->name('vue_superadmin_addetablissement');
+
+// Pour afficher la vue de modification d'un etablissement
+Route::get('/superadmin_editetablissement/{id}', 'SuperAdminAffController@editetablissement')->name('vue_superadmin_editetablissement');
+
+// Pour modifier un etablissement
+
+Route::get('/superadmin_updateetablissement/{id}', 'SuperAdminAffController@editetablissement')->name('vue_superadmin_updateetablissement');
+
+// Pour ajouter un etablissement 
+Route::post('/superadmin_addetablissement', 'SuperAdminAffController@addetablissement')->name('vue_superadmin_addetablissement');
+
+
+// Pour ajouter un etablissement juste l'affichage de la page 
+Route::get('/superadmin_addetablissementaff', 'SuperAdminAffController@addetablissementaff')->name('vue_superadmin_addetablissementaff');
 //                               ADMINISTRATEURS
 // Pour afficher tous les administrateurs 
 Route::get('/superadmin_alladmin', 'SuperAdminAffController@alladmin')->name('vue_superadmin_alladmin');
