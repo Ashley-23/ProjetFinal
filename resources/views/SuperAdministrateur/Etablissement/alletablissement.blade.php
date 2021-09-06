@@ -283,6 +283,32 @@
             </li>
             <li>Tous les etablissements</li>
         </ul>
+        <ul>
+
+             {{-- <div class="item-title">
+                    <h3> {{ $user->count() }} </h3>
+                </div> --}}
+
+
+                <div class="col-xl-3 col-sm-6 col-12">
+                    <div class="dashboard-summery-one mg-b-20">
+                        <div class="row align-items-center">
+                            <div class="col-6">
+                                <div class="item-icon bg-light-green ">
+                                    <i class="flaticon-classmates text-green"></i>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="item-content">
+                                    <div class="item-title">Etablissements</div>
+                                    <div class="item-number"><span class="counter" data-num=" {{ $user->count() }} "> {{ $user->count() }} </span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        </ul>
     </div>
     
    
@@ -294,6 +320,7 @@
                 <div class="item-title">
                     <h3>Tous les etablissements</h3>
                 </div>
+               
                 <div class="dropdown">
                     <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown"
                         aria-expanded="false">...</a>
@@ -311,19 +338,44 @@
             <form class="mg-b-20">
                 <div class="row gutters-8">
                     <div class="col-3-xxxl col-xl-3 col-lg-3 col-12 form-group">
-                        <input type="text" placeholder="Search by Roll ..." class="form-control">
+                        <input type="text" placeholder="Rechercher par nom ..." class="form-control" @keyup="SearchNom"  v-model="q"> {{--q comme query--}}
                     </div>
                     <div class="col-4-xxxl col-xl-4 col-lg-3 col-12 form-group">
-                        <input type="text" placeholder="Search by Name ..." class="form-control">
+                        <input type="text" placeholder="Rechercher par login ..." @keyup="Searchlogin" class="form-control" v-model="q"> {{--q comme query--}}
                     </div>
                     <div class="col-4-xxxl col-xl-3 col-lg-3 col-12 form-group">
-                        <input type="text" placeholder="Search by Class ..." class="form-control">
+                        <input type="text" placeholder="Rechercher par e-mail ..." class="form-control" @keyup="SearchEmail" v-model="q"> {{--q comme query--}}
                     </div>
                     <div class="col-1-xxxl col-xl-2 col-lg-3 col-12 form-group">
                         <button type="submit" class="fw-btn-fill btn-gradient-yellow">SEARCH</button>
                     </div>
                 </div>
             </form>
+
+
+
+
+<script type="text/javascript">
+    searchNom()
+    {
+        // 
+        alert('ok');
+    },
+    searchLogin()
+    {
+        // 
+        alert('ok');
+    },
+    searchEmail()
+    {
+        // 
+        alert('ok');
+    },
+</script>
+
+
+
+
             <div class="table-responsive">
                 <table class="table display data-table text-nowrap">
                     <thead>

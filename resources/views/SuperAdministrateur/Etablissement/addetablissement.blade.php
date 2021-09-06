@@ -338,7 +338,7 @@
                                         {{-- <option value="">Please Select Gender *</option> --}}
                                         <option value="m">Masculin</option>
                                         <option value="f">Feminin</option>
-                                        <option value="3">Others</option>
+                                        {{-- <option value="3">Others</option> --}}
                                     </select>
                                 </div>
                                 <div class="col-xl-3 col-lg-6 col-12 form-group">
@@ -351,7 +351,7 @@
                                     <label>Login</label>
                                     <input type="text" placeholder="" class="form-control">
                                 </div>
-                                <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                {{-- <div class="col-xl-3 col-lg-6 col-12 form-group">
                                     <label>Blood Group *</label>
                                     <select class="select2">
                                         <option value="">Please Select Group *</option>
@@ -373,44 +373,12 @@
                                         <option value="3">Buddish</option>
                                         <option value="3">Others</option>
                                     </select>
-                                </div>
+                                </div> --}}
                                 <div class="col-xl-3 col-lg-6 col-12 form-group">
                                     <label>E-Mail</label>
                                     <input type="email" placeholder="" class="form-control">
                                 </div>
-                                <div class="col-xl-3 col-lg-6 col-12 form-group">
-                                    <label>Classe</label>
-                                    <div class="classes" id="choixclasses">
-                                        <select class="select2" onchange="chargertype()">
-                                            <option value="s">selectionnez une classe</option>
-                                            <option value="sixieme">sixieme</option>
-                                            <option value="cinquieme">cinquieme</option>
-                                            <option value="quatrieme">quatrieme</option>
-                                            <option value="troisieme">troisieme</option>
-                                            <option value="seconde">seconde</option>
-                                            <option value="premiere">premiere</option>
-                                            <option value="terminale">terminale</option>
-                                        </select>
-
-                                        
-                                            <div class="typeclasse" id="typeclasse">       
-                                                {{-- Pour l'affichage des options selon la classe selectionné  --}}
-
-
-                                                &nbsp;
-                                                {{-- <label>Section *</label>
-                                                <select class="select2">
-                                                    <option value="">Please Select Section *</option>
-                                                    <option value="1">Pink</option>
-                                                    <option value="2">Blue</option>
-                                                    <option value="3">Bird</option>
-                                                    <option value="3">Rose</option>
-                                                    <option value="3">Red</option>
-                                                </select> --}}
-                                            </div>
-                                    </div>
-                                    
-                                </div>
+                                
                                 
                                 <div class="col-xl-3 col-lg-6 col-12 form-group">
                                     <label>Adresse</label>

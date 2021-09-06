@@ -190,18 +190,23 @@
                     <li class="navbar-item dropdown header-admin">
                         <a class="navbar-nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
                             aria-expanded="false">
-                            <div class="admin-title">
-                                <h5 class="item-title">Stevne Zone</h5>
-                                <span>Admin</span>
-                            </div>
+                           <div  class="admin-title" >
+                                {{ Auth::user()->nom }}
+                                {{ Auth::user()->prenom }}
+        
+                                    <span> Admin</span>
+                            </div>  
                             <div class="admin-img">
                                 <img src="img/figure/admin.jpg" alt="Admin">
                             </div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
-                            <div class="item-header">
-                                <h6 class="item-title">Steven Zone</h6>
-                            </div>
+                           <div  class="admin-title" >
+                                {{ Auth::user()->nom }}
+                                {{ Auth::user()->prenom }}
+        
+                                    <span> Admin</span>
+                            </div>  
                             <div class="item-content">
                                 <ul class="settings-list">
                                     <li><a href="#"><i class="flaticon-user"></i>My Profile</a></li>

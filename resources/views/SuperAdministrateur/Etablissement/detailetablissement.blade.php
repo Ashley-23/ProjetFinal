@@ -174,8 +174,8 @@
                         <a class="navbar-nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
                             aria-expanded="false">
                             <div  class="admin-title" >
-                                {{ Auth::user()->nom }}
-                                {{ Auth::user()->prenom }}
+                                {{-- {{ Auth::user()->nom }} --}}
+                                {{-- {{ Auth::user()->prenom }} --}}
         
                                     <span>Super Admin</span>
                             </div>       
@@ -190,8 +190,8 @@
                         <div class="dropdown-menu dropdown-menu-right">
                             <div class="item-header">
                                 <h6 class="item-title">
-                                    {{ Auth::user()->nom }}
-                                    {{ Auth::user()->prenom }}
+                                    {{-- {{ Auth::user()->nom }} --}}
+                                    {{-- {{ Auth::user()->prenom }} --}}
                                 </h6>
                             </div>
                             <div class="item-content">

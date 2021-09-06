@@ -38,6 +38,7 @@ class SuperAdminAffController extends Controller
         // dd('detailetablissement');
         // $user = user::All();
         // dd('breeeef');
+        // $user = user::all();
         $userdetail = user::findOrFail($id);
 
         // $userdetail = user::findOrFail($user);
