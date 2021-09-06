@@ -192,10 +192,10 @@
                         <a class="navbar-nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
                             aria-expanded="false">
                            <div  class="admin-title" >
-                                {{ Auth::user()->nom }}
-                                {{ Auth::user()->prenom }}
+                                {{-- {{ Auth::user()->nom }} --}}
+                                {{-- {{ Auth::user()->prenom }} --}}
         
-                                    <span>Super Admin</span>
+                                    <span> Administrateur </span>
                             </div>  
                             <div class="admin-img">
                                 <img src="img/figure/admin.jpg" alt="Admin">
@@ -203,10 +203,10 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
                             <div  class="admin-title" >
-                                {{ Auth::user()->nom }}
-                                {{ Auth::user()->prenom }}
+                                {{-- {{ Auth::user()->nom }} --}}
+                                {{-- {{ Auth::user()->prenom }} --}}
         
-                                    <span>Super Admin</span>
+                                    <span> Administrateur </span>
                             </div>  
                             <div class="item-content">
                                 <ul class="settings-list">

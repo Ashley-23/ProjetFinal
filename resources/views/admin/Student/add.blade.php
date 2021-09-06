@@ -191,7 +191,7 @@
                                 {{ Auth::user()->nom }}
                                 {{ Auth::user()->prenom }}
         
-                                    <span>Admin</span>
+                                    <span> Administrateur </span>
                             </div>       
                             
         

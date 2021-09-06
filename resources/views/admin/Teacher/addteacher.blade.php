@@ -193,7 +193,7 @@
                                 {{ Auth::user()->nom }}
                                 {{ Auth::user()->prenom }}
         
-                                    <span> Admin</span>
+                                    <span> Administrateur </span>
                             </div>  
                             <div class="admin-img">
                                 <img src="img/figure/admin.jpg" alt="Admin">
@@ -204,7 +204,7 @@
                                 {{ Auth::user()->nom }}
                                 {{ Auth::user()->prenom }}
         
-                                    <span> Admin</span>
+                                    <span> Administrateur </span>
                             </div>  
                             <div class="item-content">
                                 <ul class="settings-list">
