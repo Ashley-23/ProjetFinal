@@ -153,11 +153,11 @@ class SuperAdminAffController extends Controller
         return view('SuperAdministrateur.notice');
     }
 
-    //                                          MESSAGES
-    public function message()
+    //                                          INSCRIPTION
+    public function inscription()
     {
         // 
-        return view('SuperAdministrateur.message');
+        return view('SuperAdministrateur.Inscription');
     }
 
 

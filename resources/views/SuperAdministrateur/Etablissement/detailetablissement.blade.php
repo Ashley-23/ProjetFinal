@@ -260,8 +260,8 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('vue_superadmin_message')}}" class="nav-link"><i
-                                    class="flaticon-chat"></i><span>Message</span></a>
+                            <a href="{{route('vue_superadmin_inscription')}}" class="nav-link"><i
+                                class="flaticon-technological"></i><span>Inscription</span></a>
                         </li>
                         
                         <li class="nav-item">
