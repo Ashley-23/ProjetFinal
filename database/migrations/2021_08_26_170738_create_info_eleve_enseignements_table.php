@@ -19,7 +19,7 @@ class CreateInfoEleveEnseignementsTable extends Migration
         Schema::create('info_eleve_enseignements', function (Blueprint $table) {
             $table->id('idInfoEleveEnseignement');
             $table->string('descInfoEleveEnseignement');
-            $table->char('activeInfoEleveEnseignement');
+            $table->char('activeInfoEleveEnseignement')->default('t');
             $table->timestamps();
 
             $table->foreignId('idEpreuveMatiereNote')->constrained();

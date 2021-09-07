@@ -26,7 +26,7 @@ class CreateSuperAdminsTable extends Migration
             $table->string('telephoneSuperAdmin');
             $table->string('PhotoSuperAdmin')->default('photoSuperAdmin.jpg');
             $table->String('adresseSuperAdmin');
-            $table->char('activeSuperAdmin', 1);
+            $table->char('activeSuperAdmin', 1)->default('t');
             $table->timestamps();
 
 

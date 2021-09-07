@@ -18,7 +18,7 @@ class CreateAnneeScolairesTable extends Migration
             $table->year('AnneeScolaireInf');
             $table->year('AnneeScolaireSup');
             $table->String('idAnneeScolaireDesc');
-            $table->char('activeAnneeScolaire');
+            $table->char('activeAnneeScolaire')->default('t');
             $table->timestamps();
         });
     }

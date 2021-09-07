@@ -23,7 +23,7 @@ class CreateFraisScolairesTable extends Migration
             $table->date('dateFraisScolaire');
             $table->unsignedDouble('montantFraiscolaire', 12, 2);
             $table->unsignedDouble('soldeFraisScolaire', 12, 2);
-            $table->char('activeFraisScolaire', 1);
+            $table->char('activeFraisScolaire', 1)->default('t');
             $table->timestamps();
 
 

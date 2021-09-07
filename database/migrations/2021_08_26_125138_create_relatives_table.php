@@ -28,7 +28,7 @@ class CreateRelativesTable extends Migration
             $table->string('telephoneRelative');
             $table->string('PhotoRelative')->default('photoRelative.jpg');
             $table->String('adresseRelative');
-            $table->char('activeRelative', 1);
+            $table->char('activeRelative', 1)->default('t');
             $table->timestamps();
 
 

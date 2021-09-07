@@ -16,7 +16,7 @@ class CreateProfilsTable extends Migration
         Schema::create('profils', function (Blueprint $table) {
             $table->id('idProfil');
             $table->text('profilDesc');
-            $table->char('active', 1);
+            $table->char('active', 1)->default('t');
             $table->timestamps();
         });
     }

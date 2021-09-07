@@ -18,7 +18,7 @@ class CreateRelationElevesTable extends Migration
         Schema::create('relation_eleves', function (Blueprint $table) {
             $table->id('idRelationEleve');
             $table->String('descRelationEleve');
-            $table->char('activeRelationEleve');
+            $table->char('activeRelationEleve')->default('t');
             $table->timestamps();
 
 

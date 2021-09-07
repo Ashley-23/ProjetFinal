@@ -20,7 +20,7 @@ class CreateInscriptionsTable extends Migration
         Schema::create('inscriptions', function (Blueprint $table) {
             $table->id('idInscription');
             $table->string('descInscription');
-            $table->char('activeInscription', 1);
+            $table->char('activeInscription', 1)->default('t');
             $table->timestamps();
 
 

@@ -18,7 +18,7 @@ class CreateEnseignementsTable extends Migration
         Schema::create('enseignements', function (Blueprint $table) {
             $table->id('idEnseignement');
             $table->string('descEnseignement');
-            $table->char('activeEnseignement');
+            $table->char('activeEnseignement')->default('t');
             $table->timestamps();
 
 

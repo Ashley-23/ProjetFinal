@@ -26,7 +26,7 @@ class CreateProfesseursTable extends Migration
             $table->string('telephoneProfesseur');
             $table->string('PhotoProfesseur')->default('photoProfesseur.jpg');
             $table->String('adresseProfesseur');
-            $table->char('activeProfesseur', 1);
+            $table->char('activeProfesseur', 1)->default('t');
             $table->timestamps();
 
 

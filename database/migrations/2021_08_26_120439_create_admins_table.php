@@ -27,7 +27,7 @@ class CreateAdminsTable extends Migration
             $table->string('telephoneAdmin');
             $table->string('PhotoAdmin')->default('photoAdmin.jpg');
             $table->String('adresseAdmin');
-            $table->char('activeAdmin', 1);
+            $table->char('activeAdmin', 1)->default('t');
             $table->timestamps();
 
 

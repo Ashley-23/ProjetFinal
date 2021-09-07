@@ -17,7 +17,7 @@ class CreateEpreuvesTable extends Migration
             $table->id('idEpreuve');
             $table->String('nomEpreuve');
             $table->date('dateEpreuve');
-            $table->char('activeEpreuve', 1);
+            $table->char('activeEpreuve', 1)->default('t');
             $table->timestamps();
         });
     }

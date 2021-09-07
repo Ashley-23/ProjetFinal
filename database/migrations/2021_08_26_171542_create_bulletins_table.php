@@ -19,7 +19,7 @@ class CreateBulletinsTable extends Migration
             $table->id('idBulletin');
             $table->date('dateBulletin');
             $table->String('AuthentifieBulletin');
-            $table->char('activeBulltin');
+            $table->char('activeBulltin')->default('t');
             $table->timestamps();
 
 

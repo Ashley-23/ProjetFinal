@@ -17,7 +17,7 @@ class CreateClassesTable extends Migration
             $table->id('idClasse');
             $table->String('nomClasse');
             $table->string('typeClasse');
-            $table->char('activeClasse', 1);
+            $table->char('activeClasse', 1)->default('t');
             $table->timestamps();
         });
     }

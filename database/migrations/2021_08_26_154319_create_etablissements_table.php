@@ -24,7 +24,7 @@ class CreateEtablissementsTable extends Migration
             $table->string('password');
             $table->string('adresseEtablissement');
             $table->string('telephoneEtablissement');
-            $table->char('activeEtablissement', 1);
+            $table->char('activeEtablissement', 1)->default('t');
             $table->timestamps();
 
 

@@ -19,7 +19,7 @@ class CreateEpreuveMatiereNotesTable extends Migration
         Schema::create('epreuve_matiere_notes', function (Blueprint $table) {
             $table->id('idEpreuveMatiereNote');
             $table->string('descEpreuveMatiereNote');
-            $table->char('activeEpreuveMatiereNote', 1);
+            $table->char('activeEpreuveMatiereNote', 1)->default('t');
             $table->timestamps();
 
 

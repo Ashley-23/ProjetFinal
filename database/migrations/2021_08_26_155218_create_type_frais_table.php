@@ -16,7 +16,7 @@ class CreateTypeFraisTable extends Migration
         Schema::create('type_frais', function (Blueprint $table) {
             $table->id('idTypeFrais');
             $table->String('typeFraisDesc');
-            $table->char('activeTypeFrais', 1);
+            $table->char('activeTypeFrais', 1)->default('t');
             $table->timestamps();
         });
     }
