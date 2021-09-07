@@ -9,6 +9,12 @@ use Illuminate\Database\Eloquent\Model;
 class Classe extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'nomClasse',
+        'typeClasse',
+    ];
+
     // Un eleve a plusieurs eleves
 
     public function Eleves()
