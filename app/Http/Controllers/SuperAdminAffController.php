@@ -220,6 +220,8 @@ class SuperAdminAffController extends Controller
             ]
         );
         // dd('store'); 
+
+        // if ($matiere->nomMatiere->exist())
         $matiere = Matiere::create([
             'nomMatiere' => $request->nomMatiere,
         ]);
@@ -241,6 +243,7 @@ class SuperAdminAffController extends Controller
 
             ]
         );
+
         // dd('store'); 
         $classe = Classe::create([
             'nomClasse' => $request->nomClasse,
