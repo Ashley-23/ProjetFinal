@@ -133,8 +133,13 @@ Route::get('/superadmin_detailadmin', 'SuperAdminAffController@detailadmin')->na
 Route::get('/superadmin_addadmin', 'SuperAdminAffController@addadmin')->name('vue_superadmin_addadmin');
 //                               NOTIFICATIONS
 Route::get('/superadmin_notice', 'SuperAdminAffController@notice')->name('vue_superadmin_notice');
-//                              INSCRIPTION
+//                              AJOUTER INSCRIPTION
 Route::get('/superadmin_inscription', 'SuperAdminAffController@inscription')->name('vue_superadmin_inscription');
+//                              AJOUTER CLASSE
+Route::post('/superadmin_addclasse', 'SuperAdminAffController@addclasse')->name('vue_superadmin_addclasse');
+//                              AJOUTER MATIERE 
+Route::post('/superadmin_addmatiere', 'SuperAdminAffController@addmatiere')->name('vue_superadmin_addmatiere');
+
 
 
 

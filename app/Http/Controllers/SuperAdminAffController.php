@@ -6,6 +6,7 @@ use App\Models\Classe;
 use App\Models\Eleve;
 use App\Models\Etablissement;
 use App\Models\EtablissementParent;
+use App\Models\Matiere;
 use Facade\FlareClient\View;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -200,12 +201,57 @@ class SuperAdminAffController extends Controller
             'telephone' => $request->telephoneEleve,
 
         ]);
-        $classe = Classe::create;
+        // $classe = Classe::create;
 
 
-        return view('SuperAdministrateur.inscription', compact('eleve', 'classe'));
+        return view('SuperAdministrateur.inscription', compact('eleve'));
     }
 
+    // POUR AJOUTER UNE MATIERE 
+    public function addmatiere(Request $request)
+    {
+        // 
+        $this->validate(
+            // 
+            $request,
+            [
+                // 
+                'nomMatiere' => 'required',
+            ]
+        );
+        // dd('store'); 
+        $matiere = Matiere::create([
+            'nomMatiere' => $request->nomMatiere,
+        ]);
+
+        return view('SuperAdministrateur.inscription', compact('matiere'));
+    }
+
+    // POUR AJOUTER UNE CLASSE 
+    public function addclasse(Request $request)
+    {
+        // 
+        $this->validate(
+            // 
+            $request,
+            [
+                // 
+                'nomClasse' => 'required',
+                'typeClasse' => 'required',
+
+            ]
+        );
+        // dd('store'); 
+        $classe = Classe::create([
+            'nomClasse' => $request->nomClasse,
+            'typeClasse' => $request->typeClasse,
+
+        ]);
+        // $classe = Classe::create;
+
+
+        return view('SuperAdministrateur.inscription', compact('classe'));
+    }
 
 
 

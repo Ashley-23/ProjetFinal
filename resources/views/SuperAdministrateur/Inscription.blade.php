@@ -2,7 +2,13 @@
 
 @section('content')
     
-
+<style>
+    .error {
+        color: red;
+        font-weight: bold;
+        font-style: italic;
+    }
+</style>
 
 
 
@@ -329,37 +335,37 @@
                                     <div class="col-xl-3 col-lg-6 col-12 form-group">
                                         <label>Nom </label>
                                         <input type="text" placeholder="" class="form-control" name="nom">
+                                        {!! $errors->first('nom','<span class="error">:message </span>') !!}
                                     </div>
                                     <div class="col-xl-3 col-lg-6 col-12 form-group">
                                         <label>Prénom(s)</label>
                                         <input type="text" placeholder="" class="form-control" name="prenom">
+                                        {!! $errors->first('prenom','<span class="error">:message </span>') !!}
                                     </div>
                                     <div class="col-xl-3 col-lg-6 col-12 form-group">
                                         <label>Genre</label>
                                         <select class="select2" name="sexe">
                                             {{-- <option value="">Please Select Gender *</option> --}}
+                                            <option value="">Selectionnez le genre</option>
                                             <option value="m">Masculin</option>
                                             <option value="f">Feminin</option>
                                             {{-- <option value="3">Others</option> --}}
                                         </select>
+                                        {!! $errors->first('sexe','<span class="error">:message </span>') !!}
                                     </div>
                                     <div class="col-xl-3 col-lg-6 col-12 form-group">
                                         <label>Date de naissance</label>
                                         <input type="date" placeholder="dd/mm/yyyy" class="form-control air-datepicker " name="datenaiss"
-                                            data-position='bottom right'>
-                                        <i class="far fa-calendar-alt"></i>
+                                            data-position='bottom right <i class="far fa-calendar-alt"></i>'>
+                                        
+                                        {!! $errors->first('datenaiss','<span class="error">:message </span>') !!}
                                     </div>
                                     <div class="col-xl-3 col-lg-6 col-12 form-group">
                                         <label>Login</label>
                                         <input type="text" placeholder="" class="form-control" name="login">
+                                        {!! $errors->first('login','<span class="error">:message </span>') !!}
                                     </div>
-                                    {{-- <div class="col-xl-3 col-lg-6 col-12 form-group">
-                                        <label>Mot de passe</label>
-                                        <input type="text" placeholder="" class="form-control" name="password">
-                                    </div> --}}
-
-
-
+                                    
                                      <!-- Password -->
             <div class="mt-4">
                 <x-label for="password" :value="__('Mot de passe ')" />
@@ -378,42 +384,23 @@
                                 type="password"
                                 name="password_confirmation" required />
             </div>
-                                    {{-- <div class="col-xl-3 col-lg-6 col-12 form-group">
-                                        <label>Blood Group *</label>
-                                        <select class="select2">
-                                            <option value="">Please Select Group *</option>
-                                            <option value="1">A+</option>
-                                            <option value="2">A-</option>
-                                            <option value="3">B+</option>
-                                            <option value="3">B-</option>
-                                            <option value="3">O+</option>
-                                            <option value="3">O-</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-xl-3 col-lg-6 col-12 form-group">
-                                        <label>Religion *</label>
-                                        <select class="select2">
-                                            <option value="">Please Select Religion *</option>
-                                            <option value="1">Islam</option>
-                                            <option value="2">Hindu</option>
-                                            <option value="3">Christian</option>
-                                            <option value="3">Buddish</option>
-                                            <option value="3">Others</option>
-                                        </select>
-                                    </div> --}}
+                                   
                                     <div class="col-xl-3 col-lg-6 col-12 form-group">
                                         <label>E-Mail</label>
                                         <input type="email" placeholder="" class="form-control" name="email">
+                                        {!! $errors->first('email','<span class="error">:message </span>') !!}
                                     </div>
                                     
                                     
                                     <div class="col-xl-3 col-lg-6 col-12 form-group">
                                         <label>Adresse</label>
                                         <input type="text" placeholder="" class="form-control" name="adresse">
+                                        {!! $errors->first('adresse','<span class="error">:message </span>') !!}
                                     </div>
                                     <div class="col-xl-3 col-lg-6 col-12 form-group">
                                         <label>Telephone</label>
                                         <input type="text" placeholder="" class="form-control" name="telephone">
+                                        {!! $errors->first('telephone','<span class="error">:message </span>') !!}
                                     </div>
                                     {{-- <div class="col-lg-6 col-12 form-group">
                                         <label>Short BIO</label>
@@ -425,7 +412,7 @@
                                         <input type="file" class="form-control-file" name="photo">
                                     </div>
                                         {{-- Ajout de l'option select pour les rôles  --}}
-            <div class="mt-4">
+            {{-- <div class="mt-4">
                 <x-label for="role_id" :value="__(' S\'enregistrer en tant que ')" />
         
                <select name="role_id" class="block mt-1 w-full border-gray-300
@@ -441,12 +428,13 @@
  
                 </select>
 
-            </div>
+            </div> --}}
 
                                     <div class="col-12 form-group mg-t-8">
                                         <input type="submit" class="btn-fill-lg btn-gradient-yellow btn-hover-bluedark" value="Valider">
                                         {{-- <button type="submit" class="btn-fill-lg btn-gradient-yellow btn-hover-bluedark">Valider</button> --}}
                                         <button type="reset" class="btn-fill-lg bg-blue-dark btn-hover-yellow">Annuler</button>
+                                        <a href="{{route('vue_superadmin_accueil')}}"> <button type="button" class="btn-fill-md radius-30 text-light bg-orange-peel">Liste des élèves <i class="fas fa-cog mg-l-10"></i></button></a>
                                     </div>
                                 </div>
                             </form>
@@ -460,7 +448,7 @@
                 
 
 
-{{-- AJOUTER UNE CLASSE  --}}
+{{-- AJOUTER UNE MATIERE  --}}
 
 
 
@@ -470,6 +458,102 @@
 
 
 
+             <!-- Sidebar Area End Here -->
+            <div class="dashboard-content-one">
+
+
+
+
+
+
+                <!-- Breadcubs Area Start Here -->
+                <div class="breadcrumbs-area">
+                    <h3>Matieres</h3>
+                    <ul>
+                        <li>
+                            <a href="{{ route('vue_superadmin_accueil') }}">Home</a>
+                        </li>
+                        <li> Ajouter une matiere</li>
+                    </ul>
+                </div>
+                <!-- Breadcubs Area End Here -->
+                <!-- Admit Form Area Start Here -->
+                <div class="card height-auto">
+                    <form action="{{route('vue_superadmin_addmatiere')}}" method="POST">
+                        {{ csrf_field() }}
+                        <div class="card-body">
+                            <div class="heading-layout1">
+                                <div class="item-title">
+                                    <h3> Ajouter une matiere </h3>
+                                </div>
+                                <div class="dropdown">
+                                    <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                                        aria-expanded="false">...</a>
+
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a class="dropdown-item" href="#"><i
+                                                class="fas fa-times text-orange-red"></i>Close</a>
+                                        <a class="dropdown-item" href="#"><i
+                                                class="fas fa-cogs text-dark-pastel-green"></i>Edit</a>
+                                        <a class="dropdown-item" onClick="history.go(0)" href="#"><i
+                                                class="fas fa-redo-alt text-orange-peel" onClick="history.go(0)"></i>Refresh</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <form class="new-added-form">
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                        <label>Nom de la matiere </label>
+                                        <input type="text" placeholder="" class="form-control" name="nomMatiere">
+                                        {!! $errors->first('nomMatiere','<span class="error">:message </span>') !!}
+                                    </div>
+                                    {{-- <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                        <label>Nom de la classe </label>
+                                        <select class="select2" name="nomClasse">
+                                            <option value="sixieme">Sixieme</option>
+                                            <option value="cinquieme">cinquieme</option>
+                                            <option value="quatrieme">quatrieme</option>
+                                            <option value="f">troisieme</option>
+                                            <option value="troisieme">Feminin</option>
+                                            <option value="seconde">seconde</option>
+                                            <option value="terminale">terminale</option>
+                                            
+                                        </select>
+                                        {!! $errors->first('nomClasse','<span class="error">:message </span>') !!}
+                                    </div> --}}
+                                   
+        
+
+                                    <div class="col-12 form-group mg-t-8">
+                                        <input type="submit" class="btn-fill-lg btn-gradient-yellow btn-hover-bluedark" value="Valider">
+                                        {{-- <button type="submit" class="btn-fill-lg btn-gradient-yellow btn-hover-bluedark">Valider</button> --}}
+                                        <button type="reset" class="btn-fill-lg bg-blue-dark btn-hover-yellow">Annuler</button>
+                                        <a href="{{route('vue_superadmin_accueil')}}"> <button type="button" class="btn-fill-md radius-30 text-light bg-orange-peel">Liste des matières <i class="fas fa-cog mg-l-10"></i></button></a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </form>
+                </div>
+                <!-- Admit Form Area End Here -->
+
+
+
+
+
+
+
+
+{{--    AJOUTER UNE CLASSE   --}}
+
+
+
+
+
+
+
+
+                
              <!-- Sidebar Area End Here -->
             <div class="dashboard-content-one">
 
@@ -491,12 +575,12 @@
                 <!-- Breadcubs Area End Here -->
                 <!-- Admit Form Area Start Here -->
                 <div class="card height-auto">
-                    <form action="{{route('vue_superadmin_addetablissement')}}" method="POST">
+                    <form action="{{route('vue_superadmin_addclasse')}}" method="POST">
                         {{ csrf_field() }}
                         <div class="card-body">
                             <div class="heading-layout1">
                                 <div class="item-title">
-                                    <h3> Ajouter une classe </h3>
+                                    <h3> Ajouter une classe</h3>
                                 </div>
                                 <div class="dropdown">
                                     <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown"
@@ -514,119 +598,52 @@
                             </div>
                             <form class="new-added-form">
                                 <div class="row">
-                                    <div class="col-xl-3 col-lg-6 col-12 form-group">
-                                        <label>Nom </label>
-                                        <input type="text" placeholder="" class="form-control" name="nom">
-                                    </div>
-                                    <div class="col-xl-3 col-lg-6 col-12 form-group">
-                                        <label>Prénom(s)</label>
-                                        <input type="text" placeholder="" class="form-control" name="prenom">
-                                    </div>
-                                    <div class="col-xl-3 col-lg-6 col-12 form-group">
-                                        <label>Genre</label>
-                                        <select class="select2" name="sexe">
-                                            {{-- <option value="">Please Select Gender *</option> --}}
-                                            <option value="m">Masculin</option>
-                                            <option value="f">Feminin</option>
-                                            {{-- <option value="3">Others</option> --}}
-                                        </select>
-                                    </div>
-                                    <div class="col-xl-3 col-lg-6 col-12 form-group">
-                                        <label>Date de naissance</label>
-                                        <input type="date" placeholder="dd/mm/yyyy" class="form-control air-datepicker " name="datenaiss"
-                                            data-position='bottom right'>
-                                        <i class="far fa-calendar-alt"></i>
-                                    </div>
-                                    <div class="col-xl-3 col-lg-6 col-12 form-group">
-                                        <label>Login</label>
-                                        <input type="text" placeholder="" class="form-control" name="login">
-                                    </div>
-                                    {{-- <div class="col-xl-3 col-lg-6 col-12 form-group">
-                                        <label>Mot de passe</label>
-                                        <input type="text" placeholder="" class="form-control" name="password">
-                                    </div> --}}
+                                    <div>
+                                        <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                            <label>Nom de la classe</label>
+                                            <select class="select2" name="nomClasse">
+                                                <option value="">Selectionnez une classe</option>
+                                                <option value="sixieme">sixième</option>
+                                                <option value="cinquieme">cinquième</option>
+                                                <option value="quatrieme">quatrième</option>
+                                                <option value="troisieme">troisième</option>
+                                                <option value="seconde">seconde</option>
+                                                <option value="premiere">première</option>
+                                                <option value="terminale">terminale</option>
+                                            </select>
+                                            {!! $errors->first('nomClasse','<span class="error">:message </span>') !!}
+                                        </div>
+                                        <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                            <label>Type de la classe</label>
+                                            <select class="select2" name="typeClasse">
+                                                <option value="">Selectionnez un type</option>
+                                                <option value="A">A</option>
+                                                <option value="B">B</option>
+                                                <option value="CD">CD</option>
+                                                <option value="A4">C4</option>
+                                                <option value="C4">D</option>
+                                                <option value="D">A4</option>
+                                            </select>
+                                            {!! $errors->first('typeClasse','<span class="error">:message </span>') !!}
+                                        </div>
 
-
-
-                                     <!-- Password -->
-            <div class="mt-4">
-                <x-label for="password" :value="__('Mot de passe ')" />
-
-                <x-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="new-password" />
-            </div>
-
-            <!-- Confirm Password -->
-            <div class="mt-4">
-                <x-label for="password_confirmation" :value="__('Confirmer le mot de passe ')" />
-
-                <x-input id="password_confirmation" class="block mt-1 w-full"
-                                type="password"
-                                name="password_confirmation" required />
-            </div>
-                                    {{-- <div class="col-xl-3 col-lg-6 col-12 form-group">
-                                        <label>Blood Group *</label>
-                                        <select class="select2">
-                                            <option value="">Please Select Group *</option>
-                                            <option value="1">A+</option>
-                                            <option value="2">A-</option>
-                                            <option value="3">B+</option>
-                                            <option value="3">B-</option>
-                                            <option value="3">O+</option>
-                                            <option value="3">O-</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-xl-3 col-lg-6 col-12 form-group">
-                                        <label>Religion *</label>
-                                        <select class="select2">
-                                            <option value="">Please Select Religion *</option>
-                                            <option value="1">Islam</option>
-                                            <option value="2">Hindu</option>
-                                            <option value="3">Christian</option>
-                                            <option value="3">Buddish</option>
-                                            <option value="3">Others</option>
-                                        </select>
-                                    </div> --}}
-                                    <div class="col-xl-3 col-lg-6 col-12 form-group">
-                                        <label>E-Mail</label>
-                                        <input type="email" placeholder="" class="form-control" name="email">
+                                        
                                     </div>
                                     
-                                    
-                                    <div class="col-xl-3 col-lg-6 col-12 form-group">
-                                        <label>Adresse</label>
-                                        <input type="text" placeholder="" class="form-control" name="adresse">
-                                    </div>
-                                    <div class="col-xl-3 col-lg-6 col-12 form-group">
-                                        <label>Telephone</label>
-                                        <input type="text" placeholder="" class="form-control" name="telephone">
-                                    </div>
-                                    {{-- <div class="col-lg-6 col-12 form-group">
-                                        <label>Short BIO</label>
-                                        <textarea class="textarea form-control" name="message" id="form-message" cols="10"
-                                            rows="9"></textarea>
-                                    </div> --}}
-                                    <div class="col-lg-6 col-12 form-group mg-t-30">
-                                        <label class="text-dark-medium">Upload Student Photo (150px X 150px)</label>
-                                        <input type="file" class="form-control-file" name="photo">
-                                    </div>
-                                        {{-- Ajout de l'option select pour les rôles  --}}
             <div class="mt-4">
-                <x-label for="role_id" :value="__(' S\'enregistrer en tant que ')" />
-        
-               <select name="role_id" class="block mt-1 w-full border-gray-300
-               focus:border-indigo-300 focus:ring-indigo-200
-               focus:ring-opacity-50 rounded-md shaddow-sm ">
+               <label for="affichage"> Choissisez comme suit : </label>
+               <textarea name="c" id="" cols="30" rows="7" >
+                    Sixième A ou B 
+                    Cinquième A ou B 
+                    Quatrième A ou B 
+                    Troisième A ou B 
+                    Seconde CD ou A4
+                    Première D, C4 ou A4 
+                    Terminale D, C4 ou a4 
+               </textarea>
+            </div>
 
-                    <option value="eleve"> Eleve </option>
-                    <option value="Relative"> Parent </option>
-                    <option value="professeur"> Professeur </option>
-                    <option value="etablissement"> Etablissement </option>
-                    <option value="Admin"> Administrateur </option>
-                    <option value="SuperAdmin"> Super Administrateur </option>
- 
+           
                 </select>
 
             </div>
@@ -635,196 +652,9 @@
                                         <input type="submit" class="btn-fill-lg btn-gradient-yellow btn-hover-bluedark" value="Valider">
                                         {{-- <button type="submit" class="btn-fill-lg btn-gradient-yellow btn-hover-bluedark">Valider</button> --}}
                                         <button type="reset" class="btn-fill-lg bg-blue-dark btn-hover-yellow">Annuler</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </form>
-                </div>
-                <!-- Admit Form Area End Here -->
-
-
-
-
-
-
-
-
-{{--    Ajouter une matière    --}}
-
-
-
-
-
-
-
-
-                
-             <!-- Sidebar Area End Here -->
-            <div class="dashboard-content-one">
-
-
-
-
-
-
-                <!-- Breadcubs Area Start Here -->
-                <div class="breadcrumbs-area">
-                    <h3>Matiere</h3>
-                    <ul>
-                        <li>
-                            <a href="{{ route('vue_superadmin_accueil') }}">Home</a>
-                        </li>
-                        <li> Ajouter une matière </li>
-                    </ul>
-                </div>
-                <!-- Breadcubs Area End Here -->
-                <!-- Admit Form Area Start Here -->
-                <div class="card height-auto">
-                    <form action="{{route('vue_superadmin_addetablissement')}}" method="POST">
-                        {{ csrf_field() }}
-                        <div class="card-body">
-                            <div class="heading-layout1">
-                                <div class="item-title">
-                                    <h3> Ajouter une matière </h3>
-                                </div>
-                                <div class="dropdown">
-                                    <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-                                        aria-expanded="false">...</a>
-
-                                    <div class="dropdown-menu dropdown-menu-right">
-                                        <a class="dropdown-item" href="#"><i
-                                                class="fas fa-times text-orange-red"></i>Close</a>
-                                        <a class="dropdown-item" href="#"><i
-                                                class="fas fa-cogs text-dark-pastel-green"></i>Edit</a>
-                                        <a class="dropdown-item" onClick="history.go(0)" href="#"><i
-                                                class="fas fa-redo-alt text-orange-peel" onClick="history.go(0)"></i>Refresh</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <form class="new-added-form">
-                                <div class="row">
-                                    <div class="col-xl-3 col-lg-6 col-12 form-group">
-                                        <label>Nom </label>
-                                        <input type="text" placeholder="" class="form-control" name="nom">
-                                    </div>
-                                    <div class="col-xl-3 col-lg-6 col-12 form-group">
-                                        <label>Prénom(s)</label>
-                                        <input type="text" placeholder="" class="form-control" name="prenom">
-                                    </div>
-                                    <div class="col-xl-3 col-lg-6 col-12 form-group">
-                                        <label>Genre</label>
-                                        <select class="select2" name="sexe">
-                                            {{-- <option value="">Please Select Gender *</option> --}}
-                                            <option value="m">Masculin</option>
-                                            <option value="f">Feminin</option>
-                                            {{-- <option value="3">Others</option> --}}
-                                        </select>
-                                    </div>
-                                    <div class="col-xl-3 col-lg-6 col-12 form-group">
-                                        <label>Date de naissance</label>
-                                        <input type="date" placeholder="dd/mm/yyyy" class="form-control air-datepicker " name="datenaiss"
-                                            data-position='bottom right'>
-                                        <i class="far fa-calendar-alt"></i>
-                                    </div>
-                                    <div class="col-xl-3 col-lg-6 col-12 form-group">
-                                        <label>Login</label>
-                                        <input type="text" placeholder="" class="form-control" name="login">
-                                    </div>
-                                    {{-- <div class="col-xl-3 col-lg-6 col-12 form-group">
-                                        <label>Mot de passe</label>
-                                        <input type="text" placeholder="" class="form-control" name="password">
-                                    </div> --}}
-
-
-
-                                     <!-- Password -->
-            <div class="mt-4">
-                <x-label for="password" :value="__('Mot de passe ')" />
-
-                <x-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="new-password" />
-            </div>
-
-            <!-- Confirm Password -->
-            <div class="mt-4">
-                <x-label for="password_confirmation" :value="__('Confirmer le mot de passe ')" />
-
-                <x-input id="password_confirmation" class="block mt-1 w-full"
-                                type="password"
-                                name="password_confirmation" required />
-            </div>
-                                    {{-- <div class="col-xl-3 col-lg-6 col-12 form-group">
-                                        <label>Blood Group *</label>
-                                        <select class="select2">
-                                            <option value="">Please Select Group *</option>
-                                            <option value="1">A+</option>
-                                            <option value="2">A-</option>
-                                            <option value="3">B+</option>
-                                            <option value="3">B-</option>
-                                            <option value="3">O+</option>
-                                            <option value="3">O-</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-xl-3 col-lg-6 col-12 form-group">
-                                        <label>Religion *</label>
-                                        <select class="select2">
-                                            <option value="">Please Select Religion *</option>
-                                            <option value="1">Islam</option>
-                                            <option value="2">Hindu</option>
-                                            <option value="3">Christian</option>
-                                            <option value="3">Buddish</option>
-                                            <option value="3">Others</option>
-                                        </select>
-                                    </div> --}}
-                                    <div class="col-xl-3 col-lg-6 col-12 form-group">
-                                        <label>E-Mail</label>
-                                        <input type="email" placeholder="" class="form-control" name="email">
-                                    </div>
-                                    
-                                    
-                                    <div class="col-xl-3 col-lg-6 col-12 form-group">
-                                        <label>Adresse</label>
-                                        <input type="text" placeholder="" class="form-control" name="adresse">
-                                    </div>
-                                    <div class="col-xl-3 col-lg-6 col-12 form-group">
-                                        <label>Telephone</label>
-                                        <input type="text" placeholder="" class="form-control" name="telephone">
-                                    </div>
-                                    {{-- <div class="col-lg-6 col-12 form-group">
-                                        <label>Short BIO</label>
-                                        <textarea class="textarea form-control" name="message" id="form-message" cols="10"
-                                            rows="9"></textarea>
-                                    </div> --}}
-                                    <div class="col-lg-6 col-12 form-group mg-t-30">
-                                        <label class="text-dark-medium">Upload Student Photo (150px X 150px)</label>
-                                        <input type="file" class="form-control-file" name="photo">
-                                    </div>
-                                        {{-- Ajout de l'option select pour les rôles  --}}
-            <div class="mt-4">
-                <x-label for="role_id" :value="__(' S\'enregistrer en tant que ')" />
-        
-               <select name="role_id" class="block mt-1 w-full border-gray-300
-               focus:border-indigo-300 focus:ring-indigo-200
-               focus:ring-opacity-50 rounded-md shaddow-sm ">
-
-                    <option value="eleve"> Eleve </option>
-                    <option value="Relative"> Parent </option>
-                    <option value="professeur"> Professeur </option>
-                    <option value="etablissement"> Etablissement </option>
-                    <option value="Admin"> Administrateur </option>
-                    <option value="SuperAdmin"> Super Administrateur </option>
- 
-                </select>
-
-            </div>
-
-                                    <div class="col-12 form-group mg-t-8">
-                                        <input type="submit" class="btn-fill-lg btn-gradient-yellow btn-hover-bluedark" value="Valider">
-                                        {{-- <button type="submit" class="btn-fill-lg btn-gradient-yellow btn-hover-bluedark">Valider</button> --}}
-                                        <button type="reset" class="btn-fill-lg bg-blue-dark btn-hover-yellow">Annuler</button>
+                                        <a href="{{route('vue_superadmin_accueil')}}"> <button type="button" class="btn-fill-md radius-30 text-light bg-orange-peel">Liste des classes <i class="fas fa-cog mg-l-10"></i></button></a>
+                                        {{-- <input type="button" value=""> --}}
+                                        
                                     </div>
                                 </div>
                             </form>
