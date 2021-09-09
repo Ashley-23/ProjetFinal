@@ -86,27 +86,11 @@ Route::get('/connexion', 'SiteAffController@connexion')->name('vue_Siteconnexion
 Route::get('/inscription', 'SiteAffController@inscription')->name('vue_siteinscription');
 
 
+
+
+
 // pour la déconnexion
 Route::get('/deconnexion', 'DeconnexionControler@deconnexion')->name('vue_deconnexion');
-
-
-
-//                                                  ROUTES POUR LES SUPERADMINISTRATEURS 
-
-// Appel du controller 
-
-
-// Pour afficher l'accueil 
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -195,6 +179,20 @@ Route::get('/admin_account', 'AdminAffController@account')->name('vue_admin_acco
 
 
 
+
+
+//                                                  SUPERADMINISTRATEURCONTROLLER
+
+Route::resources('SuperadministrateurAffichage', SuperAdministrateurAffichageController::class);
+
+Route::get('/superadministrateur_accueil', 'SuperAdministrateurAffichageController@accueil')->name('vue_superadministrateur_accueil');
+
+
+
+// // Route::get('/ash', 'connexionController@accueiladmin')->middleware(['auth']);
+// Route::resource('superadminaff', superAdminAffController::class);
+// // Pour afficher la page d'accueil 
+// Route::get('/superadmin_accueil', 'SuperAdminAffController@accueil')->name('vue_superadmin_accueil');
 
 
 

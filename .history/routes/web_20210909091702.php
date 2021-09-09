@@ -86,27 +86,11 @@ Route::get('/connexion', 'SiteAffController@connexion')->name('vue_Siteconnexion
 Route::get('/inscription', 'SiteAffController@inscription')->name('vue_siteinscription');
 
 
+
+
+
 // pour la déconnexion
 Route::get('/deconnexion', 'DeconnexionControler@deconnexion')->name('vue_deconnexion');
-
-
-
-//                                                  ROUTES POUR LES SUPERADMINISTRATEURS 
-
-// Appel du controller 
-
-
-// Pour afficher l'accueil 
-
-
-
-
-
-
-
-
-
-
 
 
 

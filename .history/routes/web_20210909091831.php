@@ -93,8 +93,7 @@ Route::get('/deconnexion', 'DeconnexionControler@deconnexion')->name('vue_deconn
 
 //                                                  ROUTES POUR LES SUPERADMINISTRATEURS 
 
-// Appel du controller 
-
+// Apel  
 
 // Pour afficher l'accueil 
 

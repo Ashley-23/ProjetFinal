@@ -8,7 +8,8 @@ use App\Http\Controllers\AdminAffController;
 use App\Http\Controllers\connexionController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DeconnexionControler;
-
+use App\Http\Controllers\SuperAdminAffController;
+use App\Http\Controllers\SuperAdministrateurAffichageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -86,25 +87,70 @@ Route::get('/connexion', 'SiteAffController@connexion')->name('vue_Siteconnexion
 Route::get('/inscription', 'SiteAffController@inscription')->name('vue_siteinscription');
 
 
+
+
+
 // pour la déconnexion
 Route::get('/deconnexion', 'DeconnexionControler@deconnexion')->name('vue_deconnexion');
 
 
 
-//                                                  ROUTES POUR LES SUPERADMINISTRATEURS 
-
-// Appel du controller 
-
-
-// Pour afficher l'accueil 
 
 
 
+//                                                                 Routes pour les superadministrateurs
+
+// Route::get('/ash', 'connexionController@accueiladmin')->middleware(['auth']);
+Route::resource('superadminaff', superAdminAffController::class);
+// Pour afficher la page d'accueil 
+Route::get('/superadmin_accueil', 'SuperAdminAffController@accueil')->name('vue_superadmin_accueil');
+// Pour afficher le lock-screen 
+Route::get('/superadmin_lock-screen', 'SuperAdminAffController@lockscreen')->name('vue_superadmin_lockscreen');
+//                                ETABLISSEMENTS
+// Pour afficher tous les etablissements 
+Route::get('/superadmin_alletablissement', 'SuperAdminAffController@alletablissement')->name('vue_superadmin_alletablissement');
+// Pour avoir des détails sur les etablissements 
+Route::get('/superadmin_detailetablissement/{id}', 'SuperAdminAffController@detailetablissement')->name('vue_superadmin_detailetablissement');
+
+// Pour afficher la vue de modification d'un etablissement
+Route::get('/superadmin_editetablissement/{id}', 'SuperAdminAffController@editetablissement')->name('vue_superadmin_editetablissement');
+
+// Pour modifier un etablissement
+
+Route::get('/superadmin_updateetablissement/{id}', 'SuperAdminAffController@editetablissement')->name('vue_superadmin_updateetablissement');
+
+// Pour ajouter un etablissement 
+Route::post('/superadmin_addetablissement', 'SuperAdminAffController@addetablissement')->name('vue_superadmin_addetablissement');
 
 
+// Pour ajouter un etablissement juste l'affichage de la page 
+Route::get('/superadmin_addetablissementaff', 'SuperAdminAffController@addetablissementaff')->name('vue_superadmin_addetablissementaff');
+//                               ADMINISTRATEURS
+// Pour afficher tous les administrateurs 
+Route::get('/superadmin_alladmin', 'SuperAdminAffController@alladmin')->name('vue_superadmin_alladmin');
+// Pour avoir des détails sur les administrateurs 
+Route::get('/superadmin_detailadmin', 'SuperAdminAffController@detailadmin')->name('vue_superadmin_detailadmin');
+// Pour ajouter un administrateur 
+Route::get('/superadmin_addadmin', 'SuperAdminAffController@addadmin')->name('vue_superadmin_addadmin');
+//                               NOTIFICATIONS
+Route::get('/superadmin_notice', 'SuperAdminAffController@notice')->name('vue_superadmin_notice');
+//                              AFFICHER INSCRIPTION
+Route::get('/superadmin_inscription', 'SuperAdminAffController@inscription')->name('vue_superadmin_inscription');
+//                              AJOUTER INSCRIPTION
+Route::post('/superadmin_addinscription', 'SuperAdminAffController@addinscription')->name('vue_superadmin_addinscription');
+//                              AJOUTER CLASSE
+Route::post('/superadmin_addclasse', 'SuperAdminAffController@addclasse')->name('vue_superadmin_addclasse');
+//                              AJOUTER MATIERE 
+Route::post('/superadmin_addmatiere', 'SuperAdminAffController@addmatiere')->name('vue_superadmin_addmatiere');
 
+// Pour afficher tous les eleves 
+Route::get('/superadmin_alleleve', 'SuperAdminAffController@alleleve')->name('vue_superadmin_alleleve');
 
+// Pour afficher tous les matieres 
+Route::get('/superadmin_allmatiere', 'SuperAdminAffController@allmatiere')->name('vue_superadmin_allmatiere');
 
+// Pour afficher tous les classes 
+Route::get('/superadmin_allclasse', 'SuperAdminAffController@allclasse')->name('vue_superadmin_allclasse');
 
 
 
@@ -191,6 +237,17 @@ Route::get('/admin_account', 'AdminAffController@account')->name('vue_admin_acco
 
 //                                                                  Routes pour l'etablissement
 
+
+
+
+
+
+
+//                                                  SUPERADMINISTRATEURCONTROLLER
+
+Route::resources('SuperadministrateurAffichage', SuperAdministrateurAffichageController::class);
+
+Route::get('/accueil','super')
 
 
 

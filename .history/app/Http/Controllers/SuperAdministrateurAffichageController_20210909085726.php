@@ -4,8 +4,37 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class SuperAdminAffController extends Controller
+class SuperAdministrateurAffichageController extends Controller
 {
+
+
+    //                                          ACCUEIL 
+    public function accueil()
+    {
+        return view('Superad');
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     /**
      * Display a listing of the resource.
      *
