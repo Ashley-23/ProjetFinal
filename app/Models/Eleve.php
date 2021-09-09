@@ -13,6 +13,21 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Eleve extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'nomEleve',
+        'prenomEleve',
+        'login',
+        'datenaissEleve',
+        'sexeEleve',
+        'emailEleve',
+        'passwordEleve',
+        'adresseEleve',
+        'telephoneEleve',
+        'photoEleve',
+        'idClasse',
+    ];
+
     // Un eleve a un profil 
     public function Profil()
     {

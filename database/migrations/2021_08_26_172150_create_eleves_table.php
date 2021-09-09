@@ -3,6 +3,7 @@
 use App\Models\Bulletin;
 use App\Models\Profil;
 use App\Models\Relative;
+use App\Models\Classe;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -31,9 +32,10 @@ class CreateElevesTable extends Migration
             $table->char('activeEleve', 1)->default('t');
             $table->timestamps();
 
-            $table->foreignId('idRelative')->constrained();
-            $table->foreignId('idProfil')->constrained();
-            $table->foreignId('idBulletin')->constrained();
+            $table->foreignId('idRelative')->nullable()->constrained();
+            $table->foreignId('idClasse')->constrained();
+            $table->foreignId('idProfil')->nullable()->constrained();
+            $table->foreignId('idBulletin')->nullable()->constrained();
         });
     }
 

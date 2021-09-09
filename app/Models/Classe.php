@@ -11,6 +11,7 @@ class Classe extends Model
     use HasFactory;
 
     protected $fillable = [
+        'idClasse',
         'nomClasse',
         'typeClasse',
     ];
