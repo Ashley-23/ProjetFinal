@@ -394,6 +394,11 @@
                             <input type="text" placeholder="" class="form-control" name="nomMatiere">
                             {!! $errors->first('nomMatiere','<span class="error">:message </span>') !!}
                         </div>
+                        <div class="col-xl-3 col-lg-6 col-12 form-group">
+                            <label>Coefficient</label>
+                            <input type="number" placeholder="" class="form-control" name="coef" min="0" max="">
+                            {!! $errors->first('coef','<span class="error">:message </span>') !!}
+                        </div>
 
                         
 

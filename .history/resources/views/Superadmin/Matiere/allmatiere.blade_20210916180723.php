@@ -4,13 +4,7 @@
     
 
 
-<style>
-    .error {
-        color: red;
-        font-weight: bold;
-        font-style: italic;
-    }
-</style>
+
 
     <!-- Preloader Start Here -->
     <div id="preloader"></div>
@@ -273,14 +267,13 @@
                                         </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{route('vue_superadmin_allclasse')}}" class="nav-link "><i class="fas fa-angle-right"></i>
-                                        Classe</a>
+                                    <a href="{{route('vue_superadmin_allclasse')}}" class="nav-link"><i
+                                            class="fas fa-angle-right"></i>Classe</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{route('vue_superadmin_allmatiere')}}" class="nav-link menu-active"><i
-                                            class="fas fa-angle-right"></i>Matiere</a>
+                                    <a href="{{route('vue_superadmin_allmatiere')}}" class="nav-link menu-active"><i class="fas fa-angle-right"></i>
+                                        Matiere</a>
                                 </li>
-                                
                             </ul>
                         </li>
                         
@@ -317,16 +310,28 @@
 
 
 
-       
-
- <!-- Sidebar Area End Here -->
- <div class="dashboard-content-one">
 
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Sidebar Area End Here -->
+<div class="dashboard-content-one">
     <!-- Breadcubs Area Start Here -->
     <div class="breadcrumbs-area">
         <h3>Matiere</h3>
@@ -334,85 +339,177 @@
             <li>
                 <a href="{{route('vue_superadmin_accueil')}}">Home</a>
             </li>
-            <li>Ajouter une matiere</li>
+            <li>Toutes les matieres</li>
         </ul>
+        <ul>
 
-        <div class="col-xl-3 col-sm-6 col-12">
-            <div class="dashboard-summery-one mg-b-20">
-                <div class="row align-items-center">
-                    <div class="col-6">
-                        <div class="item-icon bg-light-green ">
-                            <i class="flaticon-classmates text-green"></i>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="item-content">
-                            <div class="item-title">Matieres</div>
-                            <div class="item-number"><span class="counter" data-num=" {{ $matiere->count() }} "> {{ $matiere->count() }} </span></div>
+             {{-- <div class="item-title">
+                    <h3> {{ $user->count() }} </h3>
+                </div> --}}
+
+
+                <div class="col-xl-3 col-sm-6 col-12">
+                    <div class="dashboard-summery-one mg-b-20">
+                        <div class="row align-items-center">
+                            <div class="col-6">
+                                <div class="item-icon bg-light-green ">
+                                    <i class="flaticon-classmates text-green"></i>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="item-content">
+                                    <div class="item-title">Matieres </div>
+                                    <div class="item-number"><span class="counter" data-num=" {{ $matiere->count() }} "> {{ $matiere->count() }} </span></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-
-
-        
-
-
-
+        </ul>
     </div>
+    
+   
     <!-- Breadcubs Area End Here -->
-    <!-- Admit Form Area Start Here -->
+    <!-- Student Table Area Start Here -->
     <div class="card height-auto">
-      
-            <div class="card-body">
-                <div class="heading-layout1">
-                    <div class="item-title">
-                        <h3>Ajouter une matiere</h3>
-                    </div>
-                    <div class="dropdown">
-                        <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-                            aria-expanded="false">...</a>
+        <div class="card-body">
+            <div class="heading-layout1">
+                <div class="item-title">
+                    <h3>Toutes les matieres</h3>
+                </div>
 
-                        <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="#"><i
-                                    class="fas fa-times text-orange-red"></i>Close</a>
-                            <a class="dropdown-item" href="#"><i
-                                    class="fas fa-cogs text-dark-pastel-green"></i>Edit</a>
-                            <a class="dropdown-item" onClick="history.go(0)" href="#"><i
-                                    class="fas fa-redo-alt text-orange-peel" onClick="history.go(0)"></i>Refresh</a>
-                        </div>
+               
+                <div class="dropdown">
+                    <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                        aria-expanded="false">...</a>
+
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="#"><i
+                                class="fas fa-times text-orange-red"></i>Close</a>
+                        <a class="dropdown-item" href="#"><i
+                                class="fas fa-cogs text-dark-pastel-green"></i>Edit</a>
+                        <a class="dropdown-item"  onClick="history.go(0)" href="#"><i
+                                class="fas fa-redo-alt text-orange-peel"  ></i>Refresh</a>
                     </div>
                 </div>
-                <form  action="{{route('vue_superadmin_addmatiere')}}" method="POST">
-                        {{ csrf_field() }}
-                    <div class="row">
-                        
-                        <div class="col-xl-3 col-lg-6 col-12 form-group">
-                            <label>Nom </label>
-                            <input type="text" placeholder="" class="form-control" name="nomMatiere">
-                            {!! $errors->first('nomMatiere','<span class="error">:message </span>') !!}
-                        </div>
-
-                        
-
-
-                        <div class="col-12 form-group mg-t-8">
-                            <input type="submit" class="btn-fill-lg btn-gradient-yellow btn-hover-bluedark" value="Valider">
-                            {{-- <button type="submit" class="btn-fill-lg btn-gradient-yellow btn-hover-bluedark">Valider</button> --}}
-                            <button type="reset" class="btn-fill-lg bg-blue-dark btn-hover-yellow">Annuler</button>
-                            <a href="{{route('vue_superadmin_allmatiere')}}"><button type="button" class="btn-fill-lmd radius-4 text-light bg-true-v"> Voir la liste</button></a>
-                            
-                                
-                           
-                        </div>
-                        
-                    </div>
-                </form>
             </div>
-    </div>
-    <!-- Admit Form Area End Here -->
+
+            <div class="ui-btn-wrap">
+                <ul>
+                    <a href="{{route('vue_superadmin_addmatiereaff')}}"> <li><button type="button" class="btn-fill-md radius-4 text-light bg-light-sea-green">Ajouter une matiere </button></li> </a>
+                    
+                </ul>
+            </div>
+
+
+            <form class="mg-b-20">
+                <div class="row gutters-8">
+                    <div class="col-3-xxxl col-xl-3 col-lg-3 col-12 form-group">
+                        <input type="text" placeholder="Rechercher par nom ..." class="form-control" @keyup="SearchNom"  v-model="q"> {{--q comme query--}}
+                    </div>
+                    <div class="col-4-xxxl col-xl-4 col-lg-3 col-12 form-group">
+                        <input type="text" placeholder="Rechercher par login ..." @keyup="Searchlogin" class="form-control" v-model="q"> {{--q comme query--}}
+                    </div>
+                    <div class="col-4-xxxl col-xl-3 col-lg-3 col-12 form-group">
+                        <input type="text" placeholder="Rechercher par e-mail ..." class="form-control" @keyup="SearchEmail" v-model="q"> {{--q comme query--}}
+                    </div>
+                    <div class="col-1-xxxl col-xl-2 col-lg-3 col-12 form-group">
+                        <button type="submit" class="fw-btn-fill btn-gradient-yellow">SEARCH</button>
+                    </div>
+                </div>
+            </form>
+
+
+
+
+
+
+            <div class="table-responsive">
+                <table class="table display data-table text-nowrap">
+                    <thead>
+                        <tr>
+                            <th>
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input checkAll">
+                                    <label class="form-check-label"> Identifiant </label>
+                                    
+                                </div>
+                            </th>
+                            {{-- <th>Id</th> --}}
+                            <th>Nom</th>
+                            <th>Coefficient</th>
+                            <th>Active</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+ @forelse ($matiere as $matiere)
+
+                         <tr> 
+
+                           
+                                
+                                  <td>
+                                                    <div class="form-check">
+                                                        <input type="checkbox" class="form-check-input">
+                                                        <label class="form-check-label"> 
+                                                                {{ $matiere->idMatiere }}
+
+                                                         </label>
+                                                    </div>
+                                                </td>
+                                                <td>  <a href=" {{ route('vue_superadmin_detailmatiere',$matiere->idMatiere) }} "> {{ $matiere->nomMatiere }} </a> </td>
+                                                <td>  <a href=" {{ route('vue_superadmin_detailmatiere',$matiere->idMatiere) }} "> {{ $matiere->nomMatiere }} </a> </td>
+                                                <td>  <a href=" {{ route('vue_superadmin_detailmatiere',$matiere->idMatiere) }} "> {{ $matiere->activeMatiere }} </a> </td>
+                                                
+                                                <td>
+                                                    <div class="dropdown">
+                                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                                                            aria-expanded="false">
+                                                            <span class="flaticon-more-button-of-three-dots"></span>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-right">
+                                                            {{-- <a class="dropdown-item" href="#"><i
+                                                                    class="fas fa-times text-orange-red"></i>Close</a> --}}
+                                                            <a class="dropdown-item" href="{{ route('vue_superadmin_updatematiereaff',$matiere->idMatiere) }}"><i
+                                                                    class="fas fa-cogs text-dark-pastel-green"></i>Edit</a>
+                                                            <a class="dropdown-item" onClick="history.go(0)" href="#"><i
+                                                                    class="fas fa-redo-alt text-orange-peel" ></i>Refresh</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+
+                            @empty
+                                <div class="ui-alart-box">
+                                        <div class="alert icon-alart bg-pink2" role="alert">
+                                            <i class="fas fa-times bg-pink3"></i>
+                                           AUCUNE MATIERE DANS LA BASE DE DONNEE
+                                        </div>
+                                </div>
+                               
+                        
+                         </tr>
+            
+
+
+
+
+@endforelse
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

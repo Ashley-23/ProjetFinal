@@ -273,14 +273,13 @@
                                         </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{route('vue_superadmin_allclasse')}}" class="nav-link "><i class="fas fa-angle-right"></i>
-                                        Classe</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{{route('vue_superadmin_allmatiere')}}" class="nav-link menu-active"><i
+                                    <a href="{{route('vue_superadmin_allmatiere')}}" class="nav-link"><i
                                             class="fas fa-angle-right"></i>Matiere</a>
                                 </li>
-                                
+                                <li class="nav-item">
+                                    <a href="{{route('vue_superadmin_allclasse')}}" class="nav-link menu-active"><i class="fas fa-angle-right"></i>
+                                        Classe</a>
+                                </li>
                             </ul>
                         </li>
                         
@@ -394,8 +393,11 @@
                             <input type="text" placeholder="" class="form-control" name="nomMatiere">
                             {!! $errors->first('nomMatiere','<span class="error">:message </span>') !!}
                         </div>
-
-                        
+                        <div class="col-xl-3 col-lg-6 col-12 form-group">
+                            <label>Coefficient</label>
+                            <input type="number" placeholder="" class="form-control" name="coef">
+                            {!! $errors->first('coef','<span class="error">:message </span>') !!}
+                        </div>
 
 
                         <div class="col-12 form-group mg-t-8">

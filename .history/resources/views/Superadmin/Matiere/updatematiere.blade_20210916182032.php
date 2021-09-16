@@ -12,6 +12,7 @@
     }
 </style>
 
+
     <!-- Preloader Start Here -->
     <div id="preloader"></div>
     <!-- Preloader End Here -->
@@ -273,14 +274,13 @@
                                         </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{route('vue_superadmin_allclasse')}}" class="nav-link "><i class="fas fa-angle-right"></i>
-                                        Classe</a>
+                                    <a href="{{route('vue_superadmin_allclasse')}}" class="nav-link"><i
+                                            class="fas fa-angle-right"></i>Classe</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{route('vue_superadmin_allmatiere')}}" class="nav-link menu-active"><i
-                                            class="fas fa-angle-right"></i>Matiere</a>
+                                    <a href="{{route('vue_superadmin_allmatiere')}}" class="nav-link menu-active"><i class="fas fa-angle-right"></i>
+                                        Matiere</a>
                                 </li>
-                                
                             </ul>
                         </li>
                         
@@ -317,118 +317,122 @@
 
 
 
-       
-
- <!-- Sidebar Area End Here -->
- <div class="dashboard-content-one">
 
 
 
 
 
 
-    <!-- Breadcubs Area Start Here -->
-    <div class="breadcrumbs-area">
-        <h3>Matiere</h3>
-        <ul>
-            <li>
-                <a href="{{route('vue_superadmin_accueil')}}">Home</a>
-            </li>
-            <li>Ajouter une matiere</li>
-        </ul>
 
-        <div class="col-xl-3 col-sm-6 col-12">
-            <div class="dashboard-summery-one mg-b-20">
-                <div class="row align-items-center">
-                    <div class="col-6">
-                        <div class="item-icon bg-light-green ">
-                            <i class="flaticon-classmates text-green"></i>
+
+
+
+
+
+
+
+
+
+
+
+
+             <!-- Sidebar Area End Here -->
+             <div class="dashboard-content-one">
+
+
+
+
+
+
+                <!-- Breadcubs Area Start Here -->
+                <div class="breadcrumbs-area">
+                    <h3>Matiere</h3>
+                    <ul>
+                        <li>
+                            <a href="{{route('vue_superadmin_accueil')}}">Home</a>
+                        </li>
+                        <li>Modifier les informations d'une matiere</li>
+                    </ul>
+
+                    <div class="col-xl-3 col-sm-6 col-12">
+                        <div class="dashboard-summery-one mg-b-20">
+                            <div class="row align-items-center">
+                                <div class="col-6">
+                                    <div class="item-icon bg-light-green ">
+                                        <i class="flaticon-classmates text-green"></i>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="item-content">
+                                        <div class="item-title">Matiere </div>
+                                        <div class="item-number"><span class="counter" data-num=" {{ $matiere->count() }} "> {{ $matiere->count() }} </span></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-6">
-                        <div class="item-content">
-                            <div class="item-title">Matieres</div>
-                            <div class="item-number"><span class="counter" data-num=" {{ $matiere->count() }} "> {{ $matiere->count() }} </span></div>
-                        </div>
-                    </div>
+    
+
+
+
                 </div>
-            </div>
-        </div>
+                <!-- Breadcubs Area End Here -->
+                <!-- Admit Form Area Start Here -->
+                <div class="card height-auto">
+                    
+                        <div class="card-body">
+                            <div class="heading-layout1">
+                                <div class="item-title">
+                                    <h3>Modifier matiere</h3>
+                                </div>
+                                <div class="dropdown">
+                                    <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                                        aria-expanded="false">...</a>
 
-
-
-        
-
-
-
-    </div>
-    <!-- Breadcubs Area End Here -->
-    <!-- Admit Form Area Start Here -->
-    <div class="card height-auto">
-      
-            <div class="card-body">
-                <div class="heading-layout1">
-                    <div class="item-title">
-                        <h3>Ajouter une matiere</h3>
-                    </div>
-                    <div class="dropdown">
-                        <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-                            aria-expanded="false">...</a>
-
-                        <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="#"><i
-                                    class="fas fa-times text-orange-red"></i>Close</a>
-                            <a class="dropdown-item" href="#"><i
-                                    class="fas fa-cogs text-dark-pastel-green"></i>Edit</a>
-                            <a class="dropdown-item" onClick="history.go(0)" href="#"><i
-                                    class="fas fa-redo-alt text-orange-peel" onClick="history.go(0)"></i>Refresh</a>
-                        </div>
-                    </div>
-                </div>
-                <form  action="{{route('vue_superadmin_addmatiere')}}" method="POST">
-                        {{ csrf_field() }}
-                    <div class="row">
-                        
-                        <div class="col-xl-3 col-lg-6 col-12 form-group">
-                            <label>Nom </label>
-                            <input type="text" placeholder="" class="form-control" name="nomMatiere">
-                            {!! $errors->first('nomMatiere','<span class="error">:message </span>') !!}
-                        </div>
-
-                        
-
-
-                        <div class="col-12 form-group mg-t-8">
-                            <input type="submit" class="btn-fill-lg btn-gradient-yellow btn-hover-bluedark" value="Valider">
-                            {{-- <button type="submit" class="btn-fill-lg btn-gradient-yellow btn-hover-bluedark">Valider</button> --}}
-                            <button type="reset" class="btn-fill-lg bg-blue-dark btn-hover-yellow">Annuler</button>
-                            <a href="{{route('vue_superadmin_allmatiere')}}"><button type="button" class="btn-fill-lmd radius-4 text-light bg-true-v"> Voir la liste</button></a>
-                            
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a class="dropdown-item" href="#"><i
+                                                class="fas fa-times text-orange-red"></i>Close</a>
+                                        <a class="dropdown-item" href="#"><i
+                                                class="fas fa-cogs text-dark-pastel-green"></i>Edit</a>
+                                        <a class="dropdown-item" onClick="history.go(0)" href="#"><i
+                                                class="fas fa-redo-alt text-orange-peel" onClick="history.go(0)"></i>Refresh</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <form  action="{{route('vue_superadmin_updatematiere',$matiereedit->idMatiere)}}" method="POST">
+                                <input type="hidden" name="method" value="PUT">
+                                    {{ csrf_field() }}
+                                    
+                                    <div class="row">
+                                        <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                            <label>Nom </label>
+                                            <input type="text"  value="{{old('nomMatiere') ??$matiereedit->nomMatiere}}"   class="form-control" name="nomMatiere">
+                                            {!! $errors->first('nomMatiere','<span class="error">:message </span>') !!}
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                            <label>Coefficient </label>
+                                            <input type="number"  value="{{old('coef') ??$matiereedit->coef}}" min="0"   class="form-control" name="nomMatiere">
+                                            {!! $errors->first('coef','<span class="error">:message </span>') !!}
+                                        </div>
+                                    </div>
+                               
+                                   
+                                    <div class="col-12 form-group mg-t-8">
+                                        <input type="submit" class="btn-fill-lg btn-gradient-yellow btn-hover-bluedark" value="Valider">
+                                        {{-- <button type="submit" class="btn-fill-lg btn-gradient-yellow btn-hover-bluedark">Valider</button> --}}
+                                        <button type="reset" class="btn-fill-lg bg-blue-dark btn-hover-yellow">Annuler</button>
+                                        <a href="{{route('vue_superadmin_allmatiere')}}"><button type="button" class="btn-fill-lmd radius-4 text-light bg-true-v"> Voir la liste</button></a>
+                                        
+                                            
+                                       
+                                    </div>
                                 
-                           
+                            </form>
                         </div>
-                        
-                    </div>
-                </form>
-            </div>
-    </div>
-    <!-- Admit Form Area End Here -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                </div>
+                <!-- Admit Form Area End Here -->
 
 
 
