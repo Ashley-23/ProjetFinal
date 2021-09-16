@@ -26,7 +26,7 @@ class CreateElevesTable extends Migration
             $table->char('sexeEleve', 1);
             $table->string('emailEleve')->unique();
             $table->string('passwordEleve');
-            $table->string('telephoneEleve')->unique();
+            $table->string('telephoneEleve')-;
             $table->string('PhotoEleve')->default('photoEleve.jpg');
             $table->String('adresseEleve');
             $table->char('activeEleve', 1)->default('t');

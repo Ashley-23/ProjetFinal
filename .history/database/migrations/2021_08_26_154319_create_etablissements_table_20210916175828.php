@@ -22,7 +22,7 @@ class CreateEtablissementsTable extends Migration
             $table->string('adresseEtablissement');
             $table->string('emailEtablissement');
             $table->string('password');
-            $table->string('telephoneEtablissement')->unique();
+            $table->string('telephoneEtablissement')-;
             $table->char('activeEtablissement', 1)->default('t');
             $table->timestamps();
 

@@ -25,7 +25,7 @@ class CreateRelativesTable extends Migration
             $table->char('sexeRelative', 1);
             $table->string('emailRelative')->unique();
             $table->string('passwordRelative');
-            $table->string('telephoneRelative')->unique();
+            $table->string('telephoneRelative')-;
             $table->string('PhotoRelative')->default('photoRelative.jpg');
             $table->String('adresseRelative');
             $table->char('activeRelative', 1)->default('t');

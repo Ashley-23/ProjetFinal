@@ -24,7 +24,7 @@ class CreateAdminsTable extends Migration
             $table->char('sexeAdmin', 1);
             $table->string('emailAdmin')->unique();
             $table->string('passwordAdmin');
-            $table->string('telephoneAdmin')->unique();
+            $table->string('telephoneAdmin')->uniq;
             $table->string('PhotoAdmin')->default('photoAdmin.jpg');
             $table->String('adresseAdmin');
             $table->char('activeAdmin', 1)->default('t');

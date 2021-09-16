@@ -17,7 +17,7 @@ class Moyenne extends Model
         'idNote'
     ];
     // Une moyenne a un plusieurs MatiereMoyenne
-    // Une moyenne appartient à une note 
+    // Une not appartient à un admin 
     public function Note()
     {
         return $this->belongsTo(Note::class);

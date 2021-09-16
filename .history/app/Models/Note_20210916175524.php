@@ -22,10 +22,6 @@ class Note extends Model
         'id',
     ];
     //Un ensemble de note à une moyenne
-    public function Moyenne()
-    {
-        return $this->hasOne(Moyenne::class);
-    }
 
     // Une Note a un plusieurs EpreuveMatiereNote
 

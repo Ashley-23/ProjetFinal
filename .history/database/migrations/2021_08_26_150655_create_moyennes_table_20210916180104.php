@@ -19,11 +19,8 @@ class CreateMoyennesTable extends Migration
             $table->unsignedDouble('ValeurMoyenne', 4, 2);
             $table->integer('rangMoyenne');
             $table->char('activeMoyenne')->default('t');
-            $table->unsignedBigInteger('idNote');
-            //
+
             $table->timestamps();
-
-
             $table->foreign('idNote')->references('id')->on('Note')
                 ->onUpdate('cascade')->onDelete('cascade');
         });

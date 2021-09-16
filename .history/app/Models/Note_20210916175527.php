@@ -22,9 +22,10 @@ class Note extends Model
         'id',
     ];
     //Un ensemble de note à une moyenne
-    public function Moyenne()
+    // Un profil appartient à un admin 
+    public function Admin()
     {
-        return $this->hasOne(Moyenne::class);
+        return $this->belongsTo(Admin::class);
     }
 
     // Une Note a un plusieurs EpreuveMatiereNote

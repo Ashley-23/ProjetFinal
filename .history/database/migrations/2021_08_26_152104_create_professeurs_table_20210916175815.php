@@ -23,7 +23,7 @@ class CreateProfesseursTable extends Migration
             $table->char('sexeProfesseur', 1);
             $table->string('emailProfesseur')->unique();
             $table->string('passwordProfesseur');
-            $table->string('telephoneProfesseur')->unique();
+            $table->string('telephoneProfesseur')-;
             $table->string('PhotoProfesseur')->default('photoProfesseur.jpg');
             $table->String('adresseProfesseur');
             $table->char('activeProfesseur', 1)->default('t');
