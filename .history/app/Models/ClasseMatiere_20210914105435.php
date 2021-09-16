@@ -1,0 +1,26 @@
+<?php
+
+namespace App\Models;
+
+use App\Models\Professeur;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+
+class ClasseMatiere extends Model
+{
+    use HasFactory;
+    protected $primaryKey = "id";
+
+    protected $fillable = [
+        'idClasse',
+        'idMatiere',
+        'idProfesseur'
+    ];
+
+    protected $table = "classe_matieres";
+
+    public function professeur()
+    {
+        return $this->belongsTo(Professeur::class);
+    }
+}
