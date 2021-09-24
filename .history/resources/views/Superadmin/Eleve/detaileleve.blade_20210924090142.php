@@ -52,7 +52,7 @@
                     </li>
                 </ul>
                 <ul class="navbar-nav">
-                    {{-- <li class="navbar-item dropdown header-message">
+                    <li class="navbar-item dropdown header-message">
                         <a class="navbar-nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
                             aria-expanded="false">
                             <i class="far fa-envelope"></i>
@@ -170,7 +170,7 @@
                                 </div>
                             </div>
                         </div>
-                    </li> --}}
+                    </li>
                     <li class="navbar-item dropdown header-admin">
                         <a class="navbar-nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
                             aria-expanded="false">
@@ -197,10 +197,10 @@
                             </div>
                             <div class="item-content">
                                 <ul class="settings-list">
-                                    {{-- <li><a href="#"><i class="flaticon-user"></i>My Profile</a></li>
+                                    <li><a href="#"><i class="flaticon-user"></i>My Profile</a></li>
                                     <li><a href="#"><i class="flaticon-list"></i>Task</a></li>
                                     <li><a href="#"><i class="flaticon-chat-comment-oval-speech-bubble-with-text-lines"></i>Message</a></li>
-                                    <li><a href="#"><i class="flaticon-gear-loading"></i>Account Settings</a></li> --}}
+                                    <li><a href="#"><i class="flaticon-gear-loading"></i>Account Settings</a></li>
                                     <li>
                                         <x-slot name="content">
                                         <!-- Authentication -->
@@ -400,8 +400,8 @@
                                 data-toggle="dropdown" aria-expanded="false">...</a>
                 
                                 <div class="dropdown-menu dropdown-menu-right">
-                                    {{-- <a class="dropdown-item" href="#"><i class="fas fa-times text-orange-red"></i>Close</a>
-                                    <a class="dropdown-item" href="#"><i class="fas fa-cogs text-dark-pastel-green"></i>Edit</a> --}}
+                                    <a class="dropdown-item" href="#"><i class="fas fa-times text-orange-red"></i>Close</a>
+                                    <a class="dropdown-item" href="#"><i class="fas fa-cogs text-dark-pastel-green"></i>Edit</a>
                                     <a class="dropdown-item" onClick="history.go(0)" href="#"><i class="fas fa-redo-alt text-orange-peel"></i>Refresh</a>
                                 </div>
                             </div>
@@ -410,13 +410,13 @@
                             <div class="item-content">
                                 <div class="header-inline item-header">
                                     <h3 class="text-dark-medium font-medium"> {{ $elevedetail->nomEleve }} </h3>
-                                    {{-- <div class="header-elements">
+                                    <div class="header-elements">
                                         <ul>
                                             <li><a href="#"><i class="far fa-edit"></i></a></li>
                                             <li><a href="#"><i class="fas fa-print"></i></a></li>
                                             <li><a href="#"><i class="fas fa-download"></i></a></li>
                                         </ul>
-                                    </div> --}}
+                                    </div>
                                 </div>
                                 {{-- <p>Aliquam erat volutpat. Curabiene natis massa sedde lacu stiquen sodale 
                                 word moun taiery.Aliquam erat volutpaturabiene natis massa sedde  sodale 

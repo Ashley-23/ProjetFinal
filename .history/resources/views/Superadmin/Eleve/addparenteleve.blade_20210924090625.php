@@ -59,124 +59,6 @@
                     </li>
                 </ul>
                 <ul class="navbar-nav">
-                    {{-- <li class="navbar-item dropdown header-message">
-                        <a class="navbar-nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-                            aria-expanded="false">
-                            <i class="far fa-envelope"></i>
-                            <div class="item-title d-md-none text-16 mg-l-10">Message</div>
-                            <span>5</span>
-                        </a>
-
-                        <div class="dropdown-menu dropdown-menu-right">
-                            <div class="item-header">
-                                <h6 class="item-title">05 Message</h6>
-                            </div>
-                            <div class="item-content">
-                                <div class="media">
-                                    <div class="item-img bg-skyblue author-online">
-                                        <img src="img/figure/student11.png" alt="img">
-                                    </div>
-                                    <div class="media-body space-sm">
-                                        <div class="item-title">
-                                            <a href="#">
-                                                <span class="item-name">Maria Zaman</span> 
-                                                <span class="item-time">18:30</span> 
-                                            </a>  
-                                        </div>
-                                        <p>What is the reason of buy this item. 
-                                        Is it usefull for me.....</p>
-                                    </div>
-                                </div>
-                                <div class="media">
-                                    <div class="item-img bg-yellow author-online">
-                                        <img src="img/figure/student12.png" alt="img">
-                                    </div>
-                                    <div class="media-body space-sm">
-                                        <div class="item-title">
-                                            <a href="#">
-                                                <span class="item-name">Benny Roy</span> 
-                                                <span class="item-time">10:35</span> 
-                                            </a>  
-                                        </div>
-                                        <p>What is the reason of buy this item. 
-                                        Is it usefull for me.....</p>
-                                    </div>
-                                </div>
-                                <div class="media">
-                                    <div class="item-img bg-pink">
-                                        <img src="img/figure/student13.png" alt="img">
-                                    </div>
-                                    <div class="media-body space-sm">
-                                        <div class="item-title">
-                                            <a href="#">
-                                                <span class="item-name">Steven</span> 
-                                                <span class="item-time">02:35</span> 
-                                            </a>  
-                                        </div>
-                                        <p>What is the reason of buy this item. 
-                                        Is it usefull for me.....</p>
-                                    </div>
-                                </div>
-                                <div class="media">
-                                    <div class="item-img bg-violet-blue">
-                                        <img src="img/figure/student11.png" alt="img">
-                                    </div>
-                                    <div class="media-body space-sm">
-                                        <div class="item-title">
-                                            <a href="#">
-                                                <span class="item-name">Joshep Joe</span> 
-                                                <span class="item-time">12:35</span> 
-                                            </a>  
-                                        </div>
-                                        <p>What is the reason of buy this item. 
-                                        Is it usefull for me.....</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="navbar-item dropdown header-notification">
-                        <a class="navbar-nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-                            aria-expanded="false">
-                            <i class="far fa-bell"></i>
-                            <div class="item-title d-md-none text-16 mg-l-10">Notification</div>
-                            <span>8</span>
-                        </a>
-
-                        <div class="dropdown-menu dropdown-menu-right">
-                            <div class="item-header">
-                                <h6 class="item-title">03 Notifiacations</h6>
-                            </div>
-                            <div class="item-content">
-                                <div class="media">
-                                    <div class="item-icon bg-skyblue">
-                                        <i class="fas fa-check"></i>
-                                    </div>
-                                    <div class="media-body space-sm">
-                                        <div class="post-title">Complete Today Task</div>
-                                        <span>1 Mins ago</span>
-                                    </div>
-                                </div>
-                                <div class="media">
-                                    <div class="item-icon bg-orange">
-                                        <i class="fas fa-calendar-alt"></i>
-                                    </div>
-                                    <div class="media-body space-sm">
-                                        <div class="post-title">Director Metting</div>
-                                        <span>20 Mins ago</span>
-                                    </div>
-                                </div>
-                                <div class="media">
-                                    <div class="item-icon bg-violet-blue">
-                                        <i class="fas fa-cogs"></i>
-                                    </div>
-                                    <div class="media-body space-sm">
-                                        <div class="post-title">Update Password</div>
-                                        <span>45 Mins ago</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </li> --}}
                     <li class="navbar-item dropdown header-admin">
                         <a class="navbar-nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
@@ -204,10 +86,10 @@
                             </div>
                             <div class="item-content">
                                 <ul class="settings-list">
-                                    {{-- <li><a href="#"><i class="flaticon-user"></i>My Profile</a></li>
+                                    <li><a href="#"><i class="flaticon-user"></i>My Profile</a></li>
                                     <li><a href="#"><i class="flaticon-list"></i>Task</a></li>
                                     <li><a href="#"><i class="flaticon-chat-comment-oval-speech-bubble-with-text-lines"></i>Message</a></li>
-                                    <li><a href="#"><i class="flaticon-gear-loading"></i>Account Settings</a></li> --}}
+                                    <li><a href="#"><i class="flaticon-gear-loading"></i>Account Settings</a></li>
                                     <li>
                                         <x-slot name="content">
                                         <!-- Authentication -->
@@ -437,100 +319,90 @@
                                         aria-expanded="false">...</a>
 
                                     <div class="dropdown-menu dropdown-menu-right">
-                                        {{-- <a class="dropdown-item" href="#"><i
+                                        <a class="dropdown-item" href="#"><i
                                                 class="fas fa-times text-orange-red"></i>Close</a>
                                         <a class="dropdown-item" href="#"><i
-                                                class="fas fa-cogs text-dark-pastel-green"></i>Edit</a> --}}
+                                                class="fas fa-cogs text-dark-pastel-green"></i>Edit</a>
                                         <a class="dropdown-item" onClick="history.go(0)" href="#"><i
                                                 class="fas fa-redo-alt text-orange-peel" onClick="history.go(0)"></i>Refresh</a>
                                     </div>
                                 </div>
                             </div>
-                            <form  action="{{route('vue_superadmin_updateeleve',$eleveedit->idEleve)}}" method="POST">
+                            <form  action="{{route('vue_superadmin_addeleveparent',$eleveedit->idEleve)}}" method="POST">
                                 <input type="hidden" name="method" value="PUT">
                                     {{ csrf_field() }}
                                     
                                 <div class="row">
                                     <div class="col-xl-3 col-lg-6 col-12 form-group">
                                         <label>Nom </label>
-                                        <input type="text"   value="{{old('nomEleve') ?? $eleveedit->nomEleve}}" class="form-control" name="nomEleve">
+                                        <input type="text"   value="{{old('nomEleve') ?? $eleveedit->nomEleve}}" class="form-control" name="nomEleve" disabled>
                                         {!! $errors->first('nomEleve','<span class="error">:message </span>') !!}
                                     </div>
                                     <div class="col-xl-3 col-lg-6 col-12 form-group">
                                         <label>Prenom </label>
-                                        <input type="text"   value="{{old('prenomEleve') ?? $eleveedit->prenomEleve}}" class="form-control" name="prenomEleve">
+                                        <input type="text"   value="{{old('prenomEleve') ?? $eleveedit->prenomEleve}}" class="form-control" name="prenomEleve"disabled>
                                         {!! $errors->first('prenomEleve','<span class="error">:message </span>') !!}
                                     </div>
                                     <div class="col-xl-3 col-lg-6 col-12 form-group">
                                         <label>Login</label>
-                                        <input type="text"  value="{{old('login') ?? $eleveedit->login}}" class="form-control" name="login">
+                                        <input type="text"  value="{{old('login') ?? $eleveedit->login}}" class="form-control" name="login" disabled>
                                         {!! $errors->first('login','<span class="error">:message </span>') !!}
                                     </div>
                                     <div class="col-xl-3 col-lg-6 col-12 form-group">
                                         <label>Date de naissance</label>
-                                        <input type="date"  value="{{old('dateNaissEleve') ?? $eleveedit->dateNaissEleve}}" class="form-control" name="dateNaissEleve">
+                                        <input type="date"  value="{{old('dateNaissEleve') ?? $eleveedit->dateNaissEleve}}" class="form-control" name="dateNaissEleve" disabled>
                                         {!! $errors->first('dateNaissEleve','<span class="error">:message </span>') !!}
                                     </div>
                                     <div class="col-xl-3 col-lg-6 col-12 form-group">
                                         <label>Genre</label>
-                                        <div>
-                                            <select class="select2" name="sexeEleve">
-                                                <option value="">Selectionner le genre</option>
-                                            <option value="m">Masculin</option>
-                                            <option value="f">Feminin</option>
-                                        </select>
-                                        {!! $errors->first('sexeEleve','<span class="error">:message </span>') !!}
-                                        </div>
+                                        @if ($eleveedit->sexeEleve=='m')
+                                        <input type="text"  value="masculin" class="form-control" name="sexeEleve" disabled>
+                                        @elseif($eleveedit->sexeEleve=='f')
+                                        <input type="text"  value="Féminin" class="form-control" name="sexeEleve" disabled>
+                                        @endif
                                     </div>
                                     <div class="col-xl-3 col-lg-6 col-12 form-group">
                                         <label>Adresse</label>
-                                        <input type="text"  value="{{old('adresseEleve') ??$eleveedit->adresseEleve}}" class="form-control" name="adresseEleve">
+                                        <input type="text"  value="{{old('adresseEleve') ??$eleveedit->adresseEleve}}" class="form-control" name="adresseEleve" disabled>
                                          {!! $errors->first('adresseEleve','<span class="error">:message </span>') !!}
                                     </div>
                                     <div class="col-xl-3 col-lg-6 col-12 form-group">
                                         <label>E-mail</label>
-                                        <input type="email"   value="{{old('emailEleve') ?? $eleveedit->emailEleve}}" class="form-control" name="emailEleve">
+                                        <input type="email"   value="{{old('emailEleve') ?? $eleveedit->emailEleve}}" class="form-control" name="emailEleve" disabled>
                                          {!! $errors->first('emailEleve','<span class="error">:message </span>') !!}
                                     </div>   
                                     {{-- value="{{$eleveedit->emailEleve}}" --}}
                                     <div class="col-xl-3 col-lg-6 col-12 form-group">
                                         <label>Telephone</label>
-                                        <input type="tel"  value="{{old('telephoneEleve') ??$eleveedit->telephoneEleve}}" class="form-control"  name="telephoneEleve">
+                                        <input type="tel"  value="{{old('telephoneEleve') ??$eleveedit->telephoneEleve}}" class="form-control"  name="telephoneEleve" disabled>
                                         {!! $errors->first('telephoneEleve','<span class="error">:message </span>') !!}
                                     </div>
 
                                     <div class="col-xl-3 col-lg-6 col-12 form-group">
-                                        <label>Classe actuelle</label>
-                                        <input type="text"  value=" {{$nom->nomClasse}} {{$nom->typeClasse}} " class="form-control"  name="nom" disabled>
+                                        <label>Classe </label>
+                                        <input type="text"  value=" {{$nom->nomClasse}} {{$nom->typeClasse}} " class="form-control"  name="nom" disabled disabled>
                                     </div>
-                                    
-                                     {{-- Pour ajouter la classe --}}
 
-                                     <div class="col-xl-3 col-lg-6 col-12 form-group">
-                                        <label>Nouvelle classe</label>
-                                        <select class="select2" name="classeEleve">
-                                            <option value="">Selectionnez une classe</option>
-                                            @forelse ($classe as $classe)
-                                                <option value="{{ $classe->idClasse }}">{{ $classe->nomClasse }} {{ $classe->typeClasse }}</option>
+                                    <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                        <label>Selectionner votre parent</label>
+                                        <select class="js-select2-multiple" name="parentEleve" id="Eleve">
+
+                                            <option value="">Selectionnez votre parent</option>
+                                            @forelse ($parent as $parent)
+                                                <option value="{{ $parent->idRelative }}">{{ $parent->nomRelative }} {{ $parent->prenomRelative }} {{ $parent->dateNaissRelative }}</option>
                                                 @empty
-                                                <option value="">Veuillez ajouter une classe</option>
+                                                <option value="">Veuillez ajouter un parent</option>
                                             @endforelse
                                         </select>
                                         
                                         <p>
-                                            Si avez le champ "Veuillez ajouter une classe" <br>
-                                            Celà signifie que vous n'avez ajouter aucune classe <br>
+                                            Si vous avez le champ "Veuillez ajouter un parent" <br>
+                                            Celà signifie que vous n'avez ajouter aucun parent <br>
                                             dans votre base de donnée 😊😊😊
                                         </p>
-                                        {!! $errors->first('classeEleve','<span class="error">:message </span>') !!}
-                                        {{-- {!! $errors->first('adresseEleve','<span class="error">:message </span>') !!} --}}
+                                        {!! $errors->first('parentEleve','<span class="error">:message </span>') !!}
                                     </div>
-
-                                    {{-- <div class="col-lg-6 col-12 form-group mg-t-30">
-                                        <label class="text-dark-medium">Upload Student Photo (150px X 150px)</label>
-                                        <input type="file" class="form-control-file" name="photo">
-                                    </div> --}}
-
+                                  
                                     <div class="col-12 form-group mg-t-8">
                                         <input type="submit" class="btn-fill-lg btn-gradient-yellow btn-hover-bluedark" value="Valider">
                                         {{-- <button type="submit" class="btn-fill-lg btn-gradient-yellow btn-hover-bluedark">Valider</button> --}}
@@ -563,7 +435,125 @@
 
 
 
+ {{-- <li class="navbar-item dropdown header-message">
+                        <a class="navbar-nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="far fa-envelope"></i>
+                            <div class="item-title d-md-none text-16 mg-l-10">Message</div>
+                            <span>5</span>
+                        </a>
 
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="item-header">
+                                <h6 class="item-title">05 Message</h6>
+                            </div>
+                            <div class="item-content">
+                                <div class="media">
+                                    <div class="item-img bg-skyblue author-online">
+                                        <img src="img/figure/student11.png" alt="img">
+                                    </div>
+                                    <div class="media-body space-sm">
+                                        <div class="item-title">
+                                            <a href="#">
+                                                <span class="item-name">Maria Zaman</span> 
+                                                <span class="item-time">18:30</span> 
+                                            </a>  
+                                        </div>
+                                        <p>What is the reason of buy this item. 
+                                        Is it usefull for me.....</p>
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <div class="item-img bg-yellow author-online">
+                                        <img src="img/figure/student12.png" alt="img">
+                                    </div>
+                                    <div class="media-body space-sm">
+                                        <div class="item-title">
+                                            <a href="#">
+                                                <span class="item-name">Benny Roy</span> 
+                                                <span class="item-time">10:35</span> 
+                                            </a>  
+                                        </div>
+                                        <p>What is the reason of buy this item. 
+                                        Is it usefull for me.....</p>
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <div class="item-img bg-pink">
+                                        <img src="img/figure/student13.png" alt="img">
+                                    </div>
+                                    <div class="media-body space-sm">
+                                        <div class="item-title">
+                                            <a href="#">
+                                                <span class="item-name">Steven</span> 
+                                                <span class="item-time">02:35</span> 
+                                            </a>  
+                                        </div>
+                                        <p>What is the reason of buy this item. 
+                                        Is it usefull for me.....</p>
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <div class="item-img bg-violet-blue">
+                                        <img src="img/figure/student11.png" alt="img">
+                                    </div>
+                                    <div class="media-body space-sm">
+                                        <div class="item-title">
+                                            <a href="#">
+                                                <span class="item-name">Joshep Joe</span> 
+                                                <span class="item-time">12:35</span> 
+                                            </a>  
+                                        </div>
+                                        <p>What is the reason of buy this item. 
+                                        Is it usefull for me.....</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="navbar-item dropdown header-notification">
+                        <a class="navbar-nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="far fa-bell"></i>
+                            <div class="item-title d-md-none text-16 mg-l-10">Notification</div>
+                            <span>8</span>
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="item-header">
+                                <h6 class="item-title">03 Notifiacations</h6>
+                            </div>
+                            <div class="item-content">
+                                <div class="media">
+                                    <div class="item-icon bg-skyblue">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <div class="media-body space-sm">
+                                        <div class="post-title">Complete Today Task</div>
+                                        <span>1 Mins ago</span>
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <div class="item-icon bg-orange">
+                                        <i class="fas fa-calendar-alt"></i>
+                                    </div>
+                                    <div class="media-body space-sm">
+                                        <div class="post-title">Director Metting</div>
+                                        <span>20 Mins ago</span>
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <div class="item-icon bg-violet-blue">
+                                        <i class="fas fa-cogs"></i>
+                                    </div>
+                                    <div class="media-body space-sm">
+                                        <div class="post-title">Update Password</div>
+                                        <span>45 Mins ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                   
 
 
 

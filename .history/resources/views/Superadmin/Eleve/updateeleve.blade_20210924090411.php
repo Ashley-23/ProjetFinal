@@ -3,6 +3,13 @@
 @section('content')
     
 
+<style>
+    .error {
+        color: red;
+        font-weight: bold;
+        font-style: italic;
+    }
+</style>
 
 
 
@@ -278,7 +285,8 @@
         <!-- Header Menu Area End Here -->
         <!-- Page Area Start Here -->
         <div class="dashboard-page-one">
-           
+            
+            
 
             
             <!-- Sidebar Area Start Here -->
@@ -367,158 +375,177 @@
 
 
 
- <!-- Sidebar Area End Here -->
-
-            <div class="dashboard-content-one">
 
 
 
-                <div class="dashboard-content-one">
-                    <!-- Breadcubs Area Start Here -->
-                    <div class="breadcrumbs-area">
-                        <h3>Eleve</h3>
-                        <ul>
-                            <li>
-                                <a href="{{route('vue_superadmin_accueil')}}">Home</a>
-                            </li>
-                            <li>Detail eleve</li>
-                        </ul>
-                        <a href="{{route('vue_superadmin_alleleve')}}"><button type="button" class="btn-fill-lmd radius-4 text-light bg-true-v"> Voir la liste</button></a>
-                                                    
-                    </div>
-                    <!-- Breadcubs Area End Here -->
-                
-                <!-- Student Details Area Start Here -->
-                <div class="card height-auto">
-                    <div class="card-body">
-                        <div class="heading-layout1">
-                            <div class="item-title">
-                                <h3>A Propos de :  {{ $elevedetail->nomEleve }} </h3>
-                            </div>
-                           <div class="dropdown">
-                                <a class="dropdown-toggle" href="#" role="button" 
-                                data-toggle="dropdown" aria-expanded="false">...</a>
-                
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    {{-- <a class="dropdown-item" href="#"><i class="fas fa-times text-orange-red"></i>Close</a>
-                                    <a class="dropdown-item" href="#"><i class="fas fa-cogs text-dark-pastel-green"></i>Edit</a> --}}
-                                    <a class="dropdown-item" onClick="history.go(0)" href="#"><i class="fas fa-redo-alt text-orange-peel"></i>Refresh</a>
+            
+
+
+             <!-- Sidebar Area End Here -->
+             <div class="dashboard-content-one">
+
+
+
+
+
+
+                <!-- Breadcubs Area Start Here -->
+                <div class="breadcrumbs-area">
+                    <h3>Eleve</h3>
+                    <ul>
+                        <li>
+                            <a href="{{route('vue_superadmin_accueil')}}">Home</a>
+                        </li>
+                        <li>Modifier les informations d'un élève</li>
+                    </ul>
+
+                    <div class="col-xl-3 col-sm-6 col-12">
+                        <div class="dashboard-summery-one mg-b-20">
+                            <div class="row align-items-center">
+                                <div class="col-6">
+                                    <div class="item-icon bg-light-green ">
+                                        <i class="flaticon-classmates text-green"></i>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="single-info-details">
-                            <div class="item-content">
-                                <div class="header-inline item-header">
-                                    <h3 class="text-dark-medium font-medium"> {{ $elevedetail->nomEleve }} </h3>
-                                    {{-- <div class="header-elements">
-                                        <ul>
-                                            <li><a href="#"><i class="far fa-edit"></i></a></li>
-                                            <li><a href="#"><i class="fas fa-print"></i></a></li>
-                                            <li><a href="#"><i class="fas fa-download"></i></a></li>
-                                        </ul>
-                                    </div> --}}
-                                </div>
-                                {{-- <p>Aliquam erat volutpat. Curabiene natis massa sedde lacu stiquen sodale 
-                                word moun taiery.Aliquam erat volutpaturabiene natis massa sedde  sodale 
-                                word moun taiery.</p> --}}
-                                <div class="info-table table-responsive">
-                                    
-                                    <table class="table text-nowrap">
-                                        
-                                        
-                                        <tbody>
-                                            
-                                            <tr>
-                                                <td>Nom:</td>
-                                                <td class="font-medium text-dark-medium"> {{ $elevedetail->nomEleve }} </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Prenom:</td>
-                                                <td class="font-medium text-dark-medium"> {{ $elevedetail->prenomEleve }} </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Login:</td>
-                                                <td class="font-medium text-dark-medium"> {{ $elevedetail->login }} </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Date de naissance:</td>
-                                                <td class="font-medium text-dark-medium"> {{ $elevedetail->dateNaissEleve }} </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Sexe:</td>
-                                                <td class="font-medium text-dark-medium"> {{ $elevedetail->sexeEleve }} </td>
-                                            </tr>
-                                            <tr>
-                                                <td>E-mail:</td>
-                                                <td class="font-medium text-dark-medium"> {{ $elevedetail->emailEleve }} </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Telephone:</td>
-                                                <td class="font-medium text-dark-medium"> {{ $elevedetail->telephoneEleve }} </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Adresse:</td>
-                                                <td class="font-medium text-dark-medium"> {{ $elevedetail->adresseEleve }} </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Active:</td>
-                                                <td class="font-medium text-dark-medium"> {{ $elevedetail->activeEleve }} </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Crée le :</td>
-                                                <td class="font-medium text-dark-medium"> {{ $elevedetail->created_at }} </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Mise à jour le :</td>
-                                                <td class="font-medium text-dark-medium"> {{ $elevedetail->updated_at }} </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                <div class="col-6">
+                                    <div class="item-content">
+                                        <div class="item-title">Eleves </div>
+                                        <div class="item-number"><span class="counter" data-num=" {{ $eleve->count() }} "> {{ $eleve->count() }} </span></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+    
+
+
+                    
+
+
+
                 </div>
-                <!-- Student Details Area End Here -->
-              
-            
-            
+                <!-- Breadcubs Area End Here -->
+                <!-- Admit Form Area Start Here -->
+                <div class="card height-auto">
+                        <div class="card-body">
+                            <div class="heading-layout1">
+                                <div class="item-title">
+                                    <h3>Modifier Eleve</h3>
+                                </div>
+                                <div class="dropdown">
+                                    <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                                        aria-expanded="false">...</a>
 
-                
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        {{-- <a class="dropdown-item" href="#"><i
+                                                class="fas fa-times text-orange-red"></i>Close</a>
+                                        <a class="dropdown-item" href="#"><i
+                                                class="fas fa-cogs text-dark-pastel-green"></i>Edit</a> --}}
+                                        <a class="dropdown-item" onClick="history.go(0)" href="#"><i
+                                                class="fas fa-redo-alt text-orange-peel" onClick="history.go(0)"></i>Refresh</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <form  action="{{route('vue_superadmin_updateeleve',$eleveedit->idEleve)}}" method="POST">
+                                <input type="hidden" name="method" value="PUT">
+                                    {{ csrf_field() }}
+                                    
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                        <label>Nom </label>
+                                        <input type="text"   value="{{old('nomEleve') ?? $eleveedit->nomEleve}}" class="form-control" name="nomEleve">
+                                        {!! $errors->first('nomEleve','<span class="error">:message </span>') !!}
+                                    </div>
+                                    <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                        <label>Prenom </label>
+                                        <input type="text"   value="{{old('prenomEleve') ?? $eleveedit->prenomEleve}}" class="form-control" name="prenomEleve">
+                                        {!! $errors->first('prenomEleve','<span class="error">:message </span>') !!}
+                                    </div>
+                                    <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                        <label>Login</label>
+                                        <input type="text"  value="{{old('login') ?? $eleveedit->login}}" class="form-control" name="login">
+                                        {!! $errors->first('login','<span class="error">:message </span>') !!}
+                                    </div>
+                                    <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                        <label>Date de naissance</label>
+                                        <input type="date"  value="{{old('dateNaissEleve') ?? $eleveedit->dateNaissEleve}}" class="form-control" name="dateNaissEleve">
+                                        {!! $errors->first('dateNaissEleve','<span class="error">:message </span>') !!}
+                                    </div>
+                                    <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                        <label>Genre</label>
+                                        <div>
+                                            <select class="select2" name="sexeEleve">
+                                                <option value="">Selectionner le genre</option>
+                                            <option value="m">Masculin</option>
+                                            <option value="f">Feminin</option>
+                                        </select>
+                                        {!! $errors->first('sexeEleve','<span class="error">:message </span>') !!}
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                        <label>Adresse</label>
+                                        <input type="text"  value="{{old('adresseEleve') ??$eleveedit->adresseEleve}}" class="form-control" name="adresseEleve">
+                                         {!! $errors->first('adresseEleve','<span class="error">:message </span>') !!}
+                                    </div>
+                                    <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                        <label>E-mail</label>
+                                        <input type="email"   value="{{old('emailEleve') ?? $eleveedit->emailEleve}}" class="form-control" name="emailEleve">
+                                         {!! $errors->first('emailEleve','<span class="error">:message </span>') !!}
+                                    </div>   
+                                    {{-- value="{{$eleveedit->emailEleve}}" --}}
+                                    <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                        <label>Telephone</label>
+                                        <input type="tel"  value="{{old('telephoneEleve') ??$eleveedit->telephoneEleve}}" class="form-control"  name="telephoneEleve">
+                                        {!! $errors->first('telephoneEleve','<span class="error">:message </span>') !!}
+                                    </div>
 
+                                    <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                        <label>Classe actuelle</label>
+                                        <input type="text"  value=" {{$nom->nomClasse}} {{$nom->typeClasse}} " class="form-control"  name="nom" disabled>
+                                    </div>
+                                    
+                                     {{-- Pour ajouter la classe --}}
 
+                                     <div class="col-xl-3 col-lg-6 col-12 form-group">
+                                        <label>Nouvelle classe</label>
+                                        <select class="select2" name="classeEleve">
+                                            <option value="">Selectionnez une classe</option>
+                                            @forelse ($classe as $classe)
+                                                <option value="{{ $classe->idClasse }}">{{ $classe->nomClasse }} {{ $classe->typeClasse }}</option>
+                                                @empty
+                                                <option value="">Veuillez ajouter une classe</option>
+                                            @endforelse
+                                        </select>
+                                        
+                                        <p>
+                                            Si avez le champ "Veuillez ajouter une classe" <br>
+                                            Celà signifie que vous n'avez ajouter aucune classe <br>
+                                            dans votre base de donnée 😊😊😊
+                                        </p>
+                                        {!! $errors->first('classeEleve','<span class="error">:message </span>') !!}
+                                        {{-- {!! $errors->first('adresseEleve','<span class="error">:message </span>') !!} --}}
+                                    </div>
 
+                                    <div class="col-lg-6 col-12 form-group mg-t-30">
+                                        <label class="text-dark-medium">Upload Student Photo (150px X 150px)</label>
+                                        <input type="file" class="form-control-file" name="photo">
+                                    </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                                    <div class="col-12 form-group mg-t-8">
+                                        <input type="submit" class="btn-fill-lg btn-gradient-yellow btn-hover-bluedark" value="Valider">
+                                        {{-- <button type="submit" class="btn-fill-lg btn-gradient-yellow btn-hover-bluedark">Valider</button> --}}
+                                        <button type="reset" class="btn-fill-lg bg-blue-dark btn-hover-yellow">Annuler</button>
+                                        <a href="{{route('vue_superadmin_alleleve')}}"><button type="button" class="btn-fill-lmd radius-4 text-light bg-true-v"> Voir la liste</button></a>
+                                        
+                                            
+                                       
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    {{-- </form> --}}
+                </div>
+                <!-- Admit Form Area End Here -->
 
 
 
